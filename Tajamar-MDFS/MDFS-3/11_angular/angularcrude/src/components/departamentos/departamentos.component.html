@@ -1,0 +1,26 @@
+<table *ngIf="departamentos.length>0;else error"
+    class="table table-hover">
+    <thead>
+        <tr>
+            <th>Numero</th>
+            <th>Nombre</th>
+            <th>Localidad</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dep of departamentos">
+            <td>{{dep.numero}}</td>
+            <td>{{dep.nombre}}</td>
+            <td>{{dep.localidad}}</td>
+            <td>
+                <button [routerLink]="['/eliminar',dep.numero]" class="btn btn-outline-danger">X</button>
+                <button [routerLink]="['/modificar',dep.numero]" class="btn btn-outline-info">U</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<ng-template #error>
+    <h1>Cargando departamentos...</h1>
+</ng-template>

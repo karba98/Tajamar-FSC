@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<link href="css/tablesHospitales.css" rel="stylesheet" />
+<head>
+    <meta charset="utf-8" />
+    <title>Hospitales</title>
+</head>
+<body>
+    <h1>Hospitales</h1>
+    <hr />
+    <div id="cajaf"></div>
+    
+    <div class="tabla-caja">
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Numero</th>
+                    <th>Nombre</th>
+                    <th>Localidad</th>
+                    <th>Telefono</th>
+                    <th>Camas</th>
+                    <th>
+                        <button class="btn-verde" id="refresh">
+                            <img class="icon" src="refresh.png" width="5px" height="5px">
+                        </button>
+                    </th>
+                    
+                </tr>
+                <tr>
+                    <td> <input type="text" id="numero" /></td>
+                    <td> <input type="text" id="nombre" /></td>
+                    <td><input type="text" id="localidad" /></td>
+                    <td><input type="text" id="tlf" /></td>
+                    <td> <input type="text" id="camas" /></td>
+                    <td style="padding: 0;">
+                        <button type="button" style="background-color:aquamarine;border:0px;width:auto " id="insertar">I</button>
+                        <button type="button" style="background-color:aquamarine;border:0px;width:auto " id="modificar">U</button>
+                       
+                    </td>
+                </tr>
+
+            </thead>
+            <tbody id="data">
+            </tbody>
+            
+        </table>
+       
+    </div>
+
+</body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/17_JSON_Ejercicio_Hosipitales.js"></script>
+</html>

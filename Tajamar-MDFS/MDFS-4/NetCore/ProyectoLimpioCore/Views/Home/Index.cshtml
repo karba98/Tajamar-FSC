@@ -1,0 +1,28 @@
+﻿@section script {
+    <script>
+        $(document).ready(function () {
+            $("#boton").click(function () {
+
+                alert("Error de validacion")
+            })
+        });
+
+    </script>
+}
+@section imagen2{ 
+    <img style="width:300px;height:300px"src="~/assets/imgs/bmw.jpg" />
+}
+<form class="form-signin">
+    <img class="mb-4" src="~/assets/imgs/user.png" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
+    </div>
+    <button id="boton" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted">&copy;Raúl Castro de la torre | email: <a href="mailto: carbajeron@gmail.com">carbajeron@gmail.com</a> </p>
+</form>
+

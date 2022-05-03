@@ -1,0 +1,6 @@
+Id cliente =>  3c2ab935-864e-4209-afbc-5f329b310705
+Id Directorio =>  68519e48-83f3-435f-a38a-1a7aa77ba987
+uri redireccion => https://apihospitalazureadrc.azurewebsites.net/.auth/login/aad/callback
+SecretKey => wEm-a715-al.6q57CrM5DpGZ5cJ7i8-tVi
+
+api-spec-converter --from=openapi_3 --to=swagger_2 --syntax=json --order=alpha https://apihospitalazureadrc.azurewebsites.net/swagger/v2/swagger.json > apihospitalesadswagger.json

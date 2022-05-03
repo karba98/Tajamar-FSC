@@ -1,0 +1,51 @@
+﻿@model List<Empleado>
+<br />
+<h1>Empleados</h1>
+<hr />
+
+<form method="post">
+    <select class="form-control" style="width:250px" name="oficio">
+        <option>Todos</option>
+        @foreach (String s in ViewBag.oficios)
+        {
+            <option>@s</option>
+        }
+    </select>
+    <br />
+    <input class="form-control" style="width:250px" type="number" name="incremento" placeholder="Incremento" />
+    <br />
+    <button type="submit" class="btn btn-danger">APLICAR</button>
+</form>
+<hr />
+@Html.ActionLink("Ver total de doctores y plantilla (Porcedimiento + Vista)",
+    "Index", "EmpleadosHospital")<br/>
+@Html.ActionLink("Ver TODOS los empleados(Porcedimiento + Vista)",
+    "TotalEmpleados", "EmpleadosHospital")
+<hr />
+@Html.ActionLink("Buscar por departamento", "EmpleadosDeptLambda")
+<br />
+@Html.ActionLink("Buscar empleados en plantilla", "Plantilla", "Plantilla")
+<hr />
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Apellido</th>
+            <th>Oficio</th>
+            <th>Salario</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (Empleado emp in Model)
+            {
+
+                <tr>
+                    <td>@emp.Apellido</td>
+                    <td>@emp.Oficio</td>
+                    <td>@emp.Salario€</td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

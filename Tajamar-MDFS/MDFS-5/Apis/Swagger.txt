@@ -1,0 +1,27 @@
+
+SWAGGERBUCKLE.ASPNETcORE
+//CONFIGYRESERVICES
+ services.AddSwaggerGen(
+                options=>
+                {
+                    options.SwaggerDoc(name: "v1", new OpenApiInfo
+                    {
+                        Title="Api Hospitales",
+                        Version="v1",
+                        Description="Api Hospitales Raul Castro"
+                    });
+                });
+
+
+
+//CONFIGURE
+ app.UseSwagger();
+            app.UseSwaggerUI(options=>
+                {
+                    options.SwaggerEndpoint(
+                        url: "/swagger/v1/swagger.json",
+                        name: "Api v1"
+                        );
+                    options.RoutePrefix = "";
+                }
+            );

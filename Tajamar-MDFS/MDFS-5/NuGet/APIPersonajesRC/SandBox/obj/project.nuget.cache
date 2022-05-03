@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "yUcreWfR6/Yyc2GXVbAyehLdMrCpxL2FOviO2ciSF9VLrIfUsp4LYCAR4gnh+mTCxCZMaPLe94Pn1n/+4Vvw7w==",
+  "success": true,
+  "projectFilePath": "E:\\MCSD\\MDFS\\MDFS-5\\NuGet\\APIPersonajesRC\\SandBox\\SandBox.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\raulc\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\raulc\\.nuget\\packages\\apipersonajesrc\\1.0.0\\apipersonajesrc.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

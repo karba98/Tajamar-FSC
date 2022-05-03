@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model List<String>
+<h1>Mensajes</h1>
+<hr/>
+<form method="post">
+    <input type="text" name="mensaje" class="form-control"/>
+    <button class="btn btn-warning" type="submit" name="accion" value="batch">Enviar Pila mensajes</button>
+    <button class="btn btn-info" type="submit" name="accion" value="mensaje">Enviar Mensaje</button>
+</form>
+<hr/>
+@if (Model != null)
+{
+    <ul>
+        @foreach(String mensaje in Model)
+        {
+            <li>mensaje</li>
+        }
+    </ul>
+}
+

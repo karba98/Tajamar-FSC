@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "1fOy87y3/+OQZaTkNz6OTi3ALjbKTR9rpHBhW/Y8g+/yTnLyfIbhJlMSCt9c9a1gwm7e36vkXnI3DDCJ1cND4w==",
+  "success": true,
+  "projectFilePath": "E:\\MCSD\\MDFS\\MDFS-5\\NuGet\\ToolKitJuniorNet\\ToolKitJuniorNet\\ToolKitJuniorNet.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\raulc\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
+    "C:\\Users\\raulc\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\raulc\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\raulc\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\raulc\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.PaginaEstilos">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="ColorLetra">White</Color>
+            <Color x:Key="ColorFondo">Black</Color>
+            <Style TargetType="Label" x:Key="estilo">
+                <Setter Property="FontFamily" Value="Calibri"/>
+                <Setter Property="TextColor" Value="red"/>
+                <Setter Property="FontSize" Value="30"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="{StaticResource ColorFondo}">
+            <Label Text="Welcome to Xamarin.Forms!"
+                   TextColor="{StaticResource Key=ColorLetra}"
+                VerticalOptions="CenterAndExpand" 
+                   FontSize="30"
+                HorizontalOptions="CenterAndExpand" />
+            <Label Style="{StaticResource estilo}" Text="Hola"/>
+            <Button Text="BOTON CON TEMAS DE APP" Style ="{StaticResource Key=botonverde}}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

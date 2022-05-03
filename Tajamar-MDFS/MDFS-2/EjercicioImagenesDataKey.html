@@ -1,0 +1,71 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio data-key</title>
+
+</head>
+
+<style>
+</style>
+
+</style>
+<body>
+    <h1>Ejercicio data-key</h1>
+    <form name="formu">
+        <input type="range" min="0" max="10" value="0" id="repe" />
+        <a id="nr"></a>
+        <hr />
+        <div id="cajaB" name="caja"></div>
+        <hr />
+        <div id="cajaI" name="caja"></div>
+
+    </form>
+</body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#repe").on("input", function () {
+            $("#nr").text($(this).val());
+        });
+        $("#repe").change(function () {
+            $("#nr").text($(this).val());
+            var cajaB = $("#cajaB");
+            var cajaI = $("#cajaI");
+            cajaB.empty();
+            cajaI.empty();
+            for (var i = 0; i < parseInt($(this).val()); i++) {
+                var img = $("<img>", {
+                    "src": "green.jpg",
+                });
+                img.css({
+                    "width": "70px",
+                    "height": "50px"
+                });
+                img.data("id",i)
+                img.appendTo(cajaI);
+
+                var bot = $("<button>", {
+                    "type": "button",
+                    "text":"Imagen "+i
+                });
+               
+                bot.data("id",i)
+                bot.appendTo(cajaB);
+                bot.click(function () {
+                    var imagen = cajaI.children().eq(parseInt($(this).data("id")));
+                    console.log(imagen.attr("src"));
+                    if (imagen.attr("src") == "facebook_logo_portada.jpg") {
+                        imagen.attr("src","green.jpg");
+                    }
+                    else imagen.attr("src","facebook_logo_portada.jpg");
+                });
+               
+            }
+            
+        });
+
+    });
+</script>
+</html>

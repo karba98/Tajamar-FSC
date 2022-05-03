@@ -1,0 +1,58 @@
+﻿@model List<Libro>
+<div class="text-center">
+    <h1 class="display-4">Libreria</h1>
+</div>
+<hr/>
+<form method="post">
+    <select name="genero">
+        <option>@Html.ActionLink("Todos", "Home", "Index")</option>
+        @foreach (String g in ViewBag.generos)
+        {
+            if (g == ViewBag.DefaultGenero)
+            {
+                <option selected="selected">@Html.ActionLink(g, "Home", "Index", new { genero = g })</option>
+
+            }
+            else
+            {
+                <option>@Html.ActionLink(g, "Home", "Index", new { genero = g })</option>
+            }
+
+        }
+    </select>
+    <button class="btn btn-dark" type="submit">Buscar libros</button>
+</form>
+<hr/>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Libro</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (Libro lib in Model)
+            {
+                <tr>
+                    <td>
+                        <a><b>@lib.Titulo</b></a>
+                    </td>
+                    <td>
+                        <button type="button" 
+                        onclick="location.href='@Url.Action("Detalles", "Home",
+                            new { idLibro = lib.IdLibro})'" 
+                            class="btn btn-success">Detalles</button>
+
+                        <button type="button" 
+                        onclick="location.href='@Url.Action("Update", "Home",
+                            new { idLibro = lib.IdLibro})'" 
+                            class="btn btn-warning">Modificar</button>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+

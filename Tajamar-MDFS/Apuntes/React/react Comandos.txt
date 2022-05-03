@@ -1,0 +1,8 @@
+npx create-react-app
+npm run start
+npm i bootstrap --save
+npm i jquery
+npm i jquery @popperjs/core
+npm i axios
+npm i react-router-dom
+

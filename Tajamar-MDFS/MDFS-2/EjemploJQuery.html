@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<style>
+    .rojo{
+        color:red;
+    }
+</style>
+<body>
+    <h1 class="rojo">Hola h1</h1>
+    <h2>Hola h2</h2>
+    <h3>Hola h3</h3>
+    <h1 class="rojo">Hola</h1>
+    <h2>Hola h2</h2>
+    <h1 id="titulo4">Hola</h1>
+    <h2>Hola h2</h2>
+</body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script>
+    //Cuando carga la pagina
+    $(document).ready(function () {
+        //codigo js o jquery
+        $("h2").click(function () {//SE USAN FUNCTIONES ANONIMAS SIEMPRE
+            var t = $(this);//$THIS ACCEDE COMO OBJETO JQUERY
+                            //SE PUEDE CONVERTIR DE JQUERY A VAR DE JS
+            t.hide();
+        });
+        $(".rojo").mouseover(function () {//SE PUEDE ACCEDER A CLASES E IDS
+            $(this).fadeOut(5000);
+        });
+        $("#titulo4").click(function () {
+            alert("Pulsado");
+        });
+    });
+</script>
+</html>

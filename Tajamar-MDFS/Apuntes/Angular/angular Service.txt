@@ -1,0 +1,73 @@
+1) carpeta services en app
+2) en services. añadir "miservicio.service.ts"
+
+**Meter url en GLobal.ts dentro de app
+export var Global ={url:'http://....'}
+
+3)Miservice.service.ts
+
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {Global} from './global';
+
+@Injectable()
+export class MiService {
+
+    private url: string;
+    constructor(private _httpService:HttpClient){
+        this.url=Global.miURL;
+    }
+
+    //metodo ():Observable <any>{
+    //    let request = "/api/....";
+    //    return this._httpService.get(this.url+request);
+    //}
+}
+
+4) en app.modules.ts
+import { HttpClientModule } from '@angular/common/http';
+import {MiService} from './services/misevice.service.ts';
+imports:[HttpClientModule]
+providers:[Miservice]
+
+5) En cualquier componente a consumir servicio:
+
+import {MiService} from './../../app/services/MiService.service';
+constructor(private _service:MiService) {..}
+
+nuevometodo(){
+this._service.metodo().subscribe(response=>{
+      //response es todo lo recibido
+    },error=>{
+	console.log(error);
+    });
+}
+
+**Crear models en carpeta app que se ajusten a modelo de json
+ejemplo:
+export class Empleado{
+    constructor(
+        public idEmpleado:number,
+        public apellido:string,
+        public oficio:string,
+        public salario:number,
+        public departamento:number
+    ){}
+}
+
+
+
+**POST/PUT
+
+ SERVICE:
+import {HttpClient,HttpHeaders} from '@angular/common/http';
+...
+ insertDep(departamento:Departamento):Observable<any>{
+        let request = "api/departamentos";
+        let depJSON = JSON.stringify(departamento);
+        let headers = new HttpHeaders().set("Content-Type", "application/json");
+        //return this._httpService.post(this.url+request,depJSON,{headers:headers});
+	//return this._httpService.put(this.url+request,depJSON,{headers:headers});
+    }
+    }

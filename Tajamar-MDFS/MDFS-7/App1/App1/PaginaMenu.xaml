@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.PaginaMenu">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black">
+            <Label Text="Menu del Layout"
+                   Margin="20"
+                   FontSize="30"
+                   TextColor="white"
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="SIGUIENTE" 
+                    TextColor="Black"
+                    Margin="30,10,10,10"
+                    x:Name="boton"
+                    BackgroundColor="white"/>
+            <Button Text="LAYOUT CREADO EN C#" 
+                    TextColor="Black"
+                    Margin="30,10,10,10"
+                    x:Name="botonce"
+                    BackgroundColor="white"/>
+            <Button Text="VER FRAME" 
+                    TextColor="Black"
+                    Margin="30,10,10,10"
+                    x:Name="botonframe"
+                    BackgroundColor="white"/>
+            <Button Text="VER ALERTAS" 
+                    TextColor="Black"
+                    Margin="30,10,10,10"
+                    x:Name="botonalerts"
+                    BackgroundColor="white"/>
+            <Frame IsVisible="false"
+                    HasShadow="True" 
+                   x:Name="framee"
+                   CornerRadius="20" 
+                   VerticalOptions="CenterAndExpand"
+                   BorderColor="Black">
+                <Label Text="Soy Un frame"/>
+            </Frame>
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

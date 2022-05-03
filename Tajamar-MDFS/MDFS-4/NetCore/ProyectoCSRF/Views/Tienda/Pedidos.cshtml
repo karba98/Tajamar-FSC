@@ -1,0 +1,12 @@
+﻿@model String[]
+<h1>Pedidos</h1>
+<hr/>
+@foreach(String producto in Model)
+{
+    <ul class="list-group-horizontal">
+        <li class="list-group-item">
+            <a>@producto</a>
+        </li>
+    </ul>
+} 
+<h4>Enviar a <span style="color:blue">@ViewBag.Direccion</span></h4>

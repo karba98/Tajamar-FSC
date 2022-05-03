@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SimpleLibreriaCochesCutrona</id>
+    <version>1.0.0</version>
+    <authors>Alumno Tajamar</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Es una libreria de coches totalmente absurda, sin más, no sirve para nada, solo se que seguimos con COVID y mi gato se llama Bigotes.</description>
+    <releaseNotes>Version 1 y no se si habrá más</releaseNotes>
+    <tags>Coches,Cars,COVID,Simple,absurda</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="E:\MCSD\MDFS\MDFS-5\NuGet\CochesNuget\bin\Release\netstandard2.0\CochesNuget.dll" target="lib\netstandard2.0\CochesNuget.dll" />
+  </files>
+</package>

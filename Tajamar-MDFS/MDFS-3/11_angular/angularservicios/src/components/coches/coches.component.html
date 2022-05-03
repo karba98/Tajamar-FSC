@@ -1,0 +1,7 @@
+<h1>Coches:</h1>
+<div *ngFor="let coche of coches">
+    <img style="width:400px;height:300px" src ="{{coche.imagen}}" alt ="{{coche.imagen}}"/>
+    <h2>{{coche.marca}} {{coche.modelo}}</h2>
+    <p>Conductor: {{coche.conductor}}</p>
+    
+</div>

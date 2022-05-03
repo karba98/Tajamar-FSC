@@ -1,0 +1,15 @@
+﻿@{
+    List<String> especialidades = ViewBag.especialidades as List<String>;
+}
+<h1>Modioficar salario doctores por especialidad (Stored procedure)</h1>
+<form method="post">
+    <select name="espe">
+        @foreach (String s in especialidades)
+        {
+            <option>@s</option>
+        }
+    </select>
+    <input type="number" name="incremento" palceholder="Incremento salarial" />
+    <button type="submit">Modificar</button>
+</form>
+<hr />

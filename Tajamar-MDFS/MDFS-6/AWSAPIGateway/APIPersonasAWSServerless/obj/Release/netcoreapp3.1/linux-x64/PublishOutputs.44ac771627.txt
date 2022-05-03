@@ -1,0 +1,7 @@
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\bin\Release\netcoreapp3.1\publish\APIPersonasAWSServerless.dll
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\bin\Release\netcoreapp3.1\publish\APIPersonasAWSServerless.deps.json
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\bin\Release\netcoreapp3.1\publish\APIPersonasAWSServerless.runtimeconfig.json
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\bin\Release\netcoreapp3.1\publish\APIPersonasAWSServerless.pdb
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.APIGatewayEvents.dll
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Core.dll
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Serialization.SystemTextJson.dll

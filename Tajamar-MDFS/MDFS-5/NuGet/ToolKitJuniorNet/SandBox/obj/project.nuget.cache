@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "kVWK28krWuk7wU5ZieuIl7wW1zBK9mKW4/53Peyq/mn8tmA4NoizIA6C5Knny18ckWGHXeOUKEJU2mGtqmFFZw==",
+  "success": true,
+  "projectFilePath": "E:\\MCSD\\MDFS\\MDFS-5\\NuGet\\ToolKitJuniorNet\\SandBox\\SandBox.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\raulc\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\raulc\\.nuget\\packages\\toolkitnet\\1.0.1\\toolkitnet.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

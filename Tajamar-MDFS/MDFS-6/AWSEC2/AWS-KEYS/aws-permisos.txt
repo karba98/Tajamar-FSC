@@ -1,0 +1,15 @@
+A cada .pem cambiar:
+
+
+-Atributos/Solo lectura
+
+-Seguridad
+-Opciones avanzadas
+-Deshabilitar herencia (toda)
+-Agregar
+-Mi usuairo de windows
+-Control total
+
+-Buscar comando para conectarse en CMD o Bash 
+ en AWS Console/EC2(La region donde tengamos la máquina)
+-/miEC2/Conectarse/ClienteSSH

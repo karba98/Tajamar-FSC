@@ -1,0 +1,22 @@
+<h1>Libreria de comics:</h1>
+
+<app-comics-insert (addComic)="addComic($event)"></app-comics-insert>
+<div id="fondo" style="background-color: floralwhite;padding:10px">
+    <div id="favorito" *ngIf="favorito!=null">
+        <hr/>
+        <h2 style="color:blue">{{favorito.nombre}}</h2>
+        <img  alt="{{favorito.imagen}}"
+        src="{{favorito.imagen}}"
+        style="width:200px;height:290px">
+        <h4>{{favorito.descripcion}}</h4>
+    </div>
+    <hr/>
+    <div style="display:inline" *ngFor="let comic of comics">
+        <app-comics-comic style="float:left" [comic]="comic" (addFav)="addFav($event)"
+        (delete)="delete($event)"
+    ></app-comics-comic>
+    </div>
+</div>
+
+
+

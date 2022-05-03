@@ -1,0 +1,32 @@
+﻿@model List<String>
+@{
+    ViewData["Title"] = "ListFiles";
+}
+
+<h1>Ficheros del Bucket</h1>
+<hr />
+@if (Model != null)
+{
+    <table class="table-hover">
+        <thead>
+            <tr>
+                <th>Fichero</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (String file in Model)
+            {
+                <tr>
+                    <td>@file</td>
+                    <td>
+                        <a asp-action="GetFile" asp-route-filename="@file">Download</a> | 
+                        <a asp-action="DeleteFile" asp-route-filename="@file">Eliminar</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+}

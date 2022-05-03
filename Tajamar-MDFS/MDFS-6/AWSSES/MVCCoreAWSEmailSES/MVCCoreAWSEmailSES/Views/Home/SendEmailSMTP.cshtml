@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "SendEmailSMTP";
+}
+
+<h1>Enviar mensajes SES AWS por Simple Mail Transfer Protocol</h1>
+<hr/>
+<h4>@ViewBag.Enviado</h4>
+<hr/>
+<form method="post">
+    <input placeholder="Asunto"class="form-control"type="text" name="asunto" /><br/>
+    <textarea placeholder="Mensaje" class="form-control" name="message" ></textarea><br/>
+    <button class="btn btn-success" type="submit">Enviar</button>
+</form>
+

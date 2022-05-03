@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PaginasBinding.Views.ListNumerosColores"
+             xmlns:models="clr-namespace:PaginasBinding.Models"
+             xmlns:converters ="clr-namespace:PaginasBinding.Converters">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ConverterNumeros 
+                x:Key="converternumeros" 
+                ColorNegativo="Red" 
+                ColorPositivo="Green"/>
+            <converters:ConverterImages
+                x:Key="converterimages"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView HasUnevenRows="true" ItemsSource="{Binding Numeros}">
+                <ListView.BindingContext>
+                    <models:ListaNumeros/>
+                </ListView.BindingContext>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout
+                                BackgroundColor="Aquamarine"
+                                Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+                                Margin="10" 
+                                Padding="10">
+                                <Label Text="{Binding Valor, StringFormat=Numero: {0}} "
+                                   TextColor="{Binding Valor,Converter={StaticResource converternumeros}}"
+                                   FontSize="30" 
+                                   />
+                                <Image HorizontalOptions="EndAndExpand" 
+                                       HeightRequest="30" WidthRequest="30"
+                                       Source="{Binding Valor, Converter={StaticResource converterimages}}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

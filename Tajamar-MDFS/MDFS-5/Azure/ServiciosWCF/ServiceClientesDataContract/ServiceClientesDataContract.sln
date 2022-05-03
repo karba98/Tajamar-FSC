@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceClientesDataContract", "ServiceClientesDataContract.csproj", "{D9DC0EAD-EE33-4146-A15E-AD714CE4564E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HostServiceClientesDataContract", "..\HostServiceClientesDataContract\HostServiceClientesDataContract.csproj", "{9AB14F89-1EF4-4797-86F7-60D36DBC0728}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9DC0EAD-EE33-4146-A15E-AD714CE4564E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9DC0EAD-EE33-4146-A15E-AD714CE4564E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9DC0EAD-EE33-4146-A15E-AD714CE4564E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9DC0EAD-EE33-4146-A15E-AD714CE4564E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AB14F89-1EF4-4797-86F7-60D36DBC0728}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AB14F89-1EF4-4797-86F7-60D36DBC0728}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AB14F89-1EF4-4797-86F7-60D36DBC0728}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB14F89-1EF4-4797-86F7-60D36DBC0728}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F13CF321-231E-483D-908E-E8A44244596B}
+	EndGlobalSection
+EndGlobal

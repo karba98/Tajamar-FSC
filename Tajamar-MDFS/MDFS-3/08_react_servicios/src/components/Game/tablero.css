@@ -1,0 +1,46 @@
+#tablero{
+    box-shadow: 0 10px 10px -6px rgba(0, 0, 0, .6);
+    border-radius: 3px;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    margin-top: 30px;
+}
+.imagen{
+    width:25px;
+    height: 25px;
+}
+.marcador{
+    text-shadow: 10cm;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    box-shadow: 0 10px 10px -6px rgba(0, 0, 0, .6);
+    border-radius: 3px;
+    width: 600px;
+    margin: auto;
+    margin-top: 30px;
+}
+#tablero{
+    margin-bottom: 30px;
+}
+
+#tablero td{
+    color: white;
+    font-size: smaller;
+    margin:5%;
+    
+}
+.aquaButton{
+    background-color: aqua;
+}
+.greyButton{
+    background-color: grey;
+}
+.scores{
+    margin-right:auto;
+    margin-top: 30px;
+    padding-left:30px;
+    background-color:black;
+    color:white;
+}

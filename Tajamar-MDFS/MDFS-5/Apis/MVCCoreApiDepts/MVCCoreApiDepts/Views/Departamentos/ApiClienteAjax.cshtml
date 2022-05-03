@@ -1,0 +1,72 @@
+﻿<h1>Api Departamentos Azure Ajax</h1>
+<hr />
+<script src="~/js/cruddepartamentos_ext.js"></script>
+@section scripts{
+    <script>
+        var url = "https://apidepartamentoscrudrc.azurewebsites.net/";
+        $(document).ready(function () {
+            cargarDepartamentos();
+
+            $("#btneliminar").click(function () {
+                var id = $("#cajaid").val();
+                eliminarDepartamentoAsync(id, function () {
+                    cargarDepartamentos();
+                });
+            });
+            $("#btnmodificar").click(function () {
+               
+                var id = parseInt($("#cajaid").val());
+                var nombre = $("#cajanombre").val();
+                var localidad = $("#cajalocalidad").val();
+                var json = convertirDeptJson(id, nombre, localidad);
+                var method = "PUT";
+                AtackDepartamentoAsync(json, method, function () {
+                    cargarDepartamentos();
+                });
+            });
+
+            $("#btninsertar").click(function () {
+                var id = parseInt($("#cajaid").val());
+                var nombre = $("#cajanombre").val();
+                var localidad = $("#cajalocalidad").val();
+                var json = convertirDeptJson(id, nombre, localidad);
+                var method = "POST";
+                AtackDepartamentoAsync(json, method, function () {
+                    cargarDepartamentos();
+                });
+            });
+        });
+
+        function cargarDepartamentos() {
+            getTablaDepartamentosAsync(function (data) {
+                $("#tabladept tbody").html(data);
+            });
+    }
+    </script>
+}
+
+<form class="form-group" method="post">
+    <input class="form-control" id="cajaid" type="number" placeholder="NUMERO" />
+    <button style="width:100%" class="btn btn-danger" id="btneliminar" type="button">ELIMINAR</button>
+    <input class="form-control" id="cajanombre" type="text" placeholder="NOMBRE" />
+    <input class="form-control" id="cajalocalidad" type="text" placeholder="LOCALIDAD" />
+    <button style="width:100%" class="btn btn-info" id="btninsertar" type="button">AÑADIR</button><br />
+    <button style="width:100%" class="btn btn-warning" id="btnmodificar" type="button">MODIFICAR</button>
+
+</form>
+<hr />
+<table class="table table-hover table-warning" id="tabladept">
+    <thead>
+        <tr>
+            <th>NUMERO</th>
+            <th>NOMBRE</th>
+            <th>LOCALIDAD</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Cargando...</td>
+        </tr>
+        
+    </tbody>
+</table>

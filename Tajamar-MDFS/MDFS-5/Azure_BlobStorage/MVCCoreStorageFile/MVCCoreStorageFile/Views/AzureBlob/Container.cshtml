@@ -1,0 +1,42 @@
+﻿
+@model List<Blob>
+@section csss{
+    <style>
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+    </style>
+}
+<h1>Container</h1>
+<hr />
+<form method="post" enctype="multipart/form-data">
+    <input type="text" name="container" value="@ViewBag.Container" hidden />
+    <input type="file" name="file" />
+    <button class="btn btn-warning" type="submit">Subir</button>
+</form>
+<br/>
+<a style="color:red">@ViewBag.Mensaje</a>
+<hr />
+
+<div>
+    <div class="wrapper">
+
+        @foreach (Blob s in Model)
+        {
+        <div>
+            <a asp-action="Delete" asp-route-fileName="@s.Nombre"
+               asp-route-containerName="@ViewBag.Container"
+               class="btn btn-danger">
+                X
+            </a>
+            <img href="@s.Uri" style="width:200px;height:200px" src="@s.Uri" /><br />
+
+        </div>
+        }
+    </div>
+</div>
+
+
+

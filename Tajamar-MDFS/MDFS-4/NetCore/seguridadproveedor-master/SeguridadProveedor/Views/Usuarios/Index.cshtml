@@ -1,0 +1,16 @@
+﻿@inject  UserManager<IdentityUser> UserManager
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Perfil de Usuario</h1>
+<h1>
+    Bienvenido @UserManager.GetUserName(User) !!
+</h1>
+<ul>
+    @foreach(var claim in User.Claims)
+    {
+        <li>@claim.Value</li>
+    }
+</ul>

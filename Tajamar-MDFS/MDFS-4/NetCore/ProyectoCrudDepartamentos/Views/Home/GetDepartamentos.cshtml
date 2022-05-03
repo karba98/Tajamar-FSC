@@ -1,0 +1,34 @@
+﻿@model List<Departamento>
+<h1>Departamentos</h1>
+<hr />
+@if (Model != null)
+{
+    @Html.ActionLink("+ Crear Nuevo", "Create", "Home")
+    <br/>
+    <table class="table table-responsive-sm">
+        <thead style="background-color:blueviolet;color:white">
+            <tr>
+                <td>Departamento</td>
+                <td>Numero</td>
+                <td>Localidad</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody style="background-color:lavender">
+            @foreach (Departamento dep in Model)
+            {
+                <tr>
+                    <td>@dep.Dnombre</td>
+                    <td>@dep.Dept_no</td>
+                    <td>@dep.Loc</td>
+                    <td>@Html.ActionLink("Editar", "Edit", "Home", new { id = dep.Dept_no })</td>
+                    <td>@Html.ActionLink("Borrar", "Delete", "Home",new { id= dep.Dept_no})</td>
+                    <td>@Html.ActionLink("Detalles", "Detalles", "Home", new { id = dep.Dept_no })</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}

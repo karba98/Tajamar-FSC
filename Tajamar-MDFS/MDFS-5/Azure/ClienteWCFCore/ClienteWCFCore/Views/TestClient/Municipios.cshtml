@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Municipios";
+}
+@model List<String>
+    <a
+       asp-controller="TestClient"
+       asp-action="Provincias">Volver a Provincias<span class="sr-only">(current)</span></a>
+    <h1>Municipios de @ViewBag.Provincia</h1>
+
+    <ul>
+        @foreach (String municipio in Model)
+        {
+            <li><a>@municipio</a></li>
+        }
+    </ul>

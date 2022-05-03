@@ -1,0 +1,54 @@
+<div *ngIf="status=='activo',then banner" >
+    <div *ngIf="status=='no',then bannermal" ></div>
+
+</div>
+<form class="form-inline" style="padding: 15px;" #formulario *ngIf="funciones!=[]">
+    <button class="btn btn-dark" (click)="setIncrement()">Incrementar</button>
+    <select class="select custom-select-sm" #funcion name='funcion'>
+        <option *ngFor="let funcion of funciones">{{funcion}}</option>
+    </select>
+    <input type="number" #incremento name='incremento'/>€
+   
+</form>
+    <hr/>
+    <h1>Empleados modificados:</h1>
+    <div *ngIf="empleados!=[]">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>ID Hospital</td>
+                    <td>Apellido</td>
+                    <td>Funcion</td>
+                    <td>Salario</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let empleado of empleados"
+                [routerLink]="['/detalles',empleado.idEmpleado]" >
+                    <td>{{empleado.idEmpleado}}</td>
+                    <td>{{empleado.idHospital}}</td>
+                    <td>{{empleado.apellido}}</td>
+                    <td>{{empleado.funcion}}</td>
+                    <td>{{empleado.salario}}€</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <ng-template #banner >
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Perfecto</h4>
+            <p>Se ha modificado con exito el salario de {{funcion.nativeElement.value}}</p>
+            <hr>
+            <p class="mb-0"></p>
+          </div>
+    </ng-template>
+    <ng-template #bannermal >
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Error</h4>
+            <p>ha habido un error al modificar el salario de la funcion seleccionadad</p>
+            <hr>
+            <p class="mb-0"></p>
+          </div>
+    </ng-template>

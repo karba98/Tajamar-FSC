@@ -1,0 +1,82 @@
+﻿@model IEnumerable<MvcCore.Models.Empleado>
+
+@{
+    ViewData["Title"] = "SeleccionMultiple";
+}
+
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<hr />
+<form method="post">
+    <nav class="nav">
+        <ul class="list-group list-group-horizontal">
+            @foreach (Departamento dep in ViewBag.Departamentos as List<Departamento>)
+            {
+                <li class="list-group-item">
+                    <input type="checkbox" name="iddepartamentos" class="form-check-inline" value="@dep.Numero" />
+                    @dep.Nombre
+                </li>
+            }
+        </ul>
+    </nav>
+    
+    <button type="submit" class="btn btn-success my-1">Mostrar Empleados</button>
+
+</form>
+<hr/>
+<h1>Seleccion Multiple Empleados</h1>
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.IDEmpelado)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Apellido)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Oficio)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Salario)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Dept_no)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IDEmpelado)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Apellido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Oficio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Salario)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dept_no)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}

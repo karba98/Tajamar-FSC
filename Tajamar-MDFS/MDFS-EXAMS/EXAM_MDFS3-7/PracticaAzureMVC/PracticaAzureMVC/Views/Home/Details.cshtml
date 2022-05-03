@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Personaje>
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Personajes</h1>
+<hr />
+
+@if (Model != null)
+{
+
+    @foreach (var item in Model)
+    {
+        <h3>@item.Nombre</h3>
+        <div>
+            <a class="btn btn-warning" asp-action="Edit" asp-controller="Home" asp-route-id="@item.IdPersonaje">
+                EDITAR
+            </a>
+        </div>
+        <div>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    Imagen
+                </dt>
+                <dd class="col-sm-10">
+                    <img style="width:300px;height:300px" src="@item.Imagen" />
+                </dd>
+                <dt class="col-sm-2">
+                    Nombre
+                </dt>
+                <dd class="col-sm-10">
+                    @item.Nombre
+                </dd>
+                <dt class="col-sm-2">
+                    ID
+                </dt>
+                <dd class="col-sm-10">
+                    @item.IdPersonaje
+                </dd>
+                <dt class="col-sm-2">
+                    IdSerie
+                </dt>
+                <dd class="col-sm-10">
+                    @ViewBag.Serie
+                </dd>
+            </dl>
+        </div>
+        <hr/>
+    }
+        <div>
+
+            <a asp-action="Index">Back to List</a>
+        </div>
+
+}

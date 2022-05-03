@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "P8GUpYQND+EBfv8HVy+Cu+ypxBTI4aTzZS4feO3f59D55K59uO88LFwbUfoiKZ00S0nxir9rV3Qp42StArI5dw==",
+  "success": true,
+  "projectFilePath": "E:\\MCSD\\MDFS\\MDFS-4\\NetCore\\PrimerMVCCore\\PrimerMVCCore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\raulc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\raulc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

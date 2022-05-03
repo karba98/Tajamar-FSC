@@ -1,0 +1,17 @@
+{ 
+	"clientes": 
+    [
+		{"nombre":"DELORIAN"},
+		{"nombre":"RICARDO TUBBS"},
+		{"nombre":"JOHNNY UTAH"},
+		{"nombre":"ISCO ALARCON"},
+		{"nombre":"OPTIMUS PRIME"},
+		{"nombre":"MICHAEL SCOFIELD"},
+		{"nombre":"CORONEL BRADDOCK"},
+		{"nombre":"MADMARTIGAN"},
+		{"nombre":"JESUS QUINTANA"},
+		{"nombre":"MICHAEL KNIGHT"},
+		{"nombre":"MARTY MACFLY"}
+	]
+}
+

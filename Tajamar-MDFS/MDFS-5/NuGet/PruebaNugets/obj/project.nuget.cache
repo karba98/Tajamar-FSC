@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "aDFvK7huQKov4VbPc6WXP9QkY2fwaZQk1iFsgHRBWqifIjQQLu5HDHKbXSv+005MR3fmarGI4xaaKSlYlivHUw==",
+  "success": true,
+  "projectFilePath": "E:\\MCSD\\MDFS\\MDFS-5\\NuGet\\PruebaNugets\\PruebaNugets.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\raulc\\.nuget\\packages\\apipersonajesrc\\1.0.0\\apipersonajesrc.1.0.0.nupkg.sha512",
+    "C:\\Users\\raulc\\.nuget\\packages\\newtonsoft.json\\13.0.1-beta1\\newtonsoft.json.13.0.1-beta1.nupkg.sha512",
+    "C:\\Users\\raulc\\.nuget\\packages\\northwindnugetcustomersrc\\1.0.4\\northwindnugetcustomersrc.1.0.4.nupkg.sha512",
+    "C:\\Users\\raulc\\.nuget\\packages\\simplelibreriacochescutrona\\2.0.0\\simplelibreriacochescutrona.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

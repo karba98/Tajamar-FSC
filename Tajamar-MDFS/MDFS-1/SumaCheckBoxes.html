@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cambiador de cbxn</title>
+
+</head>
+
+<style>
+    #res {
+        color: blue;
+    }
+</style>
+
+</style>
+<body>
+    <h1>Sumar checkboxes</h1>
+    <form name="formu">
+        <input type="range" min="0" max="10" value="0" name="repe" />
+        <a id="nr"></a>
+        <br />
+        <div id="cajaCbxs" name="caja"></div>
+        <h1 id="res"></h1>
+    </form>
+</body>
+<script type="text/javascript">
+
+    var suma = 0;
+    window.onload = function () {
+        var range = document.formu.repe;
+        console.log(range.value);
+        document.getElementById("nr").innerText = range.value;
+        document.getElementById("res").innerText = "La suma es: "+suma;
+    }
+    document.formu.repe.addEventListener("input", function () {
+        document.getElementById("res").innerText = "La suma es: "+0;
+        var range = document.formu.repe;
+        var checkboxes = document.getElementById("cajaCbxs");
+        checkboxes.innerText = "";
+        document.getElementById("nr").innerText = range.value;
+        for (var i = 0; i < parseInt(range.value); i++) {
+            var cbx = document.createElement("input");
+            cbx.setAttribute("type", "checkbox")
+            cbx.className = "cajita";
+            cbx.style.marginRight = "15px";
+            cbx.name = "cx";
+            var num = parseInt(Math.random() * 99);
+            cbx.value = num;
+            var text = document.createElement("label");
+            text.innerText = num;
+            checkboxes.append(text);
+            checkboxes.appendChild(cbx);
+
+            cbx.addEventListener("click", function () {
+                
+                if (this.checked) {
+                    suma += parseInt(this.value);
+                } else {
+                    suma -= parseInt(this.value);
+                }
+                console.log(suma);
+                document.getElementById("res").innerText = "La suma es: "+suma;
+            });
+
+
+        }
+    });
+
+
+</script>
+</html>
+

@@ -1,0 +1,40 @@
+﻿@section Scripts{ 
+<script>
+    $(document).ready(function () {
+
+        var url = "https://apipersonasrc.azurewebsites.net/api/Personas";
+        $.ajax({
+            url: url,
+            method: "GET",
+            dataType: "json",
+            success: function (data) {
+                var html = "";
+                $.each(data, function (indice, persona) {
+                    html += "<tr>";
+                    html += "<td>" + persona.nombre + "</td>";
+                    html += "<td>" + persona.edad + " años </td>";
+                    html += "<td>" + persona.idPersona + "</td>";
+                    html += "</tr>";
+                });
+                $("#tablapersonas tbody").html(html);
+            }
+        });
+    });
+</script>
+}
+
+<h1>Personas</h1>
+<hr/>
+
+<table class="table table-hover" id="tablapersonas">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>ID</th>
+        </tr>
+    </thead>
+    <tbody >
+
+    </tbody>
+</table>

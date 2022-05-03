@@ -1,0 +1,63 @@
+app.Modules.ts:
+
+import { FormsModule} from  '@angular/forms';
+
+imports:[FormsModule]
+
+CUALQUIER HTML:
+POR ngMODELS
+
+1)Crear Model
+export class Comic{
+    constructor(
+        public nombre:string,
+        public imagen:string,
+        public descripcion:string
+    ){}
+}
+
+2)html
+<form  #formu="ngForm" (ngSubmit)="metodo() " > 
+    <input name="nombre" 
+    [(ngModel)]="comic.nombre"/><label>Nombre: </label><br/>
+    <input name="imagen" 
+    [(ngModel)]="comic.imagen"/> <label>URL Imagen: </label><br/>
+    <input name="descripcion"
+    [(ngModel)]="comic.descripcion"/><label>Descripción: </label><br/><br/>
+    <button>Insertar</button>
+    <br/>
+</form>
+
+3)Componente
+
+public comic :any;
+  constructor() { 
+    this.comic = {
+      nombre:"",
+      imagen:"",
+      descripcion:""
+    }
+    
+  }
+
+POR REFERENCIA
+1)componente
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+...
+ @ViewChild("cajanumero1") cajanumero1: ElementRef;
+...
+metodo(){
+	 var num1 = this.cajanumero1.nativeElement.value;
+}
+2)HTML
+<h1>Formularios por Referencia</h1>
+<form #sumarForm="ngForm">
+    <label for="cajanumero1">Número 1: </label>
+    <input type="number" name="cajanumero1"
+    #cajanumero1/><br/>
+    <label for="cajanumero2">Número 2: </label>
+    <input type="number" name="cajanumero2"
+    #cajanumero2/><br/>
+    <button (click)="sumarNumeros()">Sumar números</button>
+</form>
+<h1 style="color:fuchsia">La suma es: {{ suma }}</h1>

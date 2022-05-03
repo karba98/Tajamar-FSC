@@ -1,0 +1,4 @@
+API KEY
+oy2mf6dgyofhzwcsbvnqn37ead32drnuzp7ecngdjrtz4e
+
+nuget push {archivo.nupkg} oy2mf6dgyofhzwcsbvnqn37ead32drnuzp7ecngdjrtz4e -source https://api.nuget.org/v3/index.json

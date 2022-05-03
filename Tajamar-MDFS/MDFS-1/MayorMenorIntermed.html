@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Mayor, menor, intermedio</title>
+</head>
+<body>
+    <a>Numero 1: </a>
+    <input type="number" id="n1" />
+    <a id="may"></a>
+    <br />
+    <a>Numeor 2: </a>
+    <input type="number" id="n2" />
+    <a id="men"></a>
+    <br />
+    <a>Numero 3: </a>
+    <input type="number" id="n3" />
+    <a id="med"></a>
+    <br />
+    <br />
+    <button type="button" onclick="mayMenInt()">Evaluar</button>
+    <br />
+</body>
+<script>
+    function mayMenInt() {
+        var n1 = parseInt(document.getElementById("n1").value);
+        var n2 = parseInt(document.getElementById("n2").value);
+        var n3 = parseInt(document.getElementById("n3").value);
+        var mayor = 0;
+        var menor = 0;
+
+        //Mayor
+        if (n1 > n2 && n1 > n3) {
+            mayor = n1;
+        }
+        else if (n2 > n1 && n2 > n3) {
+            mayor = n2;
+        }
+
+        else mayor == n3;
+        document.getElementById("may").innerText = "Numeor mayor: "+mayor;
+
+        //Menor
+        if (n1 < n2 && n1 < n3) {
+            menor = n1;
+        }
+        else if (n2 < n1 && n2 < n3) {
+            menor = n2;
+        }
+
+        else menor = n3
+        document.getElementById("men").innerText = "Numero menor: " + menor;
+
+        //Media
+        var medio = parseInt((n1 + n2 + n3) -menor -mayor);
+        document.getElementById("med").innerText = "Medio: " + medio;
+
+    }
+</script>
+</html>

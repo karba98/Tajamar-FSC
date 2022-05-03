@@ -1,0 +1,18 @@
+﻿<h1>Correos AWS</h1>
+<hr/>
+<nav>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <a asp-controller="Home" asp-action="SendEmailSMTP">
+            Enviar mensaje por SMTP SES</a>
+        </li>
+        <li class="list-group-item">
+            <a asp-controller="Home" asp-action="SendEmailAWSSES">
+            Enviar mensaje por usuario IAM SES</a>
+        </li>
+        <li class="list-group-item">
+            <a asp-controller="Home" asp-action="SendEmailFichero">
+            Enviar mensaje por usuario IAM SES con fichero</a>
+        </li>
+    </ul>
+</nav>

@@ -1,0 +1,12 @@
+﻿<h1>Crear nuevo registro de Hospital</h1>
+@Html.ActionLink("Volver a Hospitales", "index", "Hospitales")
+<hr/>
+<form method="post">
+    <input type="text" name="nombre" placeholder="Nombre" /><br />
+    <input type="text" name="direccion" placeholder="Direccion" /><br />
+    <input type="text" name="camas" placeholder="Camas" /><br />
+    <input type="number" name="id" placeholder="ID Registro" /><br />
+    <input type="text" name="telefono" placeholder="Telefono" /><br />
+    <button class="btn btn-success" type="submit">Registrar Hospital</button>
+</form>
+<h3 style="color:green">@ViewBag.Mensaje</h3>

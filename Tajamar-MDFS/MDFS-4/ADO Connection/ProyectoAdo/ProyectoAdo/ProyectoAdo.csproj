@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E732D49E-BA30-4E0C-8D5E-C1E50CBF120B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProyectoAdo</RootNamespace>
+    <AssemblyName>ProyectoAdo</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\EmpleadosContext.cs" />
+    <Compile Include="Data\EnfermoContext.cs" />
+    <Compile Include="Data\PlantillaContext.cs" />
+    <Compile Include="Empleadosplantilla.cs" />
+    <Compile Include="Form01PrimerAdo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form01PrimerAdo.Designer.cs">
+      <DependentUpon>Form01PrimerAdo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form02BuscadorEmp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form02BuscadorEmp.Designer.cs">
+      <DependentUpon>Form02BuscadorEmp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form03EliminarEnfermo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form03EliminarEnfermo.Designer.cs">
+      <DependentUpon>Form03EliminarEnfermo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form04CambiarSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form04CambiarSala.Designer.cs">
+      <DependentUpon>Form04CambiarSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form05Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form05Empleados.Designer.cs">
+      <DependentUpon>Form05Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form06MensajesServidor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form06MensajesServidor.Designer.cs">
+      <DependentUpon>Form06MensajesServidor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form07ParametrosSalida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form07ParametrosSalida.Designer.cs">
+      <DependentUpon>Form07ParametrosSalida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form08HospitalesPlantillaYDocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form08HospitalesPlantillaYDocs.Designer.cs">
+      <DependentUpon>Form08HospitalesPlantillaYDocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form09Enfermos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form09Enfermos.Designer.cs">
+      <DependentUpon>Form09Enfermos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form10ClasesEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10ClasesEmpleado.Designer.cs">
+      <DependentUpon>Form10ClasesEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form11HospitalesPlantilla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11HospitalesPlantilla.Designer.cs">
+      <DependentUpon>Form11HospitalesPlantilla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Empleado.cs" />
+    <Compile Include="Models\EmpleadoPlantilla.cs" />
+    <Compile Include="Models\Enfermo.cs" />
+    <Compile Include="Models\Hospital.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form01PrimerAdo.resx">
+      <DependentUpon>Form01PrimerAdo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form02BuscadorEmp.resx">
+      <DependentUpon>Form02BuscadorEmp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form03EliminarEnfermo.resx">
+      <DependentUpon>Form03EliminarEnfermo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form04CambiarSala.resx">
+      <DependentUpon>Form04CambiarSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form05Empleados.resx">
+      <DependentUpon>Form05Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form06MensajesServidor.resx">
+      <DependentUpon>Form06MensajesServidor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form07ParametrosSalida.resx">
+      <DependentUpon>Form07ParametrosSalida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form08HospitalesPlantillaYDocs.resx">
+      <DependentUpon>Form08HospitalesPlantillaYDocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form09Enfermos.resx">
+      <DependentUpon>Form09Enfermos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form10ClasesEmpleado.resx">
+      <DependentUpon>Form10ClasesEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form11HospitalesPlantilla.resx">
+      <DependentUpon>Form11HospitalesPlantilla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

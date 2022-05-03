@@ -1,0 +1,14 @@
+<div style="padding:20px">
+    <form #formulario>
+        <select #serie name="serie" class="nav-link dropdown-toggle">
+            <option class="dropdown-menu">Selecciona serie</option>
+            <option *ngFor="let serie of series" value="{{serie.idSerie}}">{{serie.nombre}}</option>
+        </select>
+        <select #personaje name="personaje" class="nav-link dropdown-toggle">
+            <option class="dropdown-menu">Selecciona personaje</option>
+            <option *ngFor="let per of personajes" value="{{per.idPersonaje}}">{{per.nombre}}</option>
+        </select>
+        <br/>
+        <button (click)="insertar()" class="btn  btn-light">Mover a serie</button>
+    </form>
+</div>

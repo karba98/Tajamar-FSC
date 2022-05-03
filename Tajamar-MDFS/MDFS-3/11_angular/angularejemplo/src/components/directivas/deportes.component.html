@@ -1,0 +1,18 @@
+<h1>Ejemplo driectaivas:</h1>
+<h3>Numero deportes: {{sports.length}}</h3>
+<div *ngIf= "sports.length<=6; then deportesMenor6; else deportesMayor6">
+</div>
+<h4>El primer deporte es {{sports[0]}}</h4>
+<ul>
+    <li *ngFor="let deporte of sports; let i=index">
+        Posicion en array: {{i}} deporte: {{deporte}}
+    </li>
+</ul>
+
+<ng-template #deportesMayor6>
+    <h2>Tenemos más de 6 deportes</h2>
+</ng-template>
+
+<ng-template #deportesMenor6>
+    <h2>Tenemos menos de 6 deportes</h2>
+</ng-template>

@@ -1,0 +1,72 @@
+
+Amazon ClouFront => Para S3 de acceso muy frecuente 
+Amazon EMR
+IAM Policy Simulator
+IAM inline/managed policy
+Envelope encryption KMS -> Encriptar la master Key
+
+Amazon EMR -> Servicio Cluster para analisis de Big Data
+IAM inline/managed policy -> especificadas por aws y las creadas
+Envelope encryption KMS -> Encriptar la master Key
+>>>>>>> b6c41cf047cf455570bbb68aa85900e4ecec2c4f
+	1º Data Key encripts
+	2º Master key reencriptas
+
+
+
+Amazon kinesis firehose
+Amazon Kinesis Streams => Manejo de grandes cantidades de datos
+Amazon Cognito MFA vs Amazon IAM MFA
+AWS Glacier => S3 megaoptimizado para mas objetos, copias de seguridad, etc
+AWS X-Ray
+AWS STS
+AWS CloudTrail
+Amazon CloudFront 
+AWS Step functions
+Policy
+	Rolling
+	All at Once
+	Rolling With Additional batch
+	Inmutable
+SAM Template
+AWS SSM
+- ECS (CONTAINERS)
+AWS SYSTEM MANAGER PARAMETER STORE
+SQS Long/Short Polling
+- MemCache	        WriteThroug -> Cambia si cambia la BBDD
+- Elastic Cache Redis	Lazy Loading -> Le da igual los cambios en la BBDD
+
+SSL PassThrough vs SSL termination
+
+DynamoDb capacity units
+
+Capacity Units
+	Reads => GetItem, batchGetItem, Query, Scan
+
+	RCU
+		<4kb => 1CU
+		>4kb
+			Strong           2CU => 2kb 
+			eventually       1CU => 4kb
+			transactional    4CU => 4kb
+	WCU
+		1kb => 1CU..
+Elastic Beanstalk deployment methods
+Cognito sync
+Kinsesis Shards => Lectores de Fragmentos (nuemero de maquinas que leen)
+DynamoDb Accelerator
+RDS Read Replica
+Target Tracking Scaling policy
+Docker swarm
+service scheduler
+stepp scaling policy
+SSE-S·
+SSE-KMS
+SSE-C
+SSE SMK
+Amazon Cloud Formation
+Amazon Cognito Identity Pools vs user pools
+Roles y permisos ¿Cual prevalece sobre cual? Depende (Acceso IAM prevalece sobre roles)
+AWS SAM
+Architect pattern => Event driven, Client served driven, fan out driven, schedule driven
+Canary Release deployment

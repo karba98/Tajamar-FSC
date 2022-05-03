@@ -1,0 +1,1 @@
+aws kms encrypt --key-id ccacef8e-3ece-4a7f-b9eb-56515ee0ee89 --plaintext fileb://fichero.txt --output text --query CiphertextBlob > cifrado.txt

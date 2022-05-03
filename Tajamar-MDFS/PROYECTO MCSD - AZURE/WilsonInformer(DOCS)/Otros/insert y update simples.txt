@@ -1,0 +1,102 @@
+//public int InsertPartes(List<Parte> partes)
+        //{
+        //    int afectados = 0;
+        //    foreach (Parte p in partes)
+        //    {
+        //        try
+        //        {
+        //            command.Parameters.AddWithValue("@N_parte", p.N_parte);
+        //            command.Parameters.AddWithValue("@Envios", p.Envios);
+        //            command.Parameters.AddWithValue("@Bult", p.Bult);
+        //            command.Parameters.AddWithValue("@F_Albaran", p.F_Albaran);
+        //            command.Parameters.AddWithValue("@Orig", p.Orig);
+        //            command.Parameters.AddWithValue("@Dest", p.Dest);
+        //            command.Parameters.AddWithValue("@Propi", p.Propi);
+        //            command.Parameters.AddWithValue("@Serv", p.Serv);
+        //            command.Parameters.AddWithValue("@Abonado", p.Abonado);
+        //            command.Parameters.AddWithValue("@Tipo", p.Tipo);
+        //            command.Parameters.AddWithValue("@Estado", p.Estado);
+        //            command.Parameters.AddWithValue("@Gestor", p.Gestor);
+        //            command.Parameters.AddWithValue("@Resolucion", p.Resolucion);
+        //            command.Parameters.AddWithValue("@Fecha_parte", p.Fecha_parte);
+        //            command.Parameters.AddWithValue("@Accion", p.Accion);
+
+        //            command.CommandType = CommandType.Text;
+        //            String insert = "insert into partes values (" +
+        //                "@N_parte,@Envios,@Bult,@F_Albaran,@Orig,@Dest,@Propi,@Serv,@Abonado,@Tipo,@Estado,@Gestor,@Resolucion,@Fecha_parte,@Accion)";
+        //            command.CommandText = insert;
+        //            connection.Open();
+        //            afectados += command.ExecuteNonQuery();
+        //            command.Parameters.Clear();
+        //            connection.Close();
+
+        //        }
+        //        catch(Exception ex)
+        //        {
+        //            command.Parameters.Clear();
+        //            connection.Close();
+        //            String mensaje = ex.Message;
+        //            this.UpdatetParte(p);
+        //        }
+        //        finally
+        //        {
+        //            command.Parameters.Clear();
+        //            connection.Close();
+        //        }
+
+        //    }
+        //    return afectados;
+
+
+
+        //}
+        //public int UpdatetParte(Parte p)
+        //{
+        //    int afectados = 0;
+        //    try
+        //    {
+        //        command.Parameters.AddWithValue("@N_parte", p.N_parte);
+        //        command.Parameters.AddWithValue("@Envios", p.Envios);
+        //        command.Parameters.AddWithValue("@Bult", p.Bult);
+        //        command.Parameters.AddWithValue("@F_Albaran", p.F_Albaran);
+        //        command.Parameters.AddWithValue("@Orig", p.Orig);
+        //        command.Parameters.AddWithValue("@Dest", p.Dest);
+        //        command.Parameters.AddWithValue("@Propi", p.Propi);
+        //        command.Parameters.AddWithValue("@Serv", p.Serv);
+        //        command.Parameters.AddWithValue("@Abonado", p.Abonado);
+        //        command.Parameters.AddWithValue("@Tipo", p.Tipo);
+        //        command.Parameters.AddWithValue("@Estado", p.Estado);
+        //        command.Parameters.AddWithValue("@Gestor", p.Gestor);
+        //        command.Parameters.AddWithValue("@Resolucion", p.Resolucion);
+        //        command.Parameters.AddWithValue("@Fecha_parte", p.Fecha_parte);
+        //        command.Parameters.AddWithValue("@Accion", p.Accion);
+
+        //        command.CommandType = CommandType.Text;
+        //        String update = "update partes set " +
+        //            "Envios = @Envios,Bult = @Bult,F_Albaran = @F_Albaran,Orig = @Orig,Dest = @Dest,Propi = @Propi," +
+        //            "Serv = @Serv,Abonado = @Abonado,TIpo = @Tipo,Estado = @Estado,Gestor = @Gestor,Resolucion =@Resolucion," +
+        //            "Fecha_parte = @Fecha_parte,Accion = @Accion " +
+        //            "where N_parte = @N_parte";
+        //        command.CommandText = update;
+        //        connection.Open();
+        //        afectados += command.ExecuteNonQuery();
+        //        command.Parameters.Clear();
+        //        connection.Close();
+
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        String mensaje = ex.Message;
+        //    }
+        //    finally
+        //    {
+        //        command.Parameters.Clear();
+        //        connection.Close();
+        //    }
+
+
+        //    return afectados;
+
+
+
+        //}

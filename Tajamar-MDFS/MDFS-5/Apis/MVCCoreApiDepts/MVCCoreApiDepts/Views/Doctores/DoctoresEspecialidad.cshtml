@@ -1,0 +1,43 @@
+﻿@model List<Doctor>
+<h1>Doctores porr especialidad</h1>
+<hr />
+
+<form class="form-group" method="post">
+    <select class="form-control" name="especialidades" multiple>
+        @foreach (String especialidad in ViewBag.Especialidades)
+        {
+            <option value="@especialidad">@especialidad</option>
+        }
+    </select>
+    <button class="btn btn-warning" type="submit">Buscar</button>
+</form>
+<hr />
+@if (Model != null)
+{
+    <table class="table table-hover table-success">
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Hospital</th>
+                <th>Especialidad</th>
+                <th>Salario</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Doctor doc in Model)
+            {
+                <tr>
+                    <td>@doc.Apellido</td>
+                    <td>@doc.HospitalCod</td>
+                    <td>@doc.Especialidad</td>
+                    <td>@doc.Salario</td>
+                    <td>
+                        <a asp-action="Detalles" asp-controller="Doctores" asp-route-id="@doc.IdDoctor">Detalles</a> |
+                        <a asp-action="Delete" asp-controller="Doctores" asp-route-id="@doc.IdDoctor">X</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

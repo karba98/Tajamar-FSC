@@ -1,0 +1,36 @@
+﻿@model ProcedimientoEmpleadoHospital
+<h1>Empleados por Cigo Hospital (Procedimiento)</h1>
+<hr />
+<form method="post">
+    <input type="number" placeholder="Codigo Hospital" name="hcod"
+           class="form-floating" style="width:300px" />
+    <button type="submit" class="btn btn-secondary">Buscar</button>
+</form>
+@if (Model != null)
+{
+    <h3>Suma  Salarial: @Model.SumaSalarial €</h3>
+    <h3>Media Salarial: @Model.MediaSalarial €</h3>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Apellido</th>
+                <th>Salario</th>
+                <th>Funcion</th>
+                <th>Hospital</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (EmpleadoHospital emp in Model.Empleados)
+            {
+            <tr>
+                <td>@emp.IdEmpleado</td>
+                <td>@emp.Apellido</td>
+                <td>@emp.Salario €</td>
+                <td>@emp.funcion</td>
+                <td>@emp.Hospital</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}

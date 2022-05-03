@@ -1,0 +1,29 @@
+﻿@model List<APIPersonajesRC.Models.Personaje>
+
+<table>
+    <thead>
+        <tr>
+            <th>Imagen</th>
+            <th>Nombre</th>
+            <th>Detalles</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (APIPersonajesRC.Models.Personaje personaje in Model)
+        {
+            <tr>
+                <td>
+                    <img src="@personaje.Imagen" style="width:100px;height:100px"/>
+                </td>
+                <td>
+                    @personaje.Nombre
+                </td>
+                <td>
+                    <a asp-action="PersonajesDetalles"
+                       asp-controller="Home"
+                       asp-route-id="@personaje.IdPersonaje">Detalles</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

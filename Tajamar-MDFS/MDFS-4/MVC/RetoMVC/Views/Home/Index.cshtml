@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model List<RetoMVC.Models.Empleado>
+<div class="jumbotron">
+    <h1>Plantilla</h1>
+</div>
+@if (Model != null)
+{
+    foreach (RetoMVC.Models.Empleado emp in Model)
+    {
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2>@emp.Apellido</h2>
+                <p>
+                   @emp.Oficio
+                </p>
+                <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            </div>
+
+        </div>
+    }
+}

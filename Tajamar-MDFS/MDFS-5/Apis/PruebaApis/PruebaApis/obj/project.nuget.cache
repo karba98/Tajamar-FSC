@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "D4Z3hEbBUhF8NXrZkw1ZbvDGgoSg3c4RgPd/a2Eicjkj7EWUkmhvK2HPifXwgj+2Jex7ucaovbr5qXAbu+zP+w==",
+  "success": true,
+  "projectFilePath": "G:\\MCSD\\MDFS\\MDFS-5\\Apis\\PruebaApis\\PruebaApis\\PruebaApis.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Raul\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Raul\\.nuget\\packages\\toolkitnet\\1.0.1\\toolkitnet.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

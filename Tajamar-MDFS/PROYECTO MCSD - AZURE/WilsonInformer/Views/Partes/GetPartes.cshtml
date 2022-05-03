@@ -1,0 +1,248 @@
+﻿
+@model IPagedList<Parte>
+
+    <h1><b>Buscar Partes</b></h1>
+    @if (Model != null)
+    {
+
+        <hr />
+        <a class="btn btn-info" style="width:500px" href='@Url.Action("EntregadosEnGestion", "Partes",new { })'>Gestión - Entregados</a>
+        <a class="btn btn-info" style="width:500px" href='@Url.Action("Pendientes15", "Partes",new { })'>Gestión - Pendientes (15 dias atras)</a>
+        <form method="post">
+
+            <div class='col-md-3'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker7'>
+                        <hr />
+                    </div>
+                </div>
+            </div>
+            <input type="number" value="1" name="page" hidden />
+            <input class="form-control form-control-sm ml-3 w-75" style="float:left"
+                   type="text" placeholder="Nº Albaran"
+                   aria-label="Search" name="nalbaran" value="@ViewBag.searchValALB" />
+            <input class="form-control form-control-sm ml-3 w-75" style="float:left"
+                   type="text" placeholder="Nº Parte"
+                   aria-label="Search" name="nparte" value="@ViewBag.searchValPAR" />
+            <div class='col-md-3'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker7'>
+                        <hr />
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-3'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker6'>
+                        <h4>Fecha Albaran</h4>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-3'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker6'>
+                        <input class="form-control" id="date" name="dateFrom" placeholder="MM/DD/YYY" type="date" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-3'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker6'>
+                        <a>a</a>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-3'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker7'>
+                        <input id="date" class="form-control" name="dateTo" placeholder="MM/DD/YYY" type="date" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-3'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker7'>
+                        <hr />
+                    </div>
+                </div>
+            </div>
+
+
+            <button type="submit" class="btn btn-info" style="width:75%">Buscar</button>
+        </form>
+        <hr/>
+        <p><b>Partes: </b>@ViewBag.Resultados</p>
+        <hr/>
+        @*<p>@ViewBag.Resultados</p><br />*@
+        @if (ViewBag.FilteredFecha != null)
+        {
+            <script src="https://code.highcharts.com/highcharts.js"></script>
+            <script src="https://code.highcharts.com/modules/exporting.js"></script>
+            <script src="https://code.highcharts.com/modules/export-data.js"></script>
+            <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+            <figure class="highcharts-figure">
+                <div id="container"></div>
+                
+            </figure>
+            <script>
+                Highcharts.chart('container', {
+                    chart: {
+                        type: 'line'
+                    },
+                    title: {
+                        text: 'Evolución'
+                    },
+                    
+                    xAxis: {
+                        categories:@Html.Raw(ViewBag.Fechas)
+                    },
+                    yAxis: {
+                        title: {
+                            text: 'Nº Partes'
+                        }
+                    },
+                    plotOptions: {
+                        line: {
+                            dataLabels: {
+                                enabled: true
+                            },
+                            enableMouseTracking: false
+                        }
+                    },
+                    series: [{
+                        name: 'Partes',
+                        data: @Html.Raw(ViewBag.Npartes)
+                    }]
+                });
+            </script>
+            <hr />
+
+        }
+        
+        @Html.PagedListPager(Model, page => Url.Action("GetPartes", new
+        {
+       page,
+            nalbaran = ViewBag.searchValALB,
+       nparte = ViewBag.searchValPAR,
+       dateTo = ViewBag.DateTo,
+       dateFrom = ViewBag.DateFrom
+        }),
+       new PagedListRenderOptions
+   {
+       Display = X.PagedList.Web.Common.PagedListDisplayMode.IfNeeded,
+       DisplayLinkToIndividualPages = true,
+       DisplayPageCountAndCurrentLocation = false,
+       MaximumPageNumbersToDisplay = 15,
+       LiElementClasses = new string[] { "page-item" },
+       PageClasses = new string[] { "page-link" },
+   })
+       @section styles{ 
+             <style>
+                .child {
+                    display: none;
+                    padding-left: 50px;
+                    color: blue;
+                }
+
+                .expand {
+                    cursor: pointer;
+                    vertical-align: top
+                }
+            </style>
+       }
+        <table class="table table-responsive-sm table-hover table-bordered" style="background-color:white">
+            <thead style="background-color:black;color:white">
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>Nº parte</th>
+                    <th>Nº Albaran</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Parte p in Model)
+                {
+                    var color = "";
+                    @if (p.Estado.Contains("Cerrada"))
+                    {
+                        color = "red";
+                    }
+                    else
+                    {
+                        color = "green";
+                    }
+                    <tr>
+                        <td rowspan="2" style="background-color: @color"></td>
+                        <td>
+                            <a asp-action="PartePerdida" asp-route-nparte="@p.N_parte" target="_blank">
+                                <img style="width:30px;height:30px" src="~/assets/images/doc.png" />
+                            </a>
+                        </td>
+                        <td style="padding-right:20px"><a href="@p.Accion" target="_blank">@p.N_parte</a></td>
+                        <td>@p.GetAlbaran(p.Envios)</td>
+                    </tr>
+                    <tr>
+                        <td class="expand">[+]</td>
+                        <td colspan="6">
+                            <b>Estado:</b>
+                            <table class="child">
+                                <tr>
+                                    <td style="color:white;background-color:@color">@p.Estado</td>
+                                </tr>
+                                <tr><td style="color:white;background-color:@color">@p.GetEnvio(p.Envios)</td></tr>
+                                <tr>
+                                    <td>
+                                        <dl>
+                                            <dt>Fecha de Parte:</dt>
+                                            <dd>@p.Fecha_parte.ToString("dd/MM/yyyy")</dd>
+                                            <dt>Fecha de Albaran:</dt>
+                                            <dd>@p.F_Albaran.ToString("dd/MM/yyyy")</dd>
+                                            <dt>Fecha de Resolución:</dt>
+
+                                            @if (p.Fecha_resolucion.ToString("dd/MM/yyyy") == "01/01/0001")
+                                            {
+                                                <dd style="color:red">Sin fecha de resolución</dd>
+
+                                            }
+                                            else
+                                            {
+                                                <dd>@p.Fecha_resolucion.ToString("dd/MM/yyyy")</dd>
+                                            }
+                                        </dl>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        @section scripts{ 
+            <script>
+                $('.expand').click(function () {
+                    var $td = $(this);
+
+                    if ($td.text() == '[+]') {
+                        $td.text('[-]');
+                        $td.next().children('table').show()
+                    } else {
+                        $td.text('[+]');
+                        $td.next().children('table').hide()
+                    }
+                })
+            </script>
+        }
+
+    }
+    else
+    {
+        <h1>No hay datos registrados</h1>
+    }
+

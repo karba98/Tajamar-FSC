@@ -1,0 +1,57 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cambiador de imagen</title>
+
+</head>
+
+</style>
+<body>
+    <form name="formu">
+        <select name="selector" id="fotos">
+            <option value="green">Verde</option>
+            <option value="red">Rojo</option>
+        </select>
+        <input type="range" min="0" max="10" value="0" id="repe" />
+        <a id="nr">0</a>
+        <br />
+        <div id="limg"></div>
+
+    </form>
+</body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var divf = $("#fotos");
+        divf.change(function () {
+            var imgselecc = $("#fotos").val() + ".jpg";
+            for (var imag of $("img")) {
+                imag.src = imgselecc;
+            }
+        });
+        var inp = $("#repe");
+        inp.on("input",function () {
+            var range = $(this).val();
+            $("#nr").text(range);
+            console.log(range);
+            var cajaimagenes = $("#limg");
+            cajaimagenes.html("");
+            var imgselecc = $("#fotos").val();
+            for (var i = 0; i < range; i++) {
+                var imag = $("<img>", {
+                    "src": imgselecc + ".jpg",
+                    "style":"width:70px;height:50px"
+                })
+                imag.appendTo(cajaimagenes);
+                imag.click(function () {
+                    //this.src ="facebook_logo_portada.jpg"
+                    $(this).attr("src", "facebook_logo_portada.jpg");
+                });
+            }
+        });
+
+
+    });
+</script>

@@ -1,0 +1,8 @@
+﻿<h1>Eliminar Hospital</h1>
+@Html.ActionLink("Volver a Hospitales", "index", "Hospitales")
+<hr/>
+<form method="post">
+    <input type="number" placeholder="Codigo Hospital" name="id" />
+    <button type="submit" class="btn-danger">Eliminar</button>
+</form>
+<h3 style="color:red">@ViewData["MENSAJE"]</h3>

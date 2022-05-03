@@ -1,0 +1,13 @@
+﻿@model Libro
+<h1>@Model.Titulo</h1>
+<p>@Model.Autor</p>
+<hr/>
+<img style="width:200px;height:300px"src="~/assets/images/@Model.Imagen"/>
+<hr/>
+<h3><b>Genero:</b></h3>
+<p>@Model.GetGenero()</p>
+<h3><b>Sinopsis:</b></h3>
+<br/>
+<p>
+    @Model.Sinopsis
+</p>

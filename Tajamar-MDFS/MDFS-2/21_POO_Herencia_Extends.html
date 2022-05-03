@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Ejemplop Herencia y Extends</h1>
+    <hr />
+    <button type="button" id="herencia">Probar herencia</button>
+    <button type="button" id="extends">Probar extends</button>
+    <div id="res">
+
+    </div>
+</body>
+</html>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/21_POO_Herencia_Extends.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#herencia").click(function () {
+            var array = new MiArray();
+            $("#res").empty();
+            array.descripcion = "SOY UNA DESCRIPCION NUEVA"
+            array.push(10);
+            array.push(20);
+            array.push(30);
+            array.push(40);
+            array.push(50);
+            var des = $("<h2>", { "text": "Descripción: " + array.descripcion });
+            var long = $("<h2>", { "text": "Longitud: " + array.longitud });
+            var ce = $("<h2>", { "text": "Contar elementos: " + array.contarElementos() });
+            var se = $("<h2>", { "text": "Sumar numeros: " + array.sumarNumeros() });
+            $("#res").append(des);
+            $("#res").append(long);
+            $("#res").append(ce);
+            $("#res").append(se);
+        });
+        $("#extends").click(function () {
+            var array = new Array();
+            $("#res").empty();
+            array.push(10);
+            array.push(20);
+            array.push(30);
+            array.push(40);
+            array.push(50);
+            var long = $("<h2>", { "text": "Longitud: " + array.contarElementos() });
+            var se = $("<h2>", { "text": "Sumar numeros: " + array.sumarNumeros() });
+            $("#res").append(long);
+            $("#res").append(se);
+        });
+    });
+</script>

@@ -1,0 +1,11 @@
+G:\MCSD\MDFS\MDFS-5\Apis\ApiPersonas\ApiPersonas\obj\Release\netcoreapp3.1\PubTmp\Out\ApiPersonas.exe
+G:\MCSD\MDFS\MDFS-5\Apis\ApiPersonas\ApiPersonas\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.Development.json
+G:\MCSD\MDFS\MDFS-5\Apis\ApiPersonas\ApiPersonas\obj\Release\netcoreapp3.1\PubTmp\Out\appsettings.json
+G:\MCSD\MDFS\MDFS-5\Apis\ApiPersonas\ApiPersonas\obj\Release\netcoreapp3.1\PubTmp\Out\ApiPersonas.dll
+G:\MCSD\MDFS\MDFS-5\Apis\ApiPersonas\ApiPersonas\obj\Release\netcoreapp3.1\PubTmp\Out\ApiPersonas.deps.json
+G:\MCSD\MDFS\MDFS-5\Apis\ApiPersonas\ApiPersonas\obj\Release\netcoreapp3.1\PubTmp\Out\ApiPersonas.runtimeconfig.json
+G:\MCSD\MDFS\MDFS-5\Apis\ApiPersonas\ApiPersonas\obj\Release\netcoreapp3.1\PubTmp\Out\ApiPersonas.pdb
+G:\MCSD\MDFS\MDFS-5\Apis\ApiPersonas\ApiPersonas\obj\Release\netcoreapp3.1\PubTmp\Out\Microsoft.OpenApi.dll
+G:\MCSD\MDFS\MDFS-5\Apis\ApiPersonas\ApiPersonas\obj\Release\netcoreapp3.1\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+G:\MCSD\MDFS\MDFS-5\Apis\ApiPersonas\ApiPersonas\obj\Release\netcoreapp3.1\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+G:\MCSD\MDFS\MDFS-5\Apis\ApiPersonas\ApiPersonas\obj\Release\netcoreapp3.1\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll

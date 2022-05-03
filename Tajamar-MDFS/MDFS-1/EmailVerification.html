@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>verificador email</title>
+</head>
+<body>
+    <label> email</label>
+    <input type="text" id="texto"/>
+    <button onclick="verificar()">Verificar</button>
+    <h2 id ="res"></h2>
+</body>
+
+<script>
+    function verificar() {
+        var text = document.getElementById("texto").value;
+        var res = document.getElementById("res");
+
+        if (text.indexOf("@") != -1) {
+            res.innerText = "No valido";
+        }
+        else if (text.startsWith("@") || text.endsWith("@")) {
+            res.innerText = "No Valido";
+        }
+        else if (text.indexOf("@") != text.lastIndexOf("@")) {
+            res.innerText = "No Valido";
+        }
+        else if (text.indexOf(".") == -1) {
+            res.innerText = "No Valido";
+        }
+        else if (text.lastIndexOf(".") < text.indexOf("@")) {
+            res.innerText = "No Valido";
+        }
+        else {
+            var ultimopunto = text.lastIndexOf(".") + 1;
+            var domin = text.substr(ultimopunto);
+            if (domin)
+        }
+
+       
+    }
+</script>
+</html>

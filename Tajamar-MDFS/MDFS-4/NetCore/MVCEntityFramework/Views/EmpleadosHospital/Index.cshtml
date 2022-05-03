@@ -1,0 +1,31 @@
+﻿@model List<EmpleadoHospital>
+<h1>Empleados Total</h1>
+<hr/>
+@Html.ActionLink("Buscar por Codigo Hospital","ProcedimientoEmpleadosHospital")
+<hr/>
+@if (Model != null)
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Apellido</th>
+                <th>Salario</th>
+                <th>Funcion</th>
+                <th>Hospital</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(EmpleadoHospital emp in Model)
+            {
+                <tr>
+                    <td>@emp.IdEmpleado.</td>
+                    <td>@emp.Apellido</td>
+                    <td>@emp.Salario €</td>
+                    <td>@emp.funcion</td>
+                    <td>@emp.Hospital</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

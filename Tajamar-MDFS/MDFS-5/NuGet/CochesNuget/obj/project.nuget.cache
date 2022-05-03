@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "+b26Oii0oIlWTzKpN/6JLpdn5as4icmowgDAteXKgfL7pllqmacssNZ/ktmkT+xHGdCfnVwDpWzEvJ4WTeXguQ==",
+  "success": true,
+  "projectFilePath": "E:\\MCSD\\MDFS\\MDFS-5\\NuGet\\CochesNuget\\CochesNuget.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\raulc\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\raulc\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

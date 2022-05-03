@@ -1,0 +1,72 @@
+﻿@model IEnumerable<MvcCore.Models.Empleado>
+
+@{
+    ViewData["Title"] = "AlmacenarEmpleadosSession";
+    List<int> sessionemples = Context.Session.GetObject<List<int>>("EMPLEADOS");
+}
+<partial name="_Budget" />
+<h1>AlmacenarEmpleadosSession (Mercado de esclavos Escalvos)</h1>
+<p>
+    <a asp-action="MostrarEmpleados" asp-controller="EmpleadosSession">
+        Mostrar Empleados
+    </a>
+</p>
+
+<h2 style="color:green">@ViewBag.Mensaje</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Oficio)
+            </th>
+
+            @*<th></th>*@
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @if (sessionemples == null)
+                    {
+                        <a asp-action="AlmacenarEmpleados" asp-controller="EmpleadosSession"
+                           asp-route-id="@item.IDEmpelado">
+                            Al carrito
+                        </a>
+                    }
+                    else if (!sessionemples.Contains(item.IDEmpelado))
+                    {
+                        <a asp-action="AlmacenarEmpleados" asp-controller="EmpleadosSession"
+                           asp-route-id="@item.IDEmpelado">
+                            Al carrito
+                        </a>
+                    }
+                    else
+                    {
+                        <a>Guardado</a>
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Oficio)
+                </td>
+                <td>
+
+                    @*<td>
+                            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                        </td>*@
+
+            </tr>
+        }
+    </tbody>
+</table>

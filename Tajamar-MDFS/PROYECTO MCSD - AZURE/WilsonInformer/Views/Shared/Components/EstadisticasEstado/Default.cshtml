@@ -1,0 +1,112 @@
+﻿@if (ViewBag.Data != null)
+{
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+<figure class="highcharts-figureEstado">
+    <div id="containerEstado"></div>
+</figure>
+<hr />
+<table class="table table-hover table-border">
+    <thead>
+        <tr>
+            <th>Estado</th>
+            <th>Partes</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var dato in ViewBag.Data as Dictionary<string, int>)
+        {
+            <tr>
+                <td>@dato.Key</td>
+                <td>@dato.Value</td>
+            </tr>
+        }
+        <tr style="background-color:#d3cbcb">
+            <td>Total</td>
+            <td>@ViewBag.Total </td>
+        </tr>
+    </tbody>
+</table>
+<hr />
+
+
+<script>
+    Highcharts.chart('containerEstado', {
+        chart: {
+            plotBackgroundColor: '#f0f0f0',
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        exporting: {
+            buttons: {
+                contextButton: {
+                    menuItems: [
+                        'printChart',
+                        'separator',
+                        'downloadPNG',
+                        'downloadJPEG',
+                        'downloadPDF',
+                        'downloadSVG',
+                        'separator',
+                        'downloadCSV',
+                        'downloadXLS',
+                    ]
+                }
+            }
+
+        },
+
+        title: {
+            text: 'Partes por Estado'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>  ({point.y} {point.name})'
+        },
+        accessibility: {
+            point: {
+                valueSuffix: '%'
+            }
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                }
+            }
+        },
+        series: [{
+            name: 'Partes',
+            colorByPoint: true,
+
+
+            data: [
+                @foreach (var element in ViewBag.Data as Dictionary<string, int>)
+                {
+                    @:{
+                        @Html.Raw("name: '" + element.Key + "',")
+                        @Html.Raw("y: " + element.Value + ",");
+                    if (element.Key.Contains("Cerrada a"))
+                    {
+                            @Html.Raw("sliced: true,");
+                            @:selected: true
+                        }
+                    @:},
+                }
+            ]
+       }]
+    });
+</script>
+}
+else
+{
+    <h4>No hay estados a mostrar </h4>
+}

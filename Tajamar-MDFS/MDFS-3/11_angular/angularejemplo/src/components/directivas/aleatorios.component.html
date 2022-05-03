@@ -1,0 +1,27 @@
+<h1>Numeros aleatorios Directiva ngStyle:</h1>
+<button (click)="generarNumeros()">Genrar Numeros</button>
+<h2>Condiciones con [style.color]="condicion" ? 'par':'impar'</h2>
+<ul>
+    <li *ngFor="let num of numeros"
+        [style.color]="num%2==0 ?'green':'red'">
+        Numero: {{num}}
+    </li>
+</ul>
+<h2>Condiciones con [class.clase de css]="condicion"</h2>
+<ul>
+    <li *ngFor="let num of numeros" 
+    [class.red]="num%2!=0"
+    [class.green]="num%2==0">
+        Numero: {{num}}
+    </li>
+</ul>
+<h2>Condiciones con [ngClass]</h2>
+<ul>
+    <li *ngFor="let num of numeros" 
+    [ngClass] ="{
+        green:num%2==0,
+        red:num%2!=0
+    }">
+        Numero: {{num}}
+    </li>
+</ul>

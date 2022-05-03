@@ -1,0 +1,59 @@
+﻿@model MVCCoreDynamoDB.Models.Coche
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Coche</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="IdCoche" class="control-label"></label>
+                <input asp-for="IdCoche" class="form-control" />
+                <span asp-validation-for="IdCoche" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Marca" class="control-label"></label>
+                <input asp-for="Marca" class="form-control" />
+                <span asp-validation-for="Marca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Modelo" class="control-label"></label>
+                <input asp-for="Modelo" class="form-control" />
+                <span asp-validation-for="Modelo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VMaxima" class="control-label"></label>
+                <input asp-for="VMaxima" class="form-control" />
+                <span asp-validation-for="VMaxima" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="incluirmotor" value="yes"class="form-check-inline" />Incluir motor
+                <label>Tipo de motor</label>
+                <input type="text" name="tipo" class="form-control" /><br />
+                <label>Caballos </label>
+                <input type="text" name="caballos" class="form-control" /><br />
+                <label>Cilindrada</label>
+                <input type="text" name="cilindrada" class="form-control" />
+
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+</form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

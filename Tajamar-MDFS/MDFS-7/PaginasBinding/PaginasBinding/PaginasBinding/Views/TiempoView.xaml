@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="PaginasBinding.Views.TiempoView"
+        xmlns:sistema="clr-namespace:System;assembly=mscorlib"
+        xmlns:viewmodels="clr-namespace:PaginasBinding.ViewModels">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.BindingContext>
+                <viewmodels:TiempoViewModel/>
+            </StackLayout.BindingContext>
+                <Label Text="{Binding Tiempo.Year}"/>
+                <Label Text="{Binding Tiempo.Month}"/>
+                <Label Text="{Binding Tiempo.Day}"/>
+                <Label Text="{Binding Tiempo.TimeOfDay}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

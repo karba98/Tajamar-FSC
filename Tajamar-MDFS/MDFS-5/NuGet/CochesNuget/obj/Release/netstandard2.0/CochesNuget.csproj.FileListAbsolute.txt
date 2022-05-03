@@ -1,0 +1,8 @@
+E:\MCSD\MDFS\MDFS-5\NuGet\CochesNuget\bin\Release\netstandard2.0\CochesNuget.deps.json
+E:\MCSD\MDFS\MDFS-5\NuGet\CochesNuget\bin\Release\netstandard2.0\CochesNuget.dll
+E:\MCSD\MDFS\MDFS-5\NuGet\CochesNuget\bin\Release\netstandard2.0\CochesNuget.pdb
+E:\MCSD\MDFS\MDFS-5\NuGet\CochesNuget\obj\Release\netstandard2.0\CochesNuget.AssemblyInfoInputs.cache
+E:\MCSD\MDFS\MDFS-5\NuGet\CochesNuget\obj\Release\netstandard2.0\CochesNuget.AssemblyInfo.cs
+E:\MCSD\MDFS\MDFS-5\NuGet\CochesNuget\obj\Release\netstandard2.0\CochesNuget.csproj.CoreCompileInputs.cache
+E:\MCSD\MDFS\MDFS-5\NuGet\CochesNuget\obj\Release\netstandard2.0\CochesNuget.dll
+E:\MCSD\MDFS\MDFS-5\NuGet\CochesNuget\obj\Release\netstandard2.0\CochesNuget.pdb

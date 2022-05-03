@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<style>
+    input[type=number]:nth-of-type(2n){
+        background-color: pink;
+    }
+    input[type=number]:nth-of-type(odd) {
+        background-color: lightyellow;
+    }
+    
+</style>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <h1>Suma números aleatorios</h1>
+    <form name="formular">
+        <ul>
+
+            <li><input type="radio" class="cx" name="cx"value="Odd" />Odd</li>
+            <li><input type="radio" class="cx" name="cx"value="Eve" />Eve</li>
+        </ul>
+
+    <input type="number" class="inp"name="numeros" /><br />
+    <input type="number" class="inp"name="numeros" /><br />
+    <input type="number" class="inp"name="numeros" /><br />
+    <input type="number" class="inp"name="numeros" /><br />
+    <input type="number" class="inp"name="numeros" /><br />
+    <input type="number" class="inp"name="numeros" /><br />
+    <input type="number" class="inp"name="numeros" /><br />
+    <input type="number" class="inp"name="numeros" /><br />
+    <input type="number" class="inp"name="numeros" /><br />
+    <input type="number" class="inp"name="numeros" /><br />
+        <br />
+        <button type="button">Sumar</button>
+    </form>
+
+    <h1 id="res"></h1>
+</body>
+<script type="text/javascript">
+    window.onload = function () {
+        var cajas = document.forms[0].numeros;
+        for (var i = 0; i < cajas.length; i++) {
+            document.forms[0].numeros[i].value = parseInt(Math.random() * 20);
+        }
+
+        var sumar = document.getElementsByTagName("button")[0];
+
+        sumar.addEventListener("click", function () {
+            var suma = 0;
+            var checkboxes = document.formular.cx;
+            console.log(checkboxes);
+            console.log(checkboxes[0].value + "   " + checkboxes[1].selected);
+            var cajas = document.forms[0].numeros;
+            if (checkboxes[0].checked == true && checkboxes[1].checked == false) {
+                for (var i = 0; i < cajas.length; i++) {
+                    if (i % 2 == 0) {
+                        suma += parseInt(document.forms[0].numeros[i].value);
+                    }
+                }
+                console.log(suma);
+            }
+            else if (checkboxes[1].checked == true && checkboxes[0].checked == false) {
+                for (var i = 0; i < document.forms[0].numeros.length; i++) {
+                    if (i % 2 != 0) {
+                        suma += parseInt(document.forms[0].numeros[i].value);
+                    }
+                }
+                console.log(suma);
+            } else if (checkboxes[1].checked == true && checkboxes[0].checked == true) {
+                for (var i = 0; i < document.forms[0].numeros.length; i++) {
+                    suma += parseInt(document.forms[0].numeros[i].value);   
+                }
+            }
+            
+            document.getElementById("res").innerText = suma;
+        });
+    }
+</script>
+</html>

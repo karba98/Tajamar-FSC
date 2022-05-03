@@ -1,0 +1,23 @@
+﻿    <br/>
+    <a style="color:red">@ViewBag.Error</a>
+    <form method="post">
+        <hr />
+        <input type="text" name="Titulo" class="input-group" placeholder="Titulo" />
+        <br />
+        <input type="text" name="Autor" class="input-group" placeholder="Autor" />
+        <input type="text" name="imagen" class="input-group" placeholder="Nombre Imagen" />
+        <hr />
+        <h3><b>Genero:</b></h3>
+        <select name="genero">
+            @foreach (String g in ViewBag.generos)
+            {
+                <option>@g</option>
+            }
+        </select>
+        <h3><b>Sinopsis:</b></h3>
+        <br />
+        <textarea name="sinopsis" style="width:80%;height:250px;padding:15px">
+        </textarea>
+        <hr />
+        <button type="submit" class="btn btn-success"> Insertar</button>
+    </form>

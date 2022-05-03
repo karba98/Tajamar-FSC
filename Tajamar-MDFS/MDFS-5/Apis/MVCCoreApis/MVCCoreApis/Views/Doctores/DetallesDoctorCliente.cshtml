@@ -1,0 +1,65 @@
+﻿@model MVCCoreApis.Models.Doctor
+
+@{
+    ViewData["Title"] = "DetallesDoctorCliente";
+}
+@section scripts{
+    <script>
+        var url = "https://apidoctoresrc.azurewebsites.net/";
+        $(document).ready(function () {
+            var request = "api/doctores/"+@ViewBag.id;
+            $.ajax({
+                url: url + request,
+                method: "GET",
+                dataType: "json",
+                success: function (data) {
+                    var html = "";
+                    html += "<h4>Doctor " + data.apellido;+"</h4>";
+                    html += "<hr />";
+                    html += "<dl class='row'>";
+                    html += "<dt class = 'col-sm-2'>";
+                    html += "Codigo Hospital:";
+                    html += "</dt>";
+                    html += "<dd class = 'col-sm-10'>";
+                    html += data.hospitalCod;
+                    html += "</dd>";
+                    html += "<dt class = 'col-sm-2'>";
+                    html += "Apellido:";
+                    html += "</dt>";
+                    html += "<dd class = 'col-sm-10'>";
+                    html += data.apellido;
+                    html += "</dd>";
+                    html += "<dt class = 'col-sm-2'>";
+                    html += "Doctor Nº:";
+                    html += "</dt>";
+                    html += "<dd class = 'col-sm-10'>";
+                    html += data.doctorNo;
+                    html += "</dd>";
+                    html += "<dt class = 'col-sm-2'>";
+                    html += "Especialidad:";
+                    html += "</dt>";
+                    html += "<dd class = 'col-sm-10'>";
+                    html += data.especialidad;
+                    html += "</dd>";
+                    html += "<dt class = 'col-sm-2'>";
+                    html += "Salario:";
+                    html += "</dt>";
+                    html += "<dd class = 'col-sm-10'>";
+                    html += data.salario;
+                    html += "</dd>";
+                    html += "</dl>";
+
+                    $("#details").html(html);
+                   
+                }
+            });
+        });
+
+        </script>
+}
+<div>
+    
+</div>
+<div id="details">
+
+</div>

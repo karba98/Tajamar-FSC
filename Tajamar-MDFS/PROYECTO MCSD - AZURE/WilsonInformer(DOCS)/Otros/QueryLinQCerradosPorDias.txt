@@ -1,0 +1,10 @@
+//from datos in Partes
+//where !datos.Estado.Contains("Cerrada a")
+//group datos by datos.F_Albaran into grupo
+//orderby grupo.Select(x=>x.F_Albaran).FirstOrDefault()
+//select new {
+//	Cerrados = grupo.Count(),
+//	Fecha = grupo.Select(x=>x.F_Albaran).FirstOrDefault()
+//	}
+//	
+//	

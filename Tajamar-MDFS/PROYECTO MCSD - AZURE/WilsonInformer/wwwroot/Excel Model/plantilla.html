@@ -1,0 +1,247 @@
+﻿
+<style type="text/css">
+    body, div, table, thead, tbody, tfoot, tr, th, td, p {
+        font-family: "Calibri";
+        font-size: large
+    }
+
+    a.comment-indicator:hover + comment {
+        background: #ffd;
+        position: absolute;
+        display: block;
+        border: 1px solid black;
+        padding: 0.5em;
+    }
+
+    a.comment-indicator {
+        background: red;
+        display: inline-block;
+        border: 1px solid black;
+        width: 0.5em;
+        height: 0.5em;
+    }
+
+    comment {
+        display: none;
+    }
+</style>
+        <table align="center" cellspacing="0" border="0">
+            <colgroup width="136"></colgroup>
+            <colgroup span="2" width="85"></colgroup>
+            <colgroup width="23"></colgroup>
+            <colgroup width="109"></colgroup>
+            <colgroup span="2" width="85"></colgroup>
+            <tr>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000" colspan=2 height="45" align="center" 
+                    valign=middle><b><font face="Arial" size=3 color="#000000">   PARTE DE CIERRE:</font></b></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-right: 2px solid #000000" colspan=3 align="left" valign=middle>
+                <a>PP-00000000</a></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" colspan=2 align="center" valign=middle>
+                    <b>
+                        <font face="Arial" size=3 color="#000000">
+                            <br><img src="~/assets/images/partelogo.png" width=136 height=24 hspace=17 vspace=10>
+                        </font>
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td height="21" align="left" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000" height="40" align="left" 
+                    valign=middle><font face="Franklin Gothic Book" color="#FF0000">Fecha reclamacion</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000"
+                    colspan=2 align="center" valign=middle sdnum="1033;1033;M/D/YYYY"><b><font face="Franklin Gothic Book" color="#000000">@Model.F_Albaran</font></b></td>
+                <td align="left" valign=middle><font face="Franklin Gothic Book" color="#000000"><br></font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" 
+                    align="left" valign=middle><font face="Franklin Gothic Book" color="#FF0000">Reclamado por</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000"
+                    colspan=2 align="center" valign=middle sdnum="1033;0;"><b><font face="Franklin Gothic Book" color="#000000">@Model.Propi </font></b></td>
+            </tr>
+            <tr>
+                <td height="21" align="left" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000" height="40" align="left" 
+                    valign=middle><font face="Franklin Gothic Book" color="#FF0000">Env&iacute;o</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" 
+                    colspan=2 align="center" valign=middle><b><font face="Arial" color="#000000">@Model.Serv</font></b></td>
+                <td align="left" valign=middle><font face="Arial" color="#000000"><br></font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" 
+                    align="left" valign=middle><font face="Franklin Gothic Book" color="#FF0000">N&ordm;  albar&aacute;n</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" 
+                    colspan=2 align="center" valign=middle sdnum="1033;0;"><b><font face="Franklin Gothic Book" color="#000000">@Model.GetAlbaran(Model.Envios)</font></b></td>
+            </tr>
+            <tr>
+                <td style="border-bottom: 2px solid #000000; border-left: 2px solid #000000" height="40" align="left" valign=middle>
+                <font face="Franklin Gothic Book" color="#FF0000">N&ordm; de bultos</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" 
+                    colspan=2 align="center" valign=middle sdval="4" sdnum="1033;0;0"><b><font face="Arial" color="#000000">@Model.Bult</font></b></td>
+                <td align="left" valign=middle><font face="Franklin Gothic Book" color="#000000"><br></font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000"
+                    align="left" valign=middle><font face="Franklin Gothic Book" color="#FF0000">Fecha albar&aacute;n</font></td>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" 
+                    colspan=2 align="center" valign=middle sdnum="1033;1033;M/D/YYYY"><b><font face="Franklin Gothic Book" color="#000000">@Model.F_Albaran</font></b></td>
+            </tr>
+            <tr>
+                <td height="20" align="left" valign=middle><font face="Arial" size=3 color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td height="20" align="left" valign=middle><font face="Arial" size=3 color="#000000"> </font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td height="27" align="left" valign=middle><b><i><font face="Arial" color="#FF0000">FR.ORIGEN</font></i></b></td>
+                <td align="left" valign=middle><font face="Franklin Gothic Book" color="#FF0000"><br></font></td>
+                <td align="left" valign=middle><font face="Franklin Gothic Book" color="#FF0000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=middle><b><i><font face="Arial" color="#FF0000">FR.DESTINO</font></i></b></td>
+                <td align="left" valign=middle><b><i><font face="Arial" color="#FF0000"><br></font></i></b></td>
+                <td align="left" valign=middle><font face="Franklin Gothic Book" color="#FF0000"><br></font></td>
+            </tr>
+            <tr>
+                <td height="41" align="left" valign=middle><font face="Franklin Gothic Book" color="#FF0000">Franquicia</font></td>
+                <td colspan=3 align="center" valign=middle sdnum="1033;0;"><b><font face="Arial" color="#000000">@Model.Orig</font></b></td>
+                <td align="left" valign=middle><font face="Franklin Gothic Book" color="#FF0000">Franquicia</font></td>
+                <td colspan=2 align="center" valign=middle sdnum="1033;0;"><b><font face="Arial" color="#000000">@Model.Dest</font></b></td>
+            </tr>
+            <tr>
+                <td height="11" align="left" valign=middle><font face="Franklin Gothic Book" color="#FF0000"><br></font></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="left" valign=middle><font face="Franklin Gothic Book" color="#FF0000"><br></font></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+            </tr>
+            <tr>
+                <td height="41" align="left" valign=middle><b><i><font face="Arial" color="#FF0000">NOMBRE ABO</font></i></b></td>
+                <td colspan=6 align="center" valign=middle><b><font face="Arial" color="#000000">@Model.Abonado</font></b></td>
+            </tr>
+            <tr>
+                <td height="11" align="left" valign=middle><b><i><font face="Arial" color="#FF0000"><br></font></i></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+            </tr>
+            <tr>
+                <td height="41" align="left" valign=middle><b><i><font face="Arial" color="#FF0000">BULTOS</font></i></b></td>
+                <td colspan=2 align="center" valign=middle sdval="4" sdnum="1033;"><b><font face="Arial" color="#000000">@Model.Bult</font></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+            </tr>
+            <tr>
+                <td height="9" align="left" valign=middle><font face="Franklin Gothic Book" color="#FF0000"><br></font></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="left" valign=middle><font face="Franklin Gothic Book" color="#FF0000"><br></font></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+                <td align="center" valign=middle><b><font face="Arial" color="#000000"><br></font></b></td>
+            </tr>
+            <tr>
+                <td height="31" align="left" valign=middle><b><i><font face="Arial" color="#FF0000">SEGUIMIENTO: </font></i></b></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; 
+border-right: 2px solid #000000" colspan=7 height="99" align="left" valign=top>
+                    <font face="Arial" color="#000000">
+                        <p>
+Confirmada la reclamación de la pérdida con las Franquicias implicadas, se procede a efectuar el seguimiento correspondiente. 
+Quedando en este departamento a disposición de ustedes y del Comité de Ética, Arbitraje y Asesoramiento toda la documentación 
+referente a las  personas de las Franquicias y Plataformas consultadas</p>
+                    </font>
+                </td>
+            </tr>
+            <tr>
+                <td height="1" align="left" valign=middle><font face="Arial" color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td colspan=2 height="39" align="left" valign=middle><b><i><font face="Arial" color="#FF0000">RESULTADO FINAL</font></i></b></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; 
+border-right: 2px solid #000000" colspan=7 height="100" align="left" valign=top>
+                    <b>
+                        <font face="Arial" color="#000000">
+                        <p>
+Confirmada la reclamación de la pérdida con las Franquicias implicadas, se procede a efectuar el seguimiento correspondiente. 
+Quedando en este departamento a disposición de ustedes y del Comité de Ética, Arbitraje y Asesoramiento toda la documentación 
+referente a las  personas de las Franquicias y Plataformas consultadas</p>
+                    </font>
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td height="18" align="left" valign=middle><font face="Arial" color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; 
+border-right: 2px solid #000000" colspan=7 height="53" align="left" valign=middle><b>
+                    <font face="Arial" color="#000000">ESTE INFORME ES EXCLUSIVAMENTE PARA USO INTERNO DE LA RED Y NO DEBE MOSTRARSE A LOS CLIENTES</font></b></td>
+            </tr>
+            <tr>
+                <td height="25" align="left" valign=middle><font face="Arial" color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+                <td align="left" valign=bottom><font color="#000000"><br></font></td>
+            </tr>
+            <tr>
+                <td style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" 
+                    colspan=7 height="43" align="right" valign=middle><b><font face="Arial" color="#000000">DPTO SEGURIDAD ENVIOS</font></b></td>
+            </tr>
+        </table>

@@ -1,0 +1,33 @@
+﻿@model List<int>
+@{ 
+    List<int> numeros = ViewBag.Numeros as List<int>;
+}
+<h1>Collatz</h1>
+<form method="post">
+    <input type="number" name="numero" />
+    <button type="submit">¿Es igual a 1?</button>
+</form>
+<hr />
+@if ( numeros != null)
+{
+    @foreach (int i in ViewBag.Numeros)
+    {
+        @Html.ActionLink(i.ToString() + "  ", "Collatz", "Matematicas", new { numero = i })
+    }
+}
+
+<hr />
+@if (Model != null)
+{
+    foreach (int i in Model)
+    {
+        @if (i == 1)
+        {
+            <h3 style="color:blue">@i</h3>
+        }
+        else
+        {
+            <h3>@i</h3>
+        }
+    }
+}

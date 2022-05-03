@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Serie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<a asp-action="Logout" asp-controller="Identity" class="btn btn-info">LogOut @Context.User.Identity.Name</a>
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-info">Nuevo Personaje</a>
+</p>
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdSerie)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Imagen)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Puntuacion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Anyo)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdSerie)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        <img style="width:200px;height:250px"src="@Html.DisplayFor(modelItem => item.Imagen)"/>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Puntuacion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Anyo)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", new {  id=item.IdSerie  })
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}

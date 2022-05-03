@@ -1,0 +1,12 @@
+<h1>Ejercicio aleatorios:</h1>
+<button (click)="generateNum()">Generar Num</button>
+
+    <a *ngFor="let num of numeros"
+    [ngClass]="{
+        red:num%2!=0,
+        green:num%2==0,
+        zero:num==0
+    }"
+    >
+    {{num}}
+    </a>

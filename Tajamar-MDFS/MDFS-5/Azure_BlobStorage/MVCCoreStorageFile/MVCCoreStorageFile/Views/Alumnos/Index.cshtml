@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MVCCoreStorageFile.Models.Alumno>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<hr/>
+<form method="post">
+    <input type="text" name="curso" class="form-control" style="width:300px"/>
+    <button class="btn btn-info" type="submit">Buscar</button>
+</form>
+<hr/>
+@if (Model != null)
+{ 
+    <table class="table table-hover table-info">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdAlumno)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Apellidos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Curso)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nota)
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdAlumno)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Apellidos)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Curso)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nota)
+                    </td>
+                   
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}

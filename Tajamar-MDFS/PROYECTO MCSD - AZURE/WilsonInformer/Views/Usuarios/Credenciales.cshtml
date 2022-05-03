@@ -1,0 +1,40 @@
+﻿@model WilsonInformer.Models.Usuario
+@{ Layout = "_Login"; }
+
+@{ ViewData["Title"] = "Credenciales"; }
+@section alert{
+    @Html.Raw(ViewBag.Alert)
+}
+<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+
+    <div class="row register-form">
+        <div class="col-md-9">
+
+            <div class="form-group">
+                <div class="row">
+
+                    <form asp-action="Credenciales">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-group" style="margin-bottom:15px">
+                            <label asp-for="User" class="control-label">Usuario</label>
+                            <input asp-for="User" class="form-control" placeholder= />
+                            <span asp-validation-for="User" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Pass" class="control-label">Contraseña</label>
+                            <input asp-for="Pass" type="password" class="form-control" />
+                            <span asp-validation-for="Pass" class="text-danger"></span>
+                        </div>
+                        <br />
+                        <div class="form-group">
+                            <input type="submit" value="Iniciar sesion" class="btnRegister" />
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

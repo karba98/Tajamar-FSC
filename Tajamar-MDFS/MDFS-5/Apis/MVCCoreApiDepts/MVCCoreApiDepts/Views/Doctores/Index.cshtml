@@ -1,0 +1,36 @@
+﻿@model List<Doctor>
+<h1>Doctores</h1>
+<hr/>
+<form class="form-group" method="post">
+    <input type="number" name="incremento" placeholder="Incremento €"/>
+    <input type="number" name="hospitalcod" placeholder="Codigo de hospìtal"/>
+    <button class="btn btn-warning"type="submit">Incrementar</button>
+</form>
+<hr/>
+<a class="btn btn-warning" asp-action="DoctoresEspecialidad" asp-controller="Doctores">Ver por especialidades</a>
+<a class="btn btn-success" asp-action="Insert" asp-controller="Doctores">+</a>
+<hr/>
+<table class="table table-hover table-success">
+    <thead>
+        <tr>
+            <th>Apellido</th>
+            <th>Hospital</th>
+            <th>Salario</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Doctor doc in Model)
+        {
+            <tr>
+                <td>@doc.Apellido</td>
+                <td>@doc.HospitalCod</td>
+                <td>@doc.Salario</td>
+                <td>
+                    <a asp-action="Detalles" asp-controller="Doctores" asp-route-id="@doc.IdDoctor">Detalles</a> | 
+                    <a asp-action="Delete" asp-controller="Doctores" asp-route-id="@doc.IdDoctor">X</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

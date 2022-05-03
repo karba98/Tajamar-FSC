@@ -1,0 +1,13 @@
+<h1>Productos: </h1>
+<nav>
+    <ul>
+        <li *ngFor="let prod of productos">
+            <img style="width:90px;height: 90px;"
+            alt="{{prod.imagen}}" src="{{prod.imagen}}"/>
+            <br/>
+            <a>Nombre: {{prod.nombre}}</a><br/>
+            <a>Precio: {{prod.precio}}€</a>
+            <hr/>
+        </li>
+    </ul>
+</nav>

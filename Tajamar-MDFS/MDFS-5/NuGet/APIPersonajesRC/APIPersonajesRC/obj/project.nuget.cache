@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "q5xcfBS2V9kjy6gqffYIUAY1WhQhZ5xeBewAxha3c5gIQE1BoZY0ViN+Fhp0JBSFARU5g/p9gcyOHyuC/85SVg==",
+  "success": true,
+  "projectFilePath": "E:\\MCSD\\MDFS\\MDFS-5\\NuGet\\APIPersonajesRC\\APIPersonajesRC\\APIPersonajesRC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\raulc\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\raulc\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\raulc\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

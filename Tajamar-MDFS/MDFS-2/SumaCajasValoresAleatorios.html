@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Suma cajas</h1>
+    <input type="number" value="0"/><br />
+    <input type="number" value="0"/><br />
+    <input type="number" value="0"/><br />
+    <input type="number" value="0"/><br />
+    <input type="number" value="0"/><br />
+    <input type="number" value="0"/><br />
+    <button id="gen">Generar numeros</button><br />
+    <button id="sum">Sumar</button>
+    <h1 id="res">0</h1>
+</body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#gen").click(function () {
+            $("input[type=number]").each(function () {
+                var caja = $(this);
+                var alea = parseInt((Math.random() * 99)+1);
+                caja.val(alea);
+                caja.text(alea);
+
+                $(this).blur(function () {
+                    $(this).css("background-color","blue");
+                });
+            });
+        });
+
+        $("#sum").click(function () {
+            var num = 0;
+            $("input[type=number]").each(function () {
+                if ($(this).val() != "") {
+                    num += parseInt($(this).val());
+                } else {
+                    num += parseInt(0);
+                }
+                
+            });
+            $("#res").text("La suma es: "+num);
+        });
+    });
+</script>
+</html>

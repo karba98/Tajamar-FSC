@@ -1,0 +1,101 @@
+***NUGETS MYSQL***
+Pomelo 5.0. beta 2
+EFC 5.5
+EFCTools 5.5
+
+COMPROBAR PUERTOS
+sudo lsof -i -P -n | grep LISTEN
+----------------------
+MYSQL
+----------------------
+sudo yum install wget
+wget https://dev.mysql.com/get/mysql80-community-release-el7-3.noarch.rpm
+sudo yum localinstall mysql80-community-release-el7-3.noarch.rpm
+sudo yum install mysql-community-server
+sudo service mysqld status
+sudo service mysqld start
+
+grep "A temporary password" /var/log/mysqld.log
+#sacará algo como esto => [Note] A temporary password is generated for root@localhost: hjkygMukj5+t783
+mysql_secure_installation
+#ponemos la temporary password
+#nos pedirá una nueva
+#la repetimos
+#ponemos y
+#repetimos de nuevo la contraseña nueva 2 veces 
+#(dicen que es mejor por seguridad)
+#a todo lo demás ponemos y
+chkconfig mysqld on
+service mysqld restart
+mysql -u root -p
+#entramos como root y nueva contraseña que pusimos
+#Creamos usuario remoto
+CREATE USER 'usuarioremoto'@'localhost' IDENTIFIED BY 'password';
+CREATE USER 'usuarioremoto'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* to usuarioremoto@localhost WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* to usuarioremoto@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+EXIT;
+
+cd /etc
+nano my.cnf
+#ponemos donde datadir, socket...(por ahi abajo)
+user=mysql (se puede omitir)?
+port=3306
+bind-address=0.0.0.0
+
+service mysqld restart
+
+----------------------
+MariaDB
+----------------------
+sudo yum install mariadb-server 
+service mariadb start
+mysql_secure_installation
+chkconfig mysqld on
+mysql -u root -p
+CREATE USER 'usuarioremoto'@'localhost' IDENTIFIED BY 'password';
+CREATE USER 'usuarioremoto'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* to usuarioremoto@localhost WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* to usuarioremoto@'%' WITH GRANT OPTION;
+cd /etc 
+nano my.cnf
+port=3306 bind-address=0.0.0.0
+Service mariadb restart
+----------------------
+POSTGRESS
+----------------------
+#We need to first add the pgdg repository in Amazon Linux
+sudo amazon-linux-extras | grep postgre
+amazon-linux-extras install postgresql11 vim epel
+
+yum install -y postgresql-server postgresql-devel
+
+/usr/bin/postgresql-setup --initdb
+systemctl enable postgresql
+systemctl start postgresql
+
+systemctl status postgresql
+
+sudo su - postgres
+psql -c "alter user postgres with password 'password'"
+
+createdb mibasededatos
+psql -U postgres
+psql postgres=#\c mibasededatos;
+
+#creamos tablas....tal tal
+
+####### EN EC2 QUE SE VA A COBECTAR A POSTGRES
+psql -U postgres -h IP
+
+####### FICHEROS DE CONFIGURACION DE POSTGRES
+cd /var/lib/pgsql/data
+sudo nano postgresql.conf
+*****LISTEN ADDRESS***********
+#revisar fichero
+sudo nano pg_hba.conf
+REPLICATION PRIVILEGIES
+host all all "IP de maquina/24 o /32" md5 o trust
+systemctl restart postgresql
+*******************************

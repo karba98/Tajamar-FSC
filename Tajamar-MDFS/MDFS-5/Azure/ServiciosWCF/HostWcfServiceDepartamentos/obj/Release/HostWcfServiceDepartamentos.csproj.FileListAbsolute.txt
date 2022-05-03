@@ -1,0 +1,17 @@
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\bin\HostWcfServiceDepartamentos.dll.config
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\bin\HostWcfServiceDepartamentos.dll
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\bin\HostWcfServiceDepartamentos.pdb
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\bin\EntityFramework.dll
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\bin\EntityFramework.SqlServer.dll
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\bin\ServiceDepartamentosSql.dll
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\bin\System.Data.SqlClient.dll
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\bin\ServiceDepartamentosSql.pdb
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\bin\ServiceDepartamentosSql.dll.config
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\bin\EntityFramework.xml
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\bin\EntityFramework.SqlServer.xml
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\bin\System.Data.SqlClient.xml
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\obj\Release\HostWcfServiceDepartamentos.csprojAssemblyReference.cache
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\obj\Release\HostWcfServiceDepartamentos.csproj.CoreCompileInputs.cache
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\obj\Release\HostWcfServiceDepartamentos.csproj.CopyComplete
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\obj\Release\HostWcfServiceDepartamentos.dll
+E:\MCSD\MDFS\MDFS-5\Azure\HostWcfServiceDepartamentos\obj\Release\HostWcfServiceDepartamentos.pdb

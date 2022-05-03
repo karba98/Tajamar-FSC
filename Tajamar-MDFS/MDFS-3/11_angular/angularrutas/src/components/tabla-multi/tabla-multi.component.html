@@ -1,0 +1,17 @@
+<h1>Tabla multiplicar</h1>
+<input type="number" #cajaNum/>
+<button (click)="createTable()">Mostrar Tabla</button>
+<hr/>
+<div *ngIf="results.length>0">
+    <table>
+        <tbody>
+            <tr *ngFor="let num of results;let i=index">
+                <td>{{caja.nativeElement.value}}</td>
+                <td>x</td>
+                <td>{{i}}</td>
+                <td>= {{num}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PersonalizarDispositivos.Views.EstilosExternos">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label FontSize="Large">
+                <Label.Text>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="iOS" Value="Piensa McFly, piensa"/>
+                        <On Platform="Android" Value="Soy Batman"/>
+                        <On Platform="UWP" Value="No he triunfado..."/>
+                    </OnPlatform>
+                </Label.Text>
+                <Label.FontFamily>
+                    <OnPlatform x:TypeArguments="x:String">
+                        <On Platform="ios"
+                            Value="Back to the future 2002"/>
+                        <On Platform="Android"
+                            Value="batman.ttf#BatmanForeverAlternate"/>
+                    </OnPlatform>
+                </Label.FontFamily>
+            </Label>
+            <StackLayout x:Name="contenedor">
+                
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

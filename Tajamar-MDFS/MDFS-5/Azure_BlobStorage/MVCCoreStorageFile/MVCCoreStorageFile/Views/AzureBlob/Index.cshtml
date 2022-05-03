@@ -1,0 +1,39 @@
+﻿@model List<String>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<hr/>
+<form method="post" asp-action="CreateContainer" asp-controller="AzureBlob">
+    <input type="text"name="containerName"/>
+    <button class="btn btn-warning" type="submit">Crear</button>
+</form>
+<hr/>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td>Container</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (String s in Model)
+        {
+            <tr>
+                <td>
+                    <a asp-action="Container"
+                       asp-controller="AzureBlob"
+                       asp-route-containerName="@s">
+                        @s
+                    </a>
+                </td>
+                <td>
+                    <a class="btn btn-danger" asp-action="DeleteContainer" asp-controller="AzureBlob" asp-route-containerName="@s">X</a>
+                </td>
+        </tr>
+    }
+    </tbody>
+</table>
+   

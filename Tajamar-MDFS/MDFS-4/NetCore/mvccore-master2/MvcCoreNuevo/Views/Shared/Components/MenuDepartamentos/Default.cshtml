@@ -1,0 +1,21 @@
+﻿@model List<Departamento>
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="http://example.com"
+       id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
+       aria-expanded="false">ViewComponent MenuDepartamentos</a>
+
+    <div class="dropdown-menu" aria-labelledby="dropdown01">
+        <a class="dropdown-item"
+           asp-controller="Departamentos"
+           asp-action="Index"
+           >Ejemplo Paginacion</a>
+        @foreach (Departamento d in Model)
+        {
+            <a class="dropdown-item"
+               asp-controller="Departamentos"
+               asp-action="Details"
+               asp-route-id="@d.Numero">@d.Nombre</a>
+        }
+    </div>
+</li>

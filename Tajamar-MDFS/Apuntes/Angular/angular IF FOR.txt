@@ -1,0 +1,12 @@
+IF:
+<div *ngIf="taltaltal,then template1, else template2">
+</div>
+**SE PUEDE QUITAR EL ELSE Y EL THEN
+<ng-template #template1>
+</ng-template>
+
+<ng-template #template1>
+</ng-template>
+
+FOR:
+<div *ngFor="let i of tal">

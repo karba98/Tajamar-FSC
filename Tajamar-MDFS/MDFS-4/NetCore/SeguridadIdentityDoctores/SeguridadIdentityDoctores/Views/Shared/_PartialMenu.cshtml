@@ -1,0 +1,30 @@
+﻿@if (Context.User.Identity.IsAuthenticated == true)
+{
+    <li class="nav-item active">
+        <a class="nav-link" 
+           style="background-color:green"
+           asp-controller="Doctores"
+           asp-action="Perfil">Perfil de @Context.User.Identity.Name <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" 
+           style="background-color:red"
+           asp-controller="Identity"
+           asp-action="LogOut">Cerrar Sesión <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link"
+           asp-controller="Doctores"
+           asp-action="DoctoresEspecialidad">Doctores <span class="sr-only">(current)</span></a>
+    </li>
+
+}
+else
+{
+    <li class="nav-item active">
+        <a class="nav-link"
+           style="background-color:green"
+           asp-controller="Doctores"
+           asp-action="Perfil">Login <span class="sr-only">(current)</span></a>
+    </li>
+}

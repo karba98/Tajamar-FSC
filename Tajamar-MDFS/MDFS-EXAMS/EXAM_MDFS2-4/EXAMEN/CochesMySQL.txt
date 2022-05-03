@@ -1,0 +1,35 @@
+CREATE TABLE coches(
+	idcoche int NOT NULL,
+	marca nvarchar(50) NULL,
+	modelo nvarchar(50) NULL,
+	conductor nvarchar(50) NULL,
+	imagen nvarchar(1000) NULL);
+ALTER TABLE coches 
+ADD CONSTRAINT PK_COCHES
+PRIMARY KEY (idcoche);
+
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (1, N'DMC MySQL', N'DELOREAN', N'MARTY MACFLY', N'https://static.motor.es/fotos-noticias/2015/10/min652x435/curiosidades-delorean-regreso-al-futuro-201523728_4.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (2, N'PONTIAC MySQL', N'FIREBIRD', N'MICHAEL KNIGHT', N'https://i.ytimg.com/vi/UJFwmjfTSJw/hqdefault.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (3, N'VOLKSWAGEN MySQL', N'ESCARABAJO', N'HERBIE', N'https://i.ytimg.com/vi/AP-HLHi0HUw/maxresdefault.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (4, N'GMC MySQL', N'VANDURA', N'M.A BARRACUS', N'https://mm3.vistoenpantalla.com/imagenes-productos/furgoneta-a-team-a-24-greenlight-large2.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (5, N'CADILLAC MySQL', N'MILLER-METEOR', N'CAZAFANTASMAS', N'https://aws.traveler.es/prod/designs/v1/assets/940x467/100066.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (6, N'CHEVROLET MySQL', N'CORVETTE 84', N'FENIX', N'http://3.bp.blogspot.com/-oSOLxXB9Ens/Vpla0HjL53I/AAAAAAAAB7I/zuAyq3BYThQ/s1600/corvette%2BC4.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (7, N'ASTON MARTIN MySQL', N'DB5', N'JAMES BOND', N'https://www.quadis.es/documents/80345/95274/el-aston-martin-db5.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (8, N'TRONCO MySQL', N'MOVIL', N'PEDRO PICAPIEDRA', N'https://i.pinimg.com/originals/02/cd/ec/02cdecd6a0f513954e95b4ef492926ee.png');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (9, N'DODGE MySQL', N'VIPER', N'RAYO MCQUEEN', N'https://www.clicacoches.com/wp-content/uploads/2018/10/rayo-mcqueen-1.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (10, N'AUTO MySQL', N'DOBLE CERO', N'PIERRE NODOYUNA', N'https://i.pinimg.com/736x/47/ce/f5/47cef57781506ed6cbe1b3b3bf162bd7.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (11, N'COMPACT MySQL', N'PUSSYCAT', N'PENELOPE GLAMOUR', N'https://www.ionlitio.com/images/2014/03/los-autos-locos-coche5.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (12, N'BATMOVIL MySQL', N'FIREBALL', N'BRUCE WAYNE', N'https://i.blogs.es/13cf55/ted_2695-x3/1366_2000.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (14, N'TRON MySQL', N'LEGACY', N'KEVIN FLYNN', N'https://i.blogs.es/cc6b89/ted_5938/1366_2000.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (15, N'LAND ROVER MySQL', N'DEFENDER', N'CAPITAN NEMO', N'https://static.motor.es/fotos-noticias/2015/06/min652x435/a-la-venta-el-nautilus-el-coche-de-seis-ruedas-del-capitan-nemo-201521872_3_1.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (16, N'LANDSPEEDER MySQL', N'X-34', N'LUKE SKYWALKER', N'https://pics.imcdb.org/0is849/starwarslandspeeder1.3585.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (17, N'VOLKSWAGEN MySQL', N'BEETLE', N'HERBIE', N'https://www.motor.es/fotos-noticias/2013/03/ranking-los-20-mejores-coches-del-cine-y-la-television-del-10-al-1-201313031_8.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (18, N'DODGE MySQL', N'CHARGER', N'DOMINIC TORETTO', N'https://cdn.catawiki.net/assets/marketing/stories/storybanners-files/561-162bc729f501ef97d5e8b5cee126309ec79a4635-original.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (19, N'PONTIAC MySQL', N'GTO', N'TORETTO', N'https://i.pinimg.com/originals/a5/4f/0f/a54f0f680c03a97ea0fd42bb06379bc2.png');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (20, N'PEGASSI MySQL', N'INFERNUS', N'GTA III', N'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/855/public/media/image/2019/05/pegassi-infernus-gta-v.jpg?itok=MnsxitPR');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (21, N'PEGASSI MySQL', N'ZENTORNO', N'GTA V', N'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/855/public/media/image/2019/05/pegassi-zentorno.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (22, N'VOLKSWAGEN MySQL', N'V3', N'SCOOBY DOO', N'https://i.blogs.es/919b75/650_1000_mystery-machine-by-gas--7-/1366_2000.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (23, N'BATMOVIL MySQL', N'TUMBLER', N'BATMAN', N'https://i.pinimg.com/originals/c8/2d/a0/c82da0242fb573e8f50f947561218692.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (24, N'FORD MySQL', N'MUSTANG', N'ELEANOR', N'https://www.eluniversal.com.mx/sites/default/files/main-1.jpg');
+INSERT coches (idcoche, marca, modelo, conductor, imagen) VALUES (25, N'DODGE MySQL', N'CHALLENGER R/T', N'DEATH PROOF', N'https://cdn3.whatculture.com/images/2019/06/be0d2e81214a489b-600x338.jpg');
+SELECT * FROM coches;

@@ -1,0 +1,43 @@
+PADRE-HIJO (CONCESIONARIO-COCHEs)
+
+html padre:
+<app-coche [car]="coches[0]"></app-coche> <= Un objeto, array, string o lo que sea
+
+component hijo Coche:
+import { Component, OnInit, Input } from '@angular/core';
+...
+ @Input() car: Coche;
+...
+
+
+
+HIJO-PADRE Contador-Incrementador
+
+component hijo:
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+...
+@Output() recibirIdContador = new EventEmitter();
+...
+incrementarContador(event){
+	this.recibirIdContador.emit(this.idContador);
+}
+
+hijo html:
+<button (click)="incrementarContador($event)">
+    Incrementar contador
+</button>
+
+
+componente padre:
+recibirIdContador( event ){
+    //UTILIZAMOS EVENT DIRECTAMENTE PORQUE VAMOS A 
+    //RECIBIR UN NUMERO (idContador)
+    this.mensaje = "Contador incrementando: " + event;
+  }
+
+
+padre.html:
+ <app-hijo-contador
+       [inicio]="num"
+       [idContador]="i + 1"
+       (recibirIdContador)="recibirIdContador($event)"></app-hijo-contador>

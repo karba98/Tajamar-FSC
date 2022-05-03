@@ -1,0 +1,14 @@
+E:\MCSD\MDFS\MDFS-5\Azure\ServiceDepartamentosSql\bin\Debug\ServiceDepartamentosSql.dll.config
+E:\MCSD\MDFS\MDFS-5\Azure\ServiceDepartamentosSql\bin\Debug\ServiceDepartamentosSql.dll
+E:\MCSD\MDFS\MDFS-5\Azure\ServiceDepartamentosSql\bin\Debug\ServiceDepartamentosSql.pdb
+E:\MCSD\MDFS\MDFS-5\Azure\ServiceDepartamentosSql\bin\Debug\EntityFramework.dll
+E:\MCSD\MDFS\MDFS-5\Azure\ServiceDepartamentosSql\bin\Debug\EntityFramework.SqlServer.dll
+E:\MCSD\MDFS\MDFS-5\Azure\ServiceDepartamentosSql\bin\Debug\EntityFramework.xml
+E:\MCSD\MDFS\MDFS-5\Azure\ServiceDepartamentosSql\bin\Debug\EntityFramework.SqlServer.xml
+E:\MCSD\MDFS\MDFS-5\Azure\ServiceDepartamentosSql\obj\Debug\ServiceDepartamentosSql.csprojAssemblyReference.cache
+E:\MCSD\MDFS\MDFS-5\Azure\ServiceDepartamentosSql\obj\Debug\ServiceDepartamentosSql.csproj.CoreCompileInputs.cache
+E:\MCSD\MDFS\MDFS-5\Azure\ServiceDepartamentosSql\obj\Debug\ServiceDepartamentosSql.csproj.CopyComplete
+E:\MCSD\MDFS\MDFS-5\Azure\ServiceDepartamentosSql\obj\Debug\ServiceDepartamentosSql.dll
+E:\MCSD\MDFS\MDFS-5\Azure\ServiceDepartamentosSql\obj\Debug\ServiceDepartamentosSql.pdb
+E:\MCSD\MDFS\MDFS-5\Azure\ServiceDepartamentosSql\bin\Debug\System.Data.SqlClient.dll
+E:\MCSD\MDFS\MDFS-5\Azure\ServiceDepartamentosSql\bin\Debug\System.Data.SqlClient.xml

@@ -1,0 +1,13 @@
+﻿@model List<int>
+@{
+    ViewData["Title"] = "PruebaNumeroRandomAzure";
+}
+
+<h1>PruebaNumeroRandomAzure</h1>
+<hr/>
+<ul class="list-group">
+    @foreach(int i in Model)
+    {
+        <li class="list-group-item">@i.ToString()</li>
+    }
+</ul>

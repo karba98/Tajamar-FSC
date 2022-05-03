@@ -1,0 +1,25 @@
+﻿@model List<Hospital>
+@{
+    Hospital hospital = ViewBag.Hospital as Hospital;
+
+}
+<h1>Vista detalles Hospital Select</h1>
+@Html.ActionLink("Volver a Hospitales", "index", "Hospitales")
+<hr />
+<form method="post">
+    <select name="id" onchange="this.form.submit()">
+        <option>Selecciona Hospital</option>
+        @foreach (Hospital h in Model)
+        {
+            <option value="@h.IdHospital">@h.Nombre</option>
+        }
+    </select>
+</form>
+<hr />
+@if (hospital != null)
+{
+    <h1>@hospital.Nombre</h1>
+    <h3 style="color:cornflowerblue"> @hospital.Direccion</h3>
+    <h3 style="color:cornflowerblue"> @hospital.Telefono</h3>
+    <h3 style="color:cornflowerblue"> @hospital.Camas</h3>
+}

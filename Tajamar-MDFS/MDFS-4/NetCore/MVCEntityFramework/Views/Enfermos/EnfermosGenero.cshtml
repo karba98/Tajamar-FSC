@@ -1,0 +1,50 @@
+﻿@model List<Enfermo>
+<br/>
+<h1>Enfermos por Igualdad de Genero</h1>
+<ul class="list-group">
+    @foreach (Genero g in ViewBag.Generos)
+    {
+        <li class="list-group-item">
+            <a asp-controller="Enfermos"
+               asp-action="EnfermosGenero"
+               asp-route-genero="@g.Value">@g.Text</a>
+        </li>
+    }
+</ul>
+<hr />
+@if (Model != null)
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Direccion</th>
+                <th>Fecha Nacimiento</th>
+                <th>NSS</th>
+                <th>S</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
+            {
+                @foreach (Enfermo e in Model)
+                {
+                    <tr>
+                        <td>@e.Apellido</td>
+                        <td>@e.Direccion</td>
+                        <td>@e.Fecha_Nac</td>
+                        <td>@e.NSS</td>
+                        <td>@e.S</td>
+                        @*<td>
+                                @Html.ActionLink("Ver detalles","Detalles",new { inscripcion = e.Inscripcion})
+                            </td>*@
+                        <td>
+                            <a asp-action="Detalles" asp-controller="Enfermos" asp-route-inscripcion="@e.Inscripcion">Ver detalles</a>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+}

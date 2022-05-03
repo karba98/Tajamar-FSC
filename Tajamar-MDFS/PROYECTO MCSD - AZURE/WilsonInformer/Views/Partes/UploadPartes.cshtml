@@ -1,0 +1,31 @@
+﻿@*@model List<Parte>*@
+
+    <h1>Actualizar Datos</h1>
+    <hr />
+    <div style="
+    background-color: cornflowerblue;
+    border: 1px solid blue;
+    border-collapse: collapse;
+    color:white;
+    padding:15px">
+        <p>
+            Importe partes de pérdidas de <a href="https://wilsonapp.tech/auth/login"> https://wilsonapp.tech/</a>
+            al servidor para poder comenzar a generar informes
+        </p>
+        <form method="post" enctype="multipart/form-data" asp-controller="Partes" asp-action="UploadPartes">
+            @Html.AntiForgeryToken()
+            <span>Seleccione CSV: </span>
+            <input type="file" name="postedFiles" accept=".csv" class="form-group" />
+            <button type="submit" class="btn btn-light">Cargar</button>
+            <br />
+        </form>
+
+    </div>
+    <a class="btn btn-danger" style="width:100%" href='@Url.Action("DeleteAllPartes", "Partes",new { })'>Limpiar datos almacenados</a>
+    <hr />
+
+    <div class="@ViewBag.type" role="alert">
+        @Html.Raw(ViewBag.Message)
+    </div>
+    
+

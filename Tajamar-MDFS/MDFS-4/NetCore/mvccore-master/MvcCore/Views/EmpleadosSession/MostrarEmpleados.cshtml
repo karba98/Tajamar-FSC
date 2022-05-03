@@ -1,0 +1,37 @@
+﻿@model List<Empleado>
+<h1>Empleados almacenados en Session:</h1>
+<hr />
+<a class="nav-link" asp-action="AlmacenarEmpleados" asp-controller="EmpleadosSession">
+    Volver a Almacenar Empleados
+</a>
+@if (Model != null)
+{
+    <form method="post">
+        <button class="btn btn-outline-danger" type="submit">
+            Comprar esclavos
+        </button>
+        <ul class="list-group">
+            @foreach (Empleado emp in Model)
+            {
+                <li class="list-group-item">
+                    <a>@emp.Apellido</a><br />
+
+                    <input type="number" value="1" name="cantidades" class="form-control"/>
+
+                    <a asp-action="MostrarEmpleados"
+                       asp-controller="EmpleadosSession"
+                       asp-route-eliminar="@emp.IDEmpelado">
+
+                        Eliminar de Session (Carro de eclavos)
+                    </a>
+                </li>
+
+            }
+        </ul>
+    </form>
+    <hr />
+}
+else
+{
+    <h1>No hay Chacas seleccionados para comprar</h1>
+}

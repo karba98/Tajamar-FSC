@@ -1,0 +1,20 @@
+﻿<h1>Tienda</h1>
+<hr/>
+<form method="post">
+    @Html.AntiForgeryToken()
+    <input type="text" name="direccion" placeholder="Direccion Envio" class="form-group" /><br />
+    <button type="submit" class="btn btn-danger">Enviar</button><br />
+
+    <hr />
+    <ul class="list-group-horizontal">
+        <li class="list-group-item">
+            <input type="checkbox" name="productos" value="TV" class="form-check-input" />Smart TV
+        </li>
+        <li class="list-group-item">
+            <input type="checkbox" name="productos" value="PS5" class="form-check-input" />PS5
+        </li>
+        <li class="list-group-item">
+            <input type="checkbox" name="productos" value="Movil" class="form-check-input" />Movil
+        </li>
+    </ul>
+</form>

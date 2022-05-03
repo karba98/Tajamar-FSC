@@ -1,0 +1,38 @@
+﻿@model List<Empleado>
+<h1>Buscador</h1>
+<hr />
+<form method="post">
+    <input type="text" name="oficio" placeholder="Oficio" />
+    <input type="number" name="salario" value="0" placeholder="Salario" /><sapn>€</sapn>
+    <button type="submit" class="btn-warning">Buscar</button>
+</form>
+<hr />
+@if (Model!=null)
+{
+    <table class="table table-responsive-sm">
+        <thead style="background-color:blueviolet;color:white">
+            <tr>
+                <td>Apellido</td>
+                <td>Nº Empleado</td>
+                <td>Nº Departamento</td>
+                <td>Oficio</td>
+                <td>Salario</td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody style="background-color:lavender">
+            @foreach (Empleado emp in Model)
+            {
+            <tr>
+                <td>@emp.Apellido</td>
+                <td>@emp.IdEmpleado</td>
+                <td>@emp.Departamento</td>
+                <td>@emp.Oficio</td>
+                <td>@emp.Salario€</td>
+                <td>@Html.ActionLink("Ver detalles", "DetallesEmpleado", "Empleados", new { id = emp.IdEmpleado })</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+}
+<h2>@ViewBag.Mensaje</h2>

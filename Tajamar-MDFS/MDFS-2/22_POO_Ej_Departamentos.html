@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<link href="css/22_POO_Ej_Empleados.css" rel="stylesheet" />
+<link href="css/form_style.css" rel="stylesheet" />
+<link href="css/tables.css" rel="stylesheet" />
+<head>
+    <meta charset="utf-8" />
+    <title>Empresa X</title>
+</head>
+<body>
+    <h1>Departamentos</h1>
+    <hr />
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form action="#" target="" method="get" name="formDatosPersonales">
+                <h1>Datos</h1>
+                <label>Apellido: </label>
+                <input type="text" disabled  id="apellidos" />
+                <input type="text" disabled id="id" /><br />
+                <label>Oficio: </label>
+                <input type="text" disabled  id="oficio" /><br />
+                <label>Departamento:</label>
+                <input type="text"  disabled id="dep" /><br />
+                <hr />
+                <h1>Vida laboral</h1>
+                <label>Fecha alta: </label>
+                <input type="text"  disabled id="fa" /><br />
+                <label>Duración: </label>
+                <input type="text"  disabled id="at" /><hr />
+                <h1>Ingresos</h1>
+                <label>Salario: </label>
+                <input type="text" disabled  id="sal" /><br />
+                <label>Salario/año</label>
+                <input type="text" disabled  id="sala" /><br />
+                <label>Total ingresos: </label>
+                <input type="text"  disabled id="salt" /><br /><hr />
+            </form>
+        </div>
+
+    </div>
+    <div class="tabla-caja">
+        <label>Oficios: </label>
+        <select id="oficios">
+            <option value="OFICIO">OFICIO</option>
+        </select>
+    </div>
+    <hr />
+    <div id="tablaEmp" class="tabla-caja"></div>
+</body>
+
+</html>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/22_POO_Ej_Departamentos/Empleado.js"></script>
+<script src="js/22_POO_Ej_Departamentos/22_POO_Ej_Departamentos.js"></script>

@@ -1,0 +1,87 @@
+﻿@model IEnumerable<MvcCoreNuevo.Models.Trabajador>
+
+@{
+    int numeropagina = 1;
+    int numeroregistros = ViewBag.Registros;
+}
+<style>
+    .list-group-horizontal .list-group-item {
+        display: inline-block;
+    }
+
+    .list-group-horizontal .list-group-item {
+        margin-bottom: 0;
+        margin-left: -4px;
+        margin-right: 0;
+        border-right-width: 0;
+    }
+
+        .list-group-horizontal .list-group-item:first-child {
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 4px;
+        }
+
+        .list-group-horizontal .list-group-item:last-child {
+            border-top-right-radius: 4px;
+            border-bottom-left-radius: 0;
+            border-right-width: 1px;
+        }
+</style>
+<h1>PaginarGrupoDeptSP</h1>
+<hr />
+<div>
+    <ul class="list-groupg list-group-horizontal">
+        @for (int i = 1; i < numeroregistros; i += 2)
+        {
+            <li class="list-group-item">
+                <a asp-action="TrabajadoresPaged"
+                   asp-controller="Departamentos"
+                   asp-route-posicion="@i">@numeropagina</a>
+            </li>
+            numeropagina++;
+        }
+    </ul>
+</div>
+
+<h1>TrabajadoresPaged</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Oficio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Salario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Oficio)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

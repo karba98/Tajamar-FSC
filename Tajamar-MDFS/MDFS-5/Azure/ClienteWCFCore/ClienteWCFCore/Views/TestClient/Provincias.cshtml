@@ -1,0 +1,40 @@
+﻿@model List<ClienteWCFCore.Models.Provincia>
+
+@{
+    ViewData["Title"] = "Provincias";
+}
+
+<h1>Provincias</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProvincia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+               |  @Html.ActionLink("Municipios", "Municipios", new { nombre = item.Nombre }) |
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,31 @@
+﻿@model Libro
+<br/>
+<a style="color:red">@ViewBag.Error</a>
+<form method="post">
+    <label>ID: </label>
+    <br /><input type="number" name="id" value="@Model.IdLibro" readonly></input>
+    <hr/>
+    <input type="text" name="Titulo" class="input-group" value="@Model.Titulo"/>
+    <br/>
+    <input type="text" name="Autor" class="input-group" value="@Model.Autor"/>
+    <hr />
+    <h3><b>Genero:</b></h3>
+    <select name="genero">
+        @foreach (String g in ViewBag.generos)
+        {
+            @if(g == Model.GetGenero())
+            {
+                <option selected ="selected">@g</option>
+            }
+            else
+            {
+                <option>@g</option>
+            }
+        }
+    </select>
+    <h3><b>Sinopsis:</b></h3>
+    <br />
+    <textarea name="sinopsis" style="width:80%;height:250px;padding:15px">@Model.Sinopsis</textarea>
+    <hr/>
+    <button type="submit" class="btn btn-warning"> Modificar</button>
+</form>

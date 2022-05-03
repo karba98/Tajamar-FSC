@@ -1,0 +1,41 @@
+    <table class="table table-responsive-sm table-hover table-bordered">
+    <thead style="background-color:black;color:white">
+        <tr>
+            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Nº parte</th>
+            <th>Nº Albaran</th>
+            <th>Fecha Parte</th>
+            <th>Fecha Albaran</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Parte p in Model)
+        {
+            var color = "";
+            @if (p.Estado.Contains("Cerrada"))
+            {
+                color = "red";
+            }
+            else
+            {
+                color = "green";
+            }
+            <tr>
+                <td rowspan="2" style="background-color: @color"></td>
+                <td>
+                    <a asp-action="PartePerdida" asp-route-nparte="@p.N_parte" target="_blank">
+                        <img style="width:15px;height:15px" src="~/assets/images/doc.png" />
+                    </a>
+                </td>
+                <td style="padding-right:20px"><a href="@p.Accion" target="_blank">@p.N_parte</a></td>
+                <td>@p.GetAlbaran(p.Envios)</td>
+                <td>@p.Fecha_parte</td>
+                <td>@p.F_Albaran</td>
+                <td style="color:white;background-color:@color">@p.Estado</td>
+            </tr>
+            <tr><td style="background-color:lightgoldenrodyellow" colspan="6">@p.GetEnvio(p.Envios)</td></tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,32 @@
+﻿@*
+Un comentario de Razor    
+*@
+@{
+    String nombre = "Raul";
+}
+@model Persona;
+<h1>
+    Inicio de Aplicaciones Net Core de @nombre @ViewBag.Apellido de edad @ViewBag.Edad
+</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Num</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < 10; i++)
+        {
+            <tr style="font-size:15px">
+                <td>@i</td>
+                <td>@Model.nombre</td>
+                <td>@ViewBag.Apellido</td>
+                <td>@Model.edad</td>
+            </tr>
+
+        }
+    </tbody>
+</table>

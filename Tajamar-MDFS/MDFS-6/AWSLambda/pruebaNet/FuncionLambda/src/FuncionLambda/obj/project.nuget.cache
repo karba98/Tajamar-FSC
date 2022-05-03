@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "d7q35FCCRjy+mtmPBrIpozjUKLJIBX9hJvqNBWBkGrm2jeDJ8Akagb5UGuVIAp/gKkqObfFPUkCPtVcpZnPgog==",
+  "success": true,
+  "projectFilePath": "E:\\MCSD\\MDFS\\MDFS-6\\AWSLambda\\pruebaNet\\FuncionLambda\\src\\FuncionLambda\\FuncionLambda.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\raulc\\.nuget\\packages\\amazon.lambda.core\\2.0.0\\amazon.lambda.core.2.0.0.nupkg.sha512",
+    "C:\\Users\\raulc\\.nuget\\packages\\amazon.lambda.serialization.systemtextjson\\2.1.0\\amazon.lambda.serialization.systemtextjson.2.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}

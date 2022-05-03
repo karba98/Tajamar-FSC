@@ -1,0 +1,43 @@
+﻿@model List<Doctor>
+<h1>Doctores (Stored procedure)</h1>
+<hr />
+
+<form method="post">
+    <input type="number" name="doctor" placeholder="ID DOCTOR" />
+    <input type="text" name="Especialidad" placeholder="ESPECIALIDAD" />
+    <button type="submit">Modificar</button>
+</form>
+<hr />
+<br />
+<a asp-action="DocsEspecialidad" asp-controller="Doctores">
+    Ver por especialidad
+</a>
+<br />
+<hr />
+@if (Model != null)
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Apellido</th>
+                <th>Especialidad</th>
+                <th>Hospital</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (Doctor e in Model)
+            {
+
+                <tr>
+                    <td>@e.IdDoctor</td>
+                    <td>@e.Apellido</td>
+                    <td>@e.Especialidad</td>
+                    <td>@e.Hospital</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}

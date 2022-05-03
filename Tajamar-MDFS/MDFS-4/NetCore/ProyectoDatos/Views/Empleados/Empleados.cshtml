@@ -1,0 +1,24 @@
+﻿@model List<Empleado>
+<h1>Empleados Linq</h1>
+<hr/>
+@Html.ActionLink("Buscar por oficio o salario", "BuscarEmpleSalarioOficio","Empleados")
+<hr/>
+<table class="table table-responsive-sm">
+    <thead  style="background-color:blueviolet;color:white">
+        <tr>
+            <td>Apellido</td>
+            <td>Nº Empleado</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody style="background-color:lavender">
+        @foreach(Empleado emp in Model)
+        {
+        <tr>
+            <td>@emp.Apellido</td>
+            <td>@emp.IdEmpleado</td>
+            <td>@Html.ActionLink("Ver detalles","DetallesEmpleado","Empleados", new { id=emp.IdEmpleado})</td>
+        </tr>
+        }
+    </tbody>
+</table>

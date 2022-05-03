@@ -1,0 +1,64 @@
+
+
+SERVIDOR APACHE HTTPD - LINUX
+*****************************
+sudo su
+yuminstall httpd -y
+service https start
+chkconfig httpd on
+service httpd status
+
+cd /var/www/html
+
+-Meter aqui los phph, html etc...
+
+
+VOLUMENES EBS Y SNAPSHOTS
+******************************
+-Conexion a nueva maquina virtual
+-AWS Console Elastic Block Store
+-Volumenes/Nuevo volumen magnetico 1Gb
+-Zona de disponibilidad MISMA ZONA QUE MAQUINA VIRTUAL
+-Una vez creado, seleccionamos disco nuevo/Acciones/Asociar
+-Seleccionamos Instancia de Maquina Virtual 
+ (aparece si están en misma zona)
+-Tendriamos VM con un disco duro externo
+
+-En BASH de VM: 
+fdisk -l (list de discos)
+fdisk (Disk de debajo de tabla, en este caso /dev/xvdf)
+mkfs -t ext4 /dev/xvdf1
+-Lo que tenemos que realizar ahora es montar el volumen y asignarle un nombre
+-Dicho nombre que pongamos será la clave para, posteriormente, saber si todo funciona
+-Correctamente incluido la teoría de Snapshot
+cd /mnt/
+mkdir VOL1
+ls 
+-Montamos el nuevo volumen EBS en la ruta creada VOL1
+mount /dev/xvdf1 /mnt/VOL1
+-Para visualizar si está correctamente montado utilizamos el siguiente comando
+-Para ver los volumenes disponibles
+df -h
+-creamos fichero en vol1 con nano y desmontamos el volumen
+umount -l vol1
+-guardamos UUID con blkid
+-UUID="900b1301-e702-4aa4-af8f-0494bffbebe4"
+nano /etc/fstab
+-pegamos como
+UUID="900b1301-e702-4aa4-af8f-0494bffbebe4" /mnt/vol1 ext4 defaults 0 0cerramos
+-reiniciamos la maquina
+-si volvemos a entrar estará montado vol1 y el fichero
+
+-En AWS Console creamos snapshot de INSTANCIA
+-Creamos nuevo volumen de snapshot de 8Gb de root
+-Creamos una instancia Ec2 normal (misma zona, mismas claves SSH)
+-Apagamos la maquina nueva
+-vamos a volumenes, desasociamos el nuevo volumen creado
+-asociamos el volumen de la maquina anteriormente borrada como 
+ root añadiendo /dev/xvda (para que lo coja como root)
+-asociamos tambien el hdd de 1GB 
+-arrancamos la maquina y aparecerá la carpeta mnt con vol1 y prueba.txt
+
+
+GRUPO SE SEGURIDAD EC2
+***********************

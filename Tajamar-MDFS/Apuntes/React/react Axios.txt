@@ -1,0 +1,15 @@
+ axios.post(url, departamento).then((res) => {
+      this.return();
+    });
+ 
+  axios.get(url).then((res) => {
+      this.return();
+    });
+
+  axios.put(url, departamento).then((res) => {
+      this.return();
+    });
+
+   axios.delete(url, departamento).then((res) => {
+      this.return();
+    });

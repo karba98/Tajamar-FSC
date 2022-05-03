@@ -1,0 +1,44 @@
+﻿@model ProcedimientoEmpleadoGenerico
+@{
+    List<Destino> destinos = ViewBag.destinos as List<Destino>;
+}
+<h1>BUscar por destino</h1>
+<hr />
+<form method="post">
+    <select name="dest">
+        @foreach (Destino dest in destinos)
+        {
+            <option value=@dest.Value>@dest.Nombre</option>
+        }
+    </select>
+    <button type="submit">Buscra</button>
+</form>
+
+@if (Model != null)
+{
+    <hr />
+    <h3>Salario Total: @Model.SumaSalarial €</h3>
+    <h3>Media: @Model.MediaSalarial €</h3>
+    <hr />
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Destino</th>
+                <th>Funcion</th>
+                <th>Salario</th>
+                </tr>
+        </thead>
+        <tbody>
+            @foreach (EmpleadoGenerico emp in Model.Empleados)
+            {
+                <tr>
+                    <td>@emp.Apellido.</td>
+                    <td>@emp.NombreDestino</td>
+                    <td>@emp.Funcion</td>
+                    <td>@emp.Salario €</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

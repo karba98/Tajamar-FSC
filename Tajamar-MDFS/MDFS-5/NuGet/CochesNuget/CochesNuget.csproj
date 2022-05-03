@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>SimpleLibreriaCochesCutrona</PackageId>
+    <Authors>Alumno Tajamar</Authors>
+    <Company>Tajamar</Company>
+    <Product>Simple Libreria de Coches Cutrona</Product>
+    <Description>Es una libreria de coches totalmente absurda, sin más, no sirve para nada, solo se que seguimos con COVID y mi gato se llama Bigotes.</Description>
+    <PackageTags>Coches,Cars,COVID,Simple,absurda</PackageTags>
+    <PackageReleaseNotes>Version 2 y si, hay otra version jejeje</PackageReleaseNotes>
+    <Version>2.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="coches.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="coches.xml" />
+  </ItemGroup>
+
+</Project>

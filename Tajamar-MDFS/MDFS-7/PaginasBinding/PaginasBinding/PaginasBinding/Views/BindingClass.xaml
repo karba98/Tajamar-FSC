@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PaginasBinding.Views.BindingClass"
+             xmlns:models="clr-namespace:PaginasBinding.Models">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout.BindingContext>
+                <!--MODEL DESDE XAML-->
+                <models:Coche 
+                    Imagen="https://neomotor.sport.es/media/2019/05/audi-r8-spyder-v10-quattro-8.jpg" 
+                    Modelo="Audi" Marca="R8" Velocidad="350"/>
+            </StackLayout.BindingContext>
+            <Label TextColor="Black" Text="{Binding Marca}" />
+            <Label Text="{Binding Modelo}" />
+            <Label Text="{Binding Velocidad}" />
+            <Image Source="{Binding Imagen}" WidthRequest="300" HeightRequest="300" />
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

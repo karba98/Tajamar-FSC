@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery-3.5.1.min.js"></script>
+    <script src="~/js/jquery.min.js"></script>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/css/StyleSheet.css" rel="stylesheet" type="text/css" />
+
+</head>
+@RenderSection("styles", required: false)
+<body style="
+/**/    background: url(../assets/images/furgoBG.png) no-repeat center center fixed;
+        background-size: cover;
+        /*background-color:#0652ee*/
+        ">
+    <input type="checkbox" id="navcheck" role="button" title="menu">
+    <label for="navcheck" aria-hidden="true" title="menu">
+        <span class="burger">
+            <span class="bar">
+                <span class="visuallyhidden"></span>
+            </span>
+        </span>
+    </label>
+    <nav id="menu">
+        <br />
+
+        <b><a>
+        @if (Context.User.IsInRole("A"))
+        {
+            <img style="width:20px;height:20px" src="~/assets/images/adminicon.png" />
+        }
+        else
+        {
+            <img style="width:20px;height:20px" src="~/assets/images/usericon.png" />
+        }
+        Bienvenido @Context.User.Identity.Name
+    </a></b>
+        <hr />
+        <partial name="_Menu" />
+        <hr />
+        <img src="~/assets/images/logowilsonInformer.png" style="width:350px;height:130px;margin-left:30px" />
+    </nav>
+    <main>
+        <div class="content"
+             style="background-color: rgba(255,255,255, 0.8);
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 2%;
+        border-radius: 20px">
+            @RenderBody()
+        </div>
+    </main>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

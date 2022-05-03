@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Cosmos Db Coches</h1>
+<hr />
+<form method="post">
+    <button name="accion" value="iniciar" type="submit" class="btn btn-info">Iniciar BD</button>
+</form>
+<hr />
+<a>@ViewBag.Mensaje</a><br/>
+<a asp-action="ListCoches">Ver Coches</a>
+

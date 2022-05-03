@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/jquery-3.5.1.min.js"></script>
+    <script src="~/js/jquery.min.js"></script>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/css/UserForm.css" rel="stylesheet" />
+</head>
+    <body>
+        @RenderSection("alert")
+        <div class="register">
+            <div class="row">
+                <div class="col-md-3 register-left">
+                    <img src="~/assets/images/logowilsonInformer.png" style="animation: none;width: 450px; height: 160px; margin-left: 30px" />
+                    <img src="~/assets/images/lock.png" />
+
+                    <h3 style="color:white">Welcome</h3>
+                    <p style="color:white">
+                        Bienvenido a <b>WilsonInformer</b>, el portal
+                        de datos de partes de WilsonAppTech & MRW Logistics
+                    </p>
+
+                    <img src="~/assets/images/MRWLogo.png" style="animation:none;margin-right:20px;width:130px;height:30px" />
+                    <img src="~/assets/images/logowilson.png" style="animation: none; width: 130px; height: 30px" />
+                </div>
+                <div class="col-md-9 register-right">
+                    <div class="tab-content" id="myTabContent">
+                       @RenderBody()
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>

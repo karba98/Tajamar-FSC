@@ -1,0 +1,39 @@
+﻿@model List<Enfermo>
+<h1 style="margin-top:30px">Enfermos</h1>
+<hr/>
+<a asp-action="Insertar" asp-controller="Enfermos">Nuevo enfermo</a>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Apellido</th>
+            <th>Direccion</th>
+            <th>Fecha Nacimiento</th>
+            <th>NSS</th>
+            <th>S</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach(Enfermo e in Model)
+            {
+                <tr>
+                    <td>@e.Apellido</td>
+                    <td>@e.Direccion</td>
+                    <td>@e.Fecha_Nac</td>
+                    <td>@e.NSS</td>
+                    <td>@e.S</td>
+                    @*<td>
+                        @Html.ActionLink("Ver detalles","Detalles",new { inscripcion = e.Inscripcion})
+                    </td>*@
+                    <td>
+                        <a asp-action="Detalles" asp-controller="Enfermos" asp-route-inscripcion="@e.Inscripcion">Ver detalles</a>
+                        <br/>
+                        <a asp-action="Eliminar" asp-controller="Enfermos" asp-route-inscripcion="@e.Inscripcion">Tiene COVID, Eliminar</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

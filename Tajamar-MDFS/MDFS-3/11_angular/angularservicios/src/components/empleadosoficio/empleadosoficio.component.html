@@ -1,0 +1,31 @@
+<h1>Buscar Empleados Oficio</h1>
+<form>
+    <select #oficio name="oficio" (change)="getEmpleados()" 
+    class="select custom-select"  *ngIf="oficios.length>0">
+        <option>Seleccione oficio..</option>
+        <option *ngFor="let oficio of oficios"
+        >{{oficio}}</option>
+    </select>
+</form>
+<hr/>
+<div *ngIf="empleados.length!=0">
+    <table class="table table-info">
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Oficio</th>
+                <th>Salario</th>
+                <th>Departamento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-dark" style="color:black" *ngFor="let emple of empleados">
+                <td>{{emple.apellido}}</td>
+                <td>{{emple.oficio}}</td>
+                <td>{{emple.salario}}</td>
+                <td>{{emple.departamento}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

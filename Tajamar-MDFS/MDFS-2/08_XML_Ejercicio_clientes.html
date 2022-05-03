@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<style>
+    img {
+    width:150px;
+    height:150px;
+    border-radius:150px;
+    display: block;
+   
+    margin-top:50px;
+    border:double;
+    }
+    .name {
+        font-family:monospace;
+        background-color:lightblue;
+        padding:8px;
+        border-radius:150px;
+    }
+    h1,h2,label{
+        font-family:monospace;
+    }
+    .container {
+    position: fixed;
+    padding: 50px;
+    margin: auto;
+}
+</style>
+<head>
+    <meta charset="utf-8" />
+    <title>Ejemplo JQuery</title>
+</head>
+<body>
+    <div class="container">
+        <div class="divl">
+            <h1>Red Clientes</h1>
+            <label>Nombre: </label>
+            <form>
+                <select id="clientes"></select>
+            </form>
+        </div>
+        <div class="divr" id="result"></div>
+    </div>
+    
+    <!--
+      <CLIENTES>
+        <CLIENTE IDCLIENTE="1">
+          <NOMBRE>DELORIAN</NOMBRE>
+          <DIRECCION>C/ Paseo Castellana, 150</DIRECCION>
+          <EMAIL>blockbuster@video.es</EMAIL>
+          <CODIGOPOSTAL>28020</CODIGOPOSTAL>
+          <PAGINAWEB>http://www.delorian.es</PAGINAWEB>
+          <IMAGENCLIENTE>https://emerdela.jpg</IMAGENCLIENTE>
+        </CLIENTE>
+      -->
+
+</body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/08_XML_Ejercicio_clientes.js"></script>
+</html>

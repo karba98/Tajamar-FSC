@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E3CA7F16-6EB3-40B5-8841-EA65EA0370AB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Fundamentos</RootNamespace>
+    <AssemblyName>Fundamentos</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form04CambiarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form04CambiarForm.Designer.cs">
+      <DependentUpon>Form04CambiarForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form05NumeroMayor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form05NumeroMayor.Designer.cs">
+      <DependentUpon>Form05NumeroMayor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form06DiaNacimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form06DiaNacimiento.Designer.cs">
+      <DependentUpon>Form06DiaNacimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form07DateTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form07DateTime.Designer.cs">
+      <DependentUpon>Form07DateTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form08Char.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form08Char.Designer.cs">
+      <DependentUpon>Form08Char.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form09validarEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form09validarEmail.Designer.cs">
+      <DependentUpon>Form09validarEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form10SumanumerosString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form10SumanumerosString.Designer.cs">
+      <DependentUpon>Form10SumanumerosString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form11ValidarISBN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form11ValidarISBN.Designer.cs">
+      <DependentUpon>Form11ValidarISBN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form12StringBuilder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form12StringBuilder.Designer.cs">
+      <DependentUpon>Form12StringBuilder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form13ColeccionGrafica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form13ColeccionGrafica.Designer.cs">
+      <DependentUpon>Form13ColeccionGrafica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form14SeleccionMultiple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form14SeleccionMultiple.Designer.cs">
+      <DependentUpon>Form14SeleccionMultiple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form15ColeccionNumeroListBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form15ColeccionNumeroListBox.Designer.cs">
+      <DependentUpon>Form15ColeccionNumeroListBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form16EjercicioTienda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form16EjercicioTienda.Designer.cs">
+      <DependentUpon>Form16EjercicioTienda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form16Referencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form16Referencia.Designer.cs">
+      <DependentUpon>Form16Referencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form17MetodosdeEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form17MetodosdeEvento.Designer.cs">
+      <DependentUpon>Form17MetodosdeEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form18ColeccionesNoGraficas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form18ColeccionesNoGraficas.Designer.cs">
+      <DependentUpon>Form18ColeccionesNoGraficas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form19MetodosEventosColecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form19MetodosEventosColecciones.Designer.cs">
+      <DependentUpon>Form19MetodosEventosColecciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form20SumarBotonesColeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form20SumarBotonesColeccion.Designer.cs">
+      <DependentUpon>Form20SumarBotonesColeccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form21TablaMultiplicar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form21TablaMultiplicar.Designer.cs">
+      <DependentUpon>Form21TablaMultiplicar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form22PractTemperaturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form22PractTemperaturas.Designer.cs">
+      <DependentUpon>Form22PractTemperaturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form23ControlesEnEjecucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form23ControlesEnEjecucion.Designer.cs">
+      <DependentUpon>Form23ControlesEnEjecucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form24Primitiva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form24Primitiva.Designer.cs">
+      <DependentUpon>Form24Primitiva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form25PruebaDeClases.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form25PruebaDeClases.Designer.cs">
+      <DependentUpon>Form25PruebaDeClases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form27FicherosPlanos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form27FicherosPlanos.Designer.cs">
+      <DependentUpon>Form27FicherosPlanos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form26MesesConClase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form26MesesConClase.Designer.cs">
+      <DependentUpon>Form26MesesConClase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form28FicheroProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form28FicheroProductos.Designer.cs">
+      <DependentUpon>Form28FicheroProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form29SeralizacionProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form29SeralizacionProducto.Designer.cs">
+      <DependentUpon>Form29SeralizacionProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form29SerialzarColeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form29SerialzarColeccion.Designer.cs">
+      <DependentUpon>Form29SerialzarColeccion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form30PracticaCoches.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form30PracticaCoches.Designer.cs">
+      <DependentUpon>Form30PracticaCoches.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConversion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConversion.Designer.cs">
+      <DependentUpon>FormConversion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSumar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSumar.Designer.cs">
+      <DependentUpon>FormSumar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form04CambiarForm.resx">
+      <DependentUpon>Form04CambiarForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form05NumeroMayor.resx">
+      <DependentUpon>Form05NumeroMayor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form06DiaNacimiento.resx">
+      <DependentUpon>Form06DiaNacimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form07DateTime.resx">
+      <DependentUpon>Form07DateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form08Char.resx">
+      <DependentUpon>Form08Char.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form09validarEmail.resx">
+      <DependentUpon>Form09validarEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form10SumanumerosString.resx">
+      <DependentUpon>Form10SumanumerosString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form11ValidarISBN.resx">
+      <DependentUpon>Form11ValidarISBN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form12StringBuilder.resx">
+      <DependentUpon>Form12StringBuilder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form13ColeccionGrafica.resx">
+      <DependentUpon>Form13ColeccionGrafica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form14SeleccionMultiple.resx">
+      <DependentUpon>Form14SeleccionMultiple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form15ColeccionNumeroListBox.resx">
+      <DependentUpon>Form15ColeccionNumeroListBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form16EjercicioTienda.resx">
+      <DependentUpon>Form16EjercicioTienda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form16Referencia.resx">
+      <DependentUpon>Form16Referencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form17MetodosdeEvento.resx">
+      <DependentUpon>Form17MetodosdeEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form18ColeccionesNoGraficas.resx">
+      <DependentUpon>Form18ColeccionesNoGraficas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form19MetodosEventosColecciones.resx">
+      <DependentUpon>Form19MetodosEventosColecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form20SumarBotonesColeccion.resx">
+      <DependentUpon>Form20SumarBotonesColeccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form21TablaMultiplicar.resx">
+      <DependentUpon>Form21TablaMultiplicar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form22PractTemperaturas.resx">
+      <DependentUpon>Form22PractTemperaturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form23ControlesEnEjecucion.resx">
+      <DependentUpon>Form23ControlesEnEjecucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form24Primitiva.resx">
+      <DependentUpon>Form24Primitiva.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form25PruebaDeClases.resx">
+      <DependentUpon>Form25PruebaDeClases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form27FicherosPlanos.resx">
+      <DependentUpon>Form27FicherosPlanos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form26MesesConClase.resx">
+      <DependentUpon>Form26MesesConClase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form28FicheroProductos.resx">
+      <DependentUpon>Form28FicheroProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form29SeralizacionProducto.resx">
+      <DependentUpon>Form29SeralizacionProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form29SerialzarColeccion.resx">
+      <DependentUpon>Form29SerialzarColeccion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form30PracticaCoches.resx">
+      <DependentUpon>Form30PracticaCoches.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConversion.resx">
+      <DependentUpon>FormConversion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSumar.resx">
+      <DependentUpon>FormSumar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProyectoClases\ProyectoClases.csproj">
+      <Project>{87de2f88-f954-4531-972c-3184a311cf49}</Project>
+      <Name>ProyectoClases</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

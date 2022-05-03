@@ -1,0 +1,40 @@
+﻿@model List<Departamento>
+<h1>Api Departamentos Azure c#</h1>
+<hr />
+<form class="form-group" method="post">
+    <input class="form-control" name="id" type="number" placeholder="NUMERO" />
+    <button style="width:100%" asp-action="Borrar"class="btn btn-danger" id="btneliminar" type="submit">ELIMINAR</button>
+    <input class="form-control" name="nombre" type="text" placeholder="NOMBRE" />
+    <input class="form-control" name="localidad" type="text" placeholder="LOCALIDAD" />
+    <button style="width:100%" asp-action="Insertar"class="btn btn-info" id="btninsertar" type="submit">AÑADIR</button><br />
+    <button style="width:100%" asp-action="Editar" class="btn btn-warning" id="btnmodificar" type="submit">MODIFICAR</button>
+
+</form>
+<hr />
+<table class="table table-hover table-info" id="tabladept">
+    <thead>
+        <tr>
+            <th>NUMERO</th>
+            <th>NOMBRE</th>
+            <th>LOCALIDAD</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Departamento d in Model)
+        {
+            <tr>
+                <td>@d.Id</td>
+                <td>@d.Nombre</td>
+                <td>@d.Localidad</td>
+                <td><a asp-action="Detalles" asp-route-id="@d.Id">Detalles</a></td>
+            </tr>
+        }
+        <tr>
+            <td>00</td>
+            <td>MEDICINA</td>
+            <td>MADRID</td>
+            <td><a asp-controller="Doctores" asp-action="Index">Ver Doctores</a></td>
+        </tr>
+    </tbody>
+</table>

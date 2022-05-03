@@ -1,0 +1,17 @@
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\bin\HostWcfServiceDoctores.dll.config
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\bin\HostWcfServiceDoctores.dll
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\bin\HostWcfServiceDoctores.pdb
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\bin\EntityFramework.dll
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\bin\EntityFramework.SqlServer.dll
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\bin\ServiceDoctoresSql.dll
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\bin\System.Data.SqlClient.dll
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\bin\ServiceDoctoresSql.pdb
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\bin\ServiceDoctoresSql.dll.config
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\bin\EntityFramework.xml
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\bin\EntityFramework.SqlServer.xml
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\bin\System.Data.SqlClient.xml
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\obj\Release\HostWcfServiceDoctores.csprojAssemblyReference.cache
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\obj\Release\HostWcfServiceDoctores.csproj.CoreCompileInputs.cache
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\obj\Release\HostWcfServiceDoctores.csproj.CopyComplete
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\obj\Release\HostWcfServiceDoctores.dll
+C:\Users\raulc\source\repos\HostWcfServiceDoctores\obj\Release\HostWcfServiceDoctores.pdb

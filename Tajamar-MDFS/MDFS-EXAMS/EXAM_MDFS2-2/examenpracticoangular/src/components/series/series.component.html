@@ -1,0 +1,6 @@
+<diV style="padding:15px" *ngIf="serie!=null">
+    <img style="width:400px;heigth:300px" src="{{serie.imagen}}" alt="{{serie.imagen}}"/>
+    <h1>{{serie.nombre}}</h1>
+    <h1>{{serie.anyo}}</h1>
+    <NavLink [routerLink]="['/personajes',ids]" class="btn btn-info">Ver personajes</NavLink>
+</diV>

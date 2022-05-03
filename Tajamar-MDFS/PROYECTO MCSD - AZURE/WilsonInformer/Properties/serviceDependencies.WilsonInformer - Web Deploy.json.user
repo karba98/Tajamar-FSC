@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "restored": true,
+      "restoreTime": "2021-01-25T13:29:42.077228Z"
+    },
+    "appInsights1": {
+      "restored": true,
+      "restoreTime": "2021-03-18T20:10:21.4642907Z"
+    }
+  },
+  "parameters": {
+    "appInsights1.subscriptionId": {
+      "Name": "appInsights1.subscriptionId",
+      "Type": "subscription",
+      "Value": "45314680-ecc2-4a6d-b297-44ef2f83da4f"
+    },
+    "appInsights1.resourceGroupName": {
+      "Name": "appInsights1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "wilsoninformer"
+    }
+  }
+}

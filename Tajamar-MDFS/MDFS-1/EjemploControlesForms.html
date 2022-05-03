@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Controles Formas</title>
+</head>
+<body>
+    <h1>Controles Form</h1>
+    <form name="formulario">
+        <label>
+            Colores favoritos
+            <nav>
+
+                <ul>
+                    <!--MISMO NAME A TODOS LOS CHECKBOX PARA ARRAY DINAMICO-->
+                    <li>
+                        <input type="checkbox" name="colores" value="rosa" />Rosa
+                    </li>
+                    <li>
+                        <input type="checkbox" name="colores" value="rojo" />Rojo
+                    </li>
+                    <li>
+                        <input type="checkbox" name="colores" value="verde" />Verde
+                    </li>
+                    <li>
+                        <input type="checkbox" name="colores" value="azul" />Azul
+                    </li>
+                </ul>
+            </nav>
+        </label>
+        <button type="button" onclick="colorSeleccionado()">Mostrar colores</button>
+        <br />
+
+        <select id="deportes">
+            <option value="Petanca">Petanca</option>
+            <option value="Curling">Curling</option>
+            <option value="Futbol">Futbol</option>
+            <option value="Basket">Basket</option>
+        </select>
+        <br />
+
+        <button type="button" onclick="mostrarSeleccionado()">Mostrar seleccionado</button>
+        <h1 id="res"></h1>
+        <h1 id="colores"></h1>
+    </form>
+</body>
+
+<script type="text/javascript">
+
+    function mostrarSeleccionado() {
+        var select = document.getElementById("deportes");
+        for (var option of select.options) {
+            if (option.selected == true) {
+                document.getElementById("res").innerText = "Valor: "+option.value+" texto: " + option.innerText;
+            }
+        }
+    }
+
+    function colorSeleccionado() {
+        //GUARDAMOS ARRAY DE COLORES DE CHECKBOX accediendo a name="formulario".name="colores"
+        var colores = document.formulario.colores;
+        console.log(colores.length);
+        var html = "<table>";
+        for (var option of colores) {
+            if (option.checked==true) {
+                html+="<tr><td>"+option.value+"</td></tr>"
+            }
+        }
+        html+="</table>"
+        document.getElementById("colores").innerHTML = html;
+
+    }
+</script>
+</html>

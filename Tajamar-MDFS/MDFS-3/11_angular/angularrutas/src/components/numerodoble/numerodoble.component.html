@@ -1,0 +1,9 @@
+<h1>Ejemplo routing con parametros</h1>
+<div *ngIf="num">
+    <h2>Numero: {{num}}</h2>
+    <h2>Doble: {{doble}}</h2>
+</div>
+<div *ngIf="!num">
+    <h2>No hay Numero</h2>
+</div>
+<button (click)="irACine()">Ir a cine</button>

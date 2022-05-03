@@ -1,0 +1,82 @@
+APP.JS
+
+import logo from './../../logo.svg';
+import './App.css';
+import Router from './../Router';
+import Menu from './../Rutas/Menu';
+function App() {
+  return (
+    <div className="App">
+      <Menu/>
+      <Router/>
+    </div>
+  );
+}
+export default App
+
+MENU.JS
+
+import React, { Component } from 'react'
+export default class Menu extends Component {
+    render() {
+        return (
+            <div>
+                <ul style={{display: "inline"}}>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="/musica">Musica</a>
+                    </li>
+                    <li>
+                        <a href="/cine">Cine</a>
+                    </li>
+                    <li>
+                        <a href="/television">Television</a>
+                    </li>                    
+                </ul>
+            </div>
+        )
+    }
+}
+
+ROUTER.JS
+
+import React, { Component } from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+import Home from './Rutas/Home';
+import Cine from './Rutas/Cine';
+import Musica from './Rutas/Musica';
+import Television from './Rutas/Television';
+export default class Router extends Component {
+    render() {
+        return (
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route path="/musica" component={Musica}/>
+                    <Route path="/television" component={Television}/>
+                    <Route path="/cine" component={Cine}/>
+                </Switch>
+            </BrowserRouter>
+        )
+    }
+}
+
+*****CON PARAMETROS
+ROUTER.JS
+ 		<Route exact 
+                        path="/empleadosdetalle/:idempleado"
+                        render={props => {
+                            var idemp = 
+                                props.match.params.idempleado;                            
+                            console.log("Id " + idemp);
+                            return <EmpleadoDetalles 
+                            idempleado={idemp}/>
+                        }}
+                        />
+
+component ==> RECIBE POR PROPS
+
+PARA MOVERSE, SE PUEDE USAR <NavLink to={"/loquesea"}>Ir a esto</NavLink>

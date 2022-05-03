@@ -1,0 +1,10 @@
+﻿<h1>Nuevo departamento</h1>
+@Html.ActionLink("Volver", "GetDepartamentos", "Home")
+
+<form method="post">
+    <input type="text" name="dnombre" placeholder="Nombre" /><br />
+    <input type="number" name="dept_no" placeholder="Numero" /><br />
+    <input type="text" name="loc" placeholder="Localidad" /><br />
+    <button class="btn-danger" type="submit">Crear</button>
+    <h1>@ViewBag.Mensaje</h1>
+</form>

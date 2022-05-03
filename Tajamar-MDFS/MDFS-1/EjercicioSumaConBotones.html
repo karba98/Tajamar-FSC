@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Suma con botones</title>
+</head>
+<body>
+
+    <h1>Suma con botones</h1>
+    <!--para que funcione forma bruta, añadir id a cada boton (bn)-->
+    <button type="button" name="bot" value ="19">19</button>
+    <button type="button" name="bot" value ="3">3</button>
+    <button type="button" name="bot" value ="14">14</button>
+    <button type="button" name="bot" value ="2">2</button>
+    <br />
+    <h1 id="res"></h1>
+</body>
+
+<script>
+
+//POR NAME
+    var num = 0;
+    window.onload = function () {
+
+        //PREFERIBLEMENTE POR TAJNAME <BUTTON> O CLASS
+        var botones = document.getElementsByName("bot");
+        //recorreos los botones
+        for (var i = 0; i < botones.length; i++) {
+            //extraemos cada boton en cada posicion del array
+            var boton = botones[i]; //Bucle por referencia
+
+            //A PARTIR DE AQUI ES UN METODO(AUN SIENDO ANONIMO) ES INDEPENDIENTE
+            //ES DECIR, FUNCIONA AL HACER CLICK, POR ESO SE USA this
+            //EN LUGAR DE boton
+            //boton ESTÁ DECLARADO EN EL LOAD, NO EN EL EVENT
+
+            /*
+             * 
+             * DIFERENCIA ENTRE NIVEL SCRIPT Y NIVEL EVENTO
+             * 
+             * */
+            boton.addEventListener("click", function () {
+                num += parseInt(this.innerText);
+                document.getElementById("res").innerText= "Suma: "+num;
+            })
+
+
+            /*se puede usar otro tipo de bucle por referencia
+             
+            for..in (indice) --> 
+            for(var indice in botones){
+                var boton = botones[indice];   --> tienes que referenciar igual el indice al cada boton
+            }
+
+
+            for..of (objeto) -->  
+            for(var boton of botones){  --> cada boton se convierte directamente en objeto boton del array
+                
+            }
+             */
+        }
+    }
+
+//FORMA BRUTA
+    /*
+    window.onload = function () {
+        var boton1 = document.getElementById("b1");
+        var boton2 = document.getElementById("b2");
+        var boton3 = document.getElementById("b3");
+        var boton4 = document.getElementById("b4");
+
+        boton1.addEventListener("click", incrementa);
+        boton2.addEventListener("click", incrementa);
+        boton3.addEventListener("click", incrementa);
+        boton4.addEventListener("click", incrementa);
+
+
+    }
+
+        var num = 0;
+            function incrementa() {
+                console.log(this.innerText);
+                num += parseInt(this.innerText);
+                document.getElementById("res").innerText= "Suma: "+num;
+            }
+    */
+
+    
+
+    
+</script>
+</html>

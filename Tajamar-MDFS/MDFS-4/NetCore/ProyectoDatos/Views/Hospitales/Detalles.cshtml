@@ -1,0 +1,27 @@
+﻿@model Hospital
+@Html.ActionLink("Volver", "index", "Hospitales")
+<hr />
+<h1>@Model.Nombre</h1>
+<table class="table table-success">
+    <tbody>
+        <tr>
+            <td>Direccion</td>
+            <td>@Model.Direccion.</td>
+        </tr>
+        <tr>
+            <td>Camas</td>
+            <td>@Model.Camas</td>
+        </tr>
+        <tr>
+            <td>Telefono</td>
+            <td>@Model.Telefono</td>
+        </tr>
+        <tr>
+            <td>ID</td>
+            <td>@Model.IdHospital</td>
+        </tr>
+
+    </tbody>
+</table>
+
+@Html.ActionLink("Modificar", "Update", "Hospitales",new { id = Model.IdHospital})

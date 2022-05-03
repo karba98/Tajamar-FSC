@@ -1,0 +1,14 @@
+<div style="padding:20px">
+    <form #formulario>
+        <label>Nombre:</label>
+        <input #nombre name="nombre" type="text" placeholder="Nombre" class="input input-group" style="width:40%"/><br/>
+        <label>Imagen:</label>
+        <input #imagen name="imagen" type="text" placeholder="Url imagen" class="input input-group" style="width:40%"/><br/>
+        <select #serie name="serie" class="nav-link dropdown-toggle">
+            <option class="dropdown-menu">Selecciona serie</option>
+            <option *ngFor="let serie of series" value="{{serie.idSerie}}">{{serie.nombre}}</option>
+        </select>
+        <br/>
+        <button (click)="insertar()" class="btn  btn-light">Insertar Personaje</button>
+    </form>
+</div>

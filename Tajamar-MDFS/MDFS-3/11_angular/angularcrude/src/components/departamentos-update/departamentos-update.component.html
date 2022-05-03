@@ -1,0 +1,34 @@
+<form #formulario="ngForm" *ngIf="departamento!=null">
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <col width=100><col width=100><col width=100>
+            <tr>
+                <td><label>Numero: </label></td><td></td>
+                <td><input #cnumero name="cnumero" type="number" disabled value="{{departamento.numero}}"/></td>
+            </tr>
+            <tr>
+                <td><label>Nombre: </label></td><td></td>
+                <td><input #cnombre name="cnmobre" type="text" value="{{departamento.nombre}}"/></td>
+            </tr>
+            <tr>
+                <td> <label>Localidad: </label></td><td></td>
+                <td><input #clocalidad name="clocalidad" type="text" value="{{departamento.localidad}}"/></td>
+            </tr>
+            <tr>
+                
+                <td colspan="3">
+                    <button style="width: 257px;" (click)="modDep()" class="btn btn-outline-primary">Modificar</button>
+                </td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</form>

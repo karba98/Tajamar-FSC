@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MVCCoreApis.Models.Doctor>
+
+@{
+    ViewData["Title"] = "DoctoresServidor";
+}
+
+<h1>DoctoresServidor</h1>
+
+<form method="post">
+    <select class="form-control"name="especialidad">
+        @foreach(String especialidad in ViewBag.Especialidades)
+        {
+        <option value="@especialidad">@especialidad</option>
+        }
+    </select>
+    <button type="submit" class="btn btn-secondary">Mostrar Doctores</button>
+</form>
+<hr/>
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th
+                @Html.DisplayNameFor(model => model.hospitalCod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.apellido)
+            </th>
+           
+            <th>
+                @Html.DisplayNameFor(model => model.especialidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.salario)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.hospitalCod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.apellido)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.especialidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.salario)
+            </td>
+            <td>
+                @Html.ActionLink("Ver", "DetallesDoctorServidor", new {  id=item.doctorNo }) |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

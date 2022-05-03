@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="cadenahospital-Web.config Connection String" description="cadenahospital Connection String used in web.config by the application to access the database." defaultValue="Data Source=sqlserverdbtajamarrcdlt.database.windows.net;Initial Catalog=tajamar_db;Integrated Security=False;Trusted_Connection=False;Encrypt=True;User ID=YourName;password=PasswordPassword" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="E:\\MCSD\\MDFS\\MDFS-5\\Azure\\HostWcfServiceDepartamentos\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='cadenahospital']/@connectionString" />
+  </parameter>
+</parameters>

@@ -1,0 +1,13 @@
+C:\Users\raulc\source\repos\ServiceDoctoresSql\bin\Debug\ServiceDoctoresSql.dll.config
+C:\Users\raulc\source\repos\ServiceDoctoresSql\bin\Debug\ServiceDoctoresSql.dll
+C:\Users\raulc\source\repos\ServiceDoctoresSql\bin\Debug\ServiceDoctoresSql.pdb
+C:\Users\raulc\source\repos\ServiceDoctoresSql\bin\Debug\EntityFramework.dll
+C:\Users\raulc\source\repos\ServiceDoctoresSql\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\raulc\source\repos\ServiceDoctoresSql\bin\Debug\System.Data.SqlClient.dll
+C:\Users\raulc\source\repos\ServiceDoctoresSql\bin\Debug\EntityFramework.xml
+C:\Users\raulc\source\repos\ServiceDoctoresSql\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\raulc\source\repos\ServiceDoctoresSql\bin\Debug\System.Data.SqlClient.xml
+C:\Users\raulc\source\repos\ServiceDoctoresSql\obj\Debug\ServiceDoctoresSql.csproj.CoreCompileInputs.cache
+C:\Users\raulc\source\repos\ServiceDoctoresSql\obj\Debug\ServiceDoctoresSql.csproj.CopyComplete
+C:\Users\raulc\source\repos\ServiceDoctoresSql\obj\Debug\ServiceDoctoresSql.dll
+C:\Users\raulc\source\repos\ServiceDoctoresSql\obj\Debug\ServiceDoctoresSql.pdb

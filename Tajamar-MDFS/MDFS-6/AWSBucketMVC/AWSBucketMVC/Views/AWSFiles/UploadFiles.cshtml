@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "UploadFiles";
+}
+
+<h1>UploadFiles</h1>
+<hr/>
+<a>@ViewBag.Mensaje</a>
+<br />
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="fichero" />
+    <button type="submit">Subir</button>
+</form>
+

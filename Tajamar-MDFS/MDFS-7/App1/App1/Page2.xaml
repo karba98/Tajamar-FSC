@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.Page2">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black">
+            <Label Text="Controll slider" TextColor="White" FontSize="30" Margin="10,10,10,10"/>
+            <Slider Minimum="0" Maximum="100" VerticalOptions="Fill" x:Name="sld"/>
+            <Label TextColor="Aqua" FontSize="30" HorizontalOptions="Center" Margin="10"
+                   x:Name="lblvalue"/>
+            <Stepper x:Name="steper" Minimum="0" Maximum="+10" Increment="0.1"/>
+            <Picker x:Name="picker" BackgroundColor="White" VerticalOptions="Fill" Title="Nuevo picker" TextColor="white"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

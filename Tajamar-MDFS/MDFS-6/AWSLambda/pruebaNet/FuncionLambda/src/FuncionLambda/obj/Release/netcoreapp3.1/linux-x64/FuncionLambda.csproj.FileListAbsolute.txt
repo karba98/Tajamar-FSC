@@ -1,0 +1,15 @@
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\bin\Release\netcoreapp3.1\linux-x64\FuncionLambda.deps.json
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\bin\Release\netcoreapp3.1\linux-x64\FuncionLambda.runtimeconfig.json
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\bin\Release\netcoreapp3.1\linux-x64\FuncionLambda.runtimeconfig.dev.json
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\bin\Release\netcoreapp3.1\linux-x64\FuncionLambda.dll
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\bin\Release\netcoreapp3.1\linux-x64\FuncionLambda.pdb
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\bin\Release\netcoreapp3.1\linux-x64\Amazon.Lambda.Core.dll
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\bin\Release\netcoreapp3.1\linux-x64\Amazon.Lambda.Serialization.SystemTextJson.dll
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\obj\Release\netcoreapp3.1\linux-x64\FuncionLambda.csprojAssemblyReference.cache
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\obj\Release\netcoreapp3.1\linux-x64\FuncionLambda.AssemblyInfoInputs.cache
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\obj\Release\netcoreapp3.1\linux-x64\FuncionLambda.AssemblyInfo.cs
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\obj\Release\netcoreapp3.1\linux-x64\FuncionLambda.csproj.CoreCompileInputs.cache
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\obj\Release\netcoreapp3.1\linux-x64\FuncionLambda.csproj.CopyComplete
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\obj\Release\netcoreapp3.1\linux-x64\FuncionLambda.dll
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\obj\Release\netcoreapp3.1\linux-x64\FuncionLambda.pdb
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\obj\Release\netcoreapp3.1\linux-x64\FuncionLambda.genruntimeconfig.cache

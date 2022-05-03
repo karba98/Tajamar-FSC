@@ -1,0 +1,28 @@
+﻿@model Hospital
+@Html.ActionLink("Volver", "index", "Hospitales")
+<hr />
+<h3 style="color:green">@ViewBag.Mensaje</h3>
+<form method="post">
+    <h1><input type="text" name ="nombre" value="@Model.Nombre" /></h1>
+    <table class="table table-success">
+        <tbody>
+            <tr>
+                <td>Direccion</td>
+                <td><input name="direccion" type="text" value="@Model.Direccion" /></td>
+            </tr>
+            <tr>
+                <td>Camas</td>
+                <td><input name="camas" type="number" value="@Model.Camas" /></td>
+            </tr>
+            <tr>
+                <td>Telefono</td>
+                <td><input name="telefono" type="text" value="@Model.Telefono" /></td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>@Model.IdHospital</td>
+            </tr>
+        </tbody>
+    </table>
+    <button type="submit" class="bg-warning">Modificar</button>
+</form>

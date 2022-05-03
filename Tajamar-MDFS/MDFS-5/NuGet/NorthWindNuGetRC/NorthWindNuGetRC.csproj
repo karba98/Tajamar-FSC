@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>NorthWindNuGetCustomersRC</PackageId>
+    <Authors>Raul Castro</Authors>
+    <Company>Yo</Company>
+    <Product>NorthWindNuGetCustomers</Product>
+    <Description>Conjunto de customers de uin servicio de prueba (No hacer mucho caso)</Description>
+    <PackageIcon>database-icon.png</PackageIcon>
+    <PackageTags>Customers,json,newtonsoft,prueba</PackageTags>
+    <Version>1.0.4</Version>
+    <PackageReleaseNotes>Añadido buscador customers por id
+Aádido queso fundido dentro de nuget
+Añadido rebozado de pan rayado sin gluten</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1-beta1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="C:\Users\raulc\Pictures\database-icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

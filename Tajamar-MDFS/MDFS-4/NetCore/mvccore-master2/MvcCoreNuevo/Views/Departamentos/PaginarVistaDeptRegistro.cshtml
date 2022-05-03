@@ -1,0 +1,81 @@
+﻿@model MvcCoreNuevo.Models.VistaDept
+<style>
+    .list-group-horizontal .list-group-item {
+        display: inline-block;
+    }
+
+    .list-group-horizontal .list-group-item {
+        margin-bottom: 0;
+        margin-left: -4px;
+        margin-right: 0;
+        border-right-width: 0;
+    }
+
+        .list-group-horizontal .list-group-item:first-child {
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 4px;
+        }
+
+        .list-group-horizontal .list-group-item:last-child {
+            border-top-right-radius: 4px;
+            border-bottom-left-radius: 0;
+            border-right-width: 1px;
+        }
+</style>
+    <div>
+        <ul class="list group list-group-horizontal">
+            <li class="list-group-item">
+                <a asp-controller="Departamentos"
+                   asp-action="PaginarVistaDeptRegistro"
+                   asp-route-posicion="1">Primero
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a asp-controller="Departamentos"
+                   asp-action="PaginarVistaDeptRegistro"
+                   asp-route-posicion="@ViewBag.anterior">Anterior
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a>
+                    @Model.Posicion / @ViewBag.ultimo
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a asp-controller="Departamentos"
+                   asp-action="PaginarVistaDeptRegistro"
+                   asp-route-posicion="@ViewBag.siguiente">Siguiente
+                </a>
+            </li>
+            <li class="list-group-item">
+                <a asp-controller="Departamentos"
+                   asp-action="PaginarVistaDeptRegistro"
+                   asp-route-posicion="@ViewBag.ultimo">Ultimo
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h4>VistaDept</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Numero)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Numero)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Nombre)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Nombre)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Imagen)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Imagen)
+            </dd>
+        </dl>
+    </div>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)grapecity.documents.html.windows.x64\4.0.0.632\build\GrapeCity.Documents.Html.Windows.X64.targets" Condition="Exists('$(NuGetPackageRoot)grapecity.documents.html.windows.x64\4.0.0.632\build\GrapeCity.Documents.Html.Windows.X64.targets')" />
+    <Import Project="$(NuGetPackageRoot)grapecity.documents.html.mac.x64\4.0.0.632\build\GrapeCity.Documents.Html.Mac.X64.targets" Condition="Exists('$(NuGetPackageRoot)grapecity.documents.html.mac.x64\4.0.0.632\build\GrapeCity.Documents.Html.Mac.X64.targets')" />
+    <Import Project="$(NuGetPackageRoot)grapecity.documents.html.linux.x64\4.0.0.632\build\GrapeCity.Documents.Html.Linux.X64.targets" Condition="Exists('$(NuGetPackageRoot)grapecity.documents.html.linux.x64\4.0.0.632\build\GrapeCity.Documents.Html.Linux.X64.targets')" />
+    <Import Project="$(NuGetPackageRoot)grapecity.documents.html\4.0.0.632\build\GrapeCity.Documents.Html.targets" Condition="Exists('$(NuGetPackageRoot)grapecity.documents.html\4.0.0.632\build\GrapeCity.Documents.Html.targets')" />
+    <Import Project="$(NuGetPackageRoot)buildbundlerminifier\3.2.449\build\BuildBundlerMinifier.targets" Condition="Exists('$(NuGetPackageRoot)buildbundlerminifier\3.2.449\build\BuildBundlerMinifier.targets')" />
+  </ImportGroup>
+</Project>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        function ejecutarCollatz() {
+            var caja = document.getElementById("cajanumero");
+            var numero = parseInt(caja.value);
+            var div = document.getElementById("resultado");
+            //            	Si el número es PAR: Dividimos el número entre 2
+            //Si el número es IMPAR: Multiplicamos el número por 3 y le sumamos 1
+            div.innerHTML = "";
+            if (numero < 0) {
+                div.innerHTML = "<h1>Número debe ser positivo</h1>";
+            } else {
+                div.innerHTML += "<p>" + numero + "</p>";
+                while (numero != 1) {
+                    //PREGUNTAMOS SI ES PAR
+                    if (numero % 2 == 0) {
+                        //PAR
+                        numero = numero / 2;
+                    } else {
+                        //IMPAR
+                        numero = numero * 3 + 1;
+                    }
+                    div.innerHTML += "<p>" + numero + "</p>";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Conjetura Collatz</h1>
+    <label>Introduzca un número: </label>
+    <input type="number" id="cajanumero" />
+    <button type="button" onclick="ejecutarCollatz()">
+        Mostrar secuencia Collatz
+    </button>
+    <div id="resultado"></div>
+</body>
+</html>

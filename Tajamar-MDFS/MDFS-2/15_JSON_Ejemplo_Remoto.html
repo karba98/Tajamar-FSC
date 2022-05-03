@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<link href="css/tables.css" rel="stylesheet" />
+<head>
+    <meta charset="utf-8" />
+    <title>GET Departamentos</title>
+</head>
+<body>
+    <form>
+        <h1>Departamentos</h1>
+        <a href="https://apicruddepartamentoscore.azurewebsites.net/api/departamentos">
+            https://apicruddepartamentoscore.azurewebsites.net/api/departamentos
+        </a><hr />
+
+        <label>Numero:   </label>
+        <input type="text" id="numero" /><br />
+        <label>Nombre:   </label>
+        <input type="text" id="nombre" /><br />
+        <label>Localid.: </label>
+        <input type="text" id="localidad" /><br /><br />
+        <button type="button" id="insertar">Insertar</button>
+        <button type="button" id="borrar">Borrar</button>
+        <button type="button" id="modificar">Modificar</button>
+        <button type="button" id="refresh">Actualizar</button>
+        <hr />
+    </form>
+    <div class="table-wrapper">
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Numero</th>
+                    <th>Nombre</th>
+                    <th>Localidaaaad</th>
+                </tr>
+
+            </thead>
+            <tbody id="data">
+            </tbody>
+        </table>
+    </div>
+
+</body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/15_JSON_Ejemplo_Remoto.js"></script>
+</html>

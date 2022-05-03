@@ -1,0 +1,12 @@
+E:\MCSD\MDFS\MDFS-4\ProyectoClases\bin\Debug\ProyectoClases.dll
+E:\MCSD\MDFS\MDFS-4\ProyectoClases\bin\Debug\ProyectoClases.pdb
+E:\MCSD\MDFS\MDFS-4\ProyectoClases\obj\Debug\ProyectoClases.csprojAssemblyReference.cache
+E:\MCSD\MDFS\MDFS-4\ProyectoClases\obj\Debug\ProyectoClases.csproj.CoreCompileInputs.cache
+E:\MCSD\MDFS\MDFS-4\ProyectoClases\obj\Debug\ProyectoClases.dll
+E:\MCSD\MDFS\MDFS-4\ProyectoClases\obj\Debug\ProyectoClases.pdb
+C:\Users\AlumnoMCSD\source\repos\MDFS-4\ProyectoClases\bin\Debug\ProyectoClases.dll
+C:\Users\AlumnoMCSD\source\repos\MDFS-4\ProyectoClases\bin\Debug\ProyectoClases.pdb
+C:\Users\AlumnoMCSD\source\repos\MDFS-4\ProyectoClases\obj\Debug\ProyectoClases.csprojAssemblyReference.cache
+C:\Users\AlumnoMCSD\source\repos\MDFS-4\ProyectoClases\obj\Debug\ProyectoClases.csproj.CoreCompileInputs.cache
+C:\Users\AlumnoMCSD\source\repos\MDFS-4\ProyectoClases\obj\Debug\ProyectoClases.dll
+C:\Users\AlumnoMCSD\source\repos\MDFS-4\ProyectoClases\obj\Debug\ProyectoClases.pdb

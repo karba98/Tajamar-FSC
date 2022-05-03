@@ -1,0 +1,76 @@
+﻿﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cambiador de cbxn</title>
+
+</head>
+
+<style>
+</style>
+
+</style>
+<body>
+    <h1>Sumar checkboxes</h1>
+    <form name="formu">
+        <input type="range" min="0" max="10" value="0" id="repe" />
+        <a id="nr"></a>
+        <br />
+        <label>Posicion a eliminar</label>
+        <input type="text" id="posel"/>
+        <button id="elimi" type="button">Eliminar</button>
+        <hr />
+        <div id="cajaCbxs" name="caja"></div>
+        <h1 id="res"></h1>
+    </form>
+</body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        //BORRA UN CHECKBOX
+         $("#elimi").click(function () {
+            var posicion = parseInt($("#posel").val());
+             console.log($("#cajaCbxs").children());
+             $("div").children().eq(posicion).remove();
+
+         });
+
+        var suma = 0;
+        $("#res").css("color", "blue");
+        $("#res").text(suma);
+        $("#repe").on("input", function () {
+              $("#nr").text($(this).val());
+        });
+        $("#repe").change(function () {
+            $("#nr").text($(this).val());
+            var cbxs = $("#cajaCbxs");
+            cbxs.empty();
+            suma = 0;
+            $("#res").text(suma);
+            for (var i = 0; i < parseInt($(this).val()); i++) {
+                var nal = parseInt(Math.random() * 99);
+                var cb = $("<input>", {
+                    "type": "checkbox",
+                    "value":nal
+                });
+                cb.appendTo(cbxs);
+                var label = $("<label>");
+                label.text(nal);
+                label.appendTo(cbxs);
+
+                cb.click(function () {
+                    //Se puede usar is(":checked") o prop("checked")
+                    if ($(this).is(":checked")) {
+                        suma += parseInt($(this).val());
+                    } else {
+                        suma -= parseInt($(this).val());
+                    }
+                    $("#res").text(suma);
+                });
+            }
+        });
+       
+    });
+</script>
+</html>

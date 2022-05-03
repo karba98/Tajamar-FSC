@@ -1,0 +1,32 @@
+﻿@model List<Departamento>
+    <div style="padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 150px;
+        width:100%;
+        height: 100%;">
+        <h1 style="text-align:left"><u>Departamentos</u></h1>
+        <hr />
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>Numero</th>
+                    <th>Nombre</th>
+                    <th>Localidad</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @foreach (Departamento dep in Model)
+                    {
+                        <tr>
+                            <td>@dep.Dept_NO</td>
+                            <td>@dep.DNombre</td>
+                            <td>@dep.Loc</td>
+                        </tr>
+                    }
+
+                }
+            </tbody>
+        </table>
+    </div>

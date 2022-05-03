@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>NorthWindNuGetCustomersRC</id>
+    <version>1.0.4</version>
+    <authors>Raul Castro</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <icon>database-icon.png</icon>
+    <description>Conjunto de customers de uin servicio de prueba (No hacer mucho caso)</description>
+    <releaseNotes>Añadido buscador customers por id
+Aádido queso fundido dentro de nuget
+Añadido rebozado de pan rayado sin gluten</releaseNotes>
+    <tags>Customers,json,newtonsoft,prueba</tags>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Newtonsoft.Json" version="13.0.1-beta1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="E:\MCSD\MDFS\MDFS-5\NuGet\NorthWindNuGetRC\bin\Release\netstandard2.0\NorthWindNuGetRC.dll" target="lib\netstandard2.0\NorthWindNuGetRC.dll" />
+    <file src="C:\Users\raulc\Pictures\database-icon.png" target="database-icon.png" />
+  </files>
+</package>

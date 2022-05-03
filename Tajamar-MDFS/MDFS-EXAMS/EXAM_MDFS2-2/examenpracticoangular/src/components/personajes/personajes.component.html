@@ -1,0 +1,17 @@
+<div *ngIf="mostrar!=[]">
+    <button class="btn btn-danger" [routerLink]="['/']" >Vovler</button>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <td>Nombre</td>
+                <td>Imagen</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pers of mostrar">
+                <td>{{pers.nombre}}</td>
+                <td><img style="width:150px;height: 150px;" src="{{pers.imagen}}" alt="{{pers.imagen}}"/></td>
+            </tr>
+        </tbody>
+    </table>
+</div>>

@@ -1,0 +1,37 @@
+﻿@model ResumenDepartamento
+
+<h1>Resumen departamentos (Lamnda)</h1>
+<form method="post">
+    <input class="form-control" style="width:300px" name="dept" type="number" placeholder="Nº Dept" />
+    <button type="submit" class=" = btn btn-check">Buscar</button>
+</form>
+<hr />
+
+@if (Model != null)
+{
+    <p>Empleados: @Model.NumEmpleados</p>
+    <p>Maximo salario: @Model.Maximo €</p>
+    <p>Minimo salario: @Model.Minimo €</p>
+    <hr/>
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Oficio</th>
+                <th>Departamento</th>
+                <th>Salario</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Empleado emp in Model.Empleados)
+            {
+                <tr>
+                    <td>@emp.Apellido</td>
+                    <td>@emp.Oficio</td>
+                    <td>@emp.Departamento</td>
+                    <td>@emp.Salario</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

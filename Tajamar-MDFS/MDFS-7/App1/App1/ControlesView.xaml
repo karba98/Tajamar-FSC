@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.ControlesView">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Aqua">
+            <Label 
+                VerticalOptions="Center"  FontSize="30" Text="Controles dinamicos" Margin="10"/>
+            <Entry x:Name="entry" Placeholder="Nuevo boton..."/>
+            <Button x:Name="boton" Text="generar botones" BackgroundColor="red" Margin="10"
+                   TextColor="white" />
+            <ScrollView Orientation="Horizontal">
+                <StackLayout Orientation="Horizontal" BackgroundColor="Azure" VerticalOptions="Fill">
+                    <Label Text="Hola mundo!" TextColor="Black" FontSize="20" Margin="20"/>
+                    <Label Text="Hola mundo!" TextColor="Black" FontSize="20" Margin="20"/>
+                    <Label Text="Hola mundo!" TextColor="Black" FontSize="20" Margin="20"/>
+                    <Label Text="Hola mundo!" TextColor="Black" FontSize="20" Margin="20"/>
+                    <Label Text="Hola mundo!" TextColor="Black" FontSize="20" Margin="20"/>
+                    <Label Text="Hola mundo!" TextColor="Black" FontSize="20" Margin="20"/>
+                </StackLayout>
+                
+            </ScrollView>
+            <ScrollView>
+            <StackLayout VerticalOptions="Fill" BackgroundColor="BurlyWood"
+                         x:Name="contenedor"/>
+                
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

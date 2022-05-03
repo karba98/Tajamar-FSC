@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ToolKitNet</id>
+    <version>1.0.2</version>
+    <authors>Raul Castro</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <icon>config-icon-16.jpg</icon>
+    <description>Kit de herramientas y Servicios para tareas corrientes
+ServiceCypher - CIfrado de textos (util para passwords)
+ServiceText - Gestion y normalizacion de Texto</description>
+    <releaseNotes>Added ServiceAPiJSON ToolKit GET</releaseNotes>
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.AspNet.WebApi.Client" version="5.2.7" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="12.0.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="E:\MCSD\MDFS\MDFS-5\NuGet\ToolKitJuniorNet\ToolKitJuniorNet\bin\Release\netstandard2.0\ToolKitJuniorNet.dll" target="lib\netstandard2.0\ToolKitJuniorNet.dll" />
+    <file src="C:\Users\raulc\Pictures\config-icon-16.jpg" target="config-icon-16.jpg" />
+  </files>
+</package>

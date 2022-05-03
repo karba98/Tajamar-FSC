@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <titleSuma contenteditable=" Texto"></titleSuma>
+</head>
+<body>
+    <label>Numeros</label>
+    <input type="text" id="numeros"/>
+    <button onclick="sumar()">Sumar</button>
+    <h1 id="res"></h1>
+</body>
+<script type="text/javascript">
+    function sumar() {
+        var cadena = document.getElementById("numeros").value;
+        var num = 0;
+        var res = document.getElementById("res");
+        res.innerText = "";
+        for (var i = 0; i < cadena.length; i++) {
+            num += parseInt(cadena.charAt(i));
+        }
+        res.innerText += "Suma: " + num + "\nMedia: " + num / i;
+    }
+</script>
+</html>

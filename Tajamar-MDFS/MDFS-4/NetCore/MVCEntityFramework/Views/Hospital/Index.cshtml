@@ -1,0 +1,31 @@
+﻿@model List<Hospital>
+
+<h1 style="margin-top:25px">Hospitales</h1>
+<hr />
+<br/>
+<a asp-action="Index" asp-controller="Doctores">
+    Ver Doctores</a>
+<br/>
+<hr/>
+@if (Model != null)
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Hospital h in Model)
+            {
+                <tr>
+                    <td>@h.Nombre</td>
+                    <td>@h.Direccion</td>
+                    <td>@h.Telefono</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,235 @@
+DROP TABLE GENEROS
+DROP TABLE LIBROS
+DROP TABLE USUARIOS
+DROP TABLE PEDIDOS
+DROP VIEW VISTAPEDIDOS
+CREATE TABLE GENEROS
+(	IdGenero int NOT NULL primary key,
+	Nombre nvarchar(50) NULL,
+)
+GO
+CREATE TABLE LIBROS
+(
+	IdLibro int NOT NULL PRIMARY KEY,
+	Titulo nvarchar(50) NULL,
+	Autor nvarchar(50) NULL,
+	Editorial nvarchar(50) NULL,
+	Portada nvarchar(50) NULL,
+	Resumen nvarchar(max) NULL,
+	Precio int NULL,
+	IdGenero int NULL
+)
+GO
+CREATE TABLE USUARIOS
+(
+	IdUsuario int NOT NULL PRIMARY KEY,
+	Nombre nvarchar(50) NULL,
+	Apellidos nvarchar(50) NULL,
+	Email nvarchar(50) NULL,
+	Pass nvarchar(50) NULL,
+	Foto nvarchar(50) NULL
+)
+GO
+CREATE TABLE PEDIDOS
+(IDPEDIDO INT NOT NULL PRIMARY KEY
+, IDFACTURA INT --VALOR REPETIDO PARA LOCALIZAR PEDIDOS
+, FECHA DATE
+, IDLIBRO INT
+, IDUSUARIO INT
+, CANTIDAD INT)
+GO
+CREATE VIEW VISTAPEDIDOS
+AS
+	SELECT 
+	ISNULL(ROW_NUMBER() OVER (ORDER BY USUARIOS.NOMBRE), 1)
+	AS IDVISTAPEDIDOS,
+	USUARIOS.IdUsuario, 
+	USUARIOS.Nombre, USUARIOS.Apellidos
+	, LIBROS.Titulo, LIBROS.Precio, LIBROS.Portada
+	, PEDIDOS.FECHA, 
+LIBROS.Precio * PEDIDOS.Cantidad as
+PRECIOFINAL
+	FROM USUARIOS
+	INNER JOIN PEDIDOS
+	ON USUARIOS.IDUSUARIO = PEDIDOS.IDUSUARIO
+	INNER JOIN LIBROS
+	ON LIBROS.IDLIBRO = PEDIDOS.IDLIBRO
+GO
+INSERT INTO USUARIOS VALUES (1, 'Barney', 'Stinson', 'brocode@gmail.com', '12345', 'barney.jpg')
+INSERT INTO USUARIOS VALUES (2, 'Dustin', 'Henderson', 'dustin@gmail.com', '12345', 'dustin.jpg')
+INSERT INTO USUARIOS VALUES (3, 'Once', 'Once', 'once@gmail.com', '12345', 'once.jpg')
+INSERT GENEROS VALUES (1, N'Novela Histórica')
+INSERT GENEROS VALUES (2, N'Ciencia Ficción')
+INSERT GENEROS VALUES (3, N'Romántica')
+INSERT GENEROS VALUES (4, N'Policíaca')
+INSERT GENEROS VALUES (5, N'Literatura Juvenil')
+INSERT GENEROS VALUES (6, N'Infantil')
+INSERT GENEROS VALUES (7, N'Libros de viajes')
+INSERT GENEROS VALUES (8, N'Libros de humor')
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (1, N'Munich', N'Robert Harris', N'Grijalbo', N'Munich.jpg', N'Adolf Hitler está decidido a invadir Checoslovaquia para devolver a Alemania un territorio
+que considera suyo. La guerra parece inevitable; en los parques de Londres se cavan trincheras mientras 
+en las casas los niños aprenden a ponerse las máscaras antigás. Sin embargo el primer 
+ministro inglés Neville Chamberlain está dispuesto a lo que sea para evitar la catástrofe 
+y viaja a Múnich para negociar a la desesperada un acuerdo que garantice la paz. 
+Europa entera contiene el aliento.', 21, 1)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (2, N'Yo, Julia', N'Santiago Posteguillo', N'Planeta', N'yojulia.jpg', N'192 d.C. Varios hombres luchan por un imperio, pero Julia, hija de reyes, 
+madre de césares y esposa de emperador, piensa en algo más grande: una dinastía. 
+Roma está bajo el control de Cómodo, un emperador loco. El Senado se conjura para 
+terminar con el tirano y los gobernadores militares más poderosos podrían dar un golpe 
+de Estado: Albino en Britania, Severo en el Danubio o Nigro en Siria. Cómodo retiene a 
+sus esposas para evitar su rebelión y Julia, la mujer de Severo, se convierte así en rehén. 
+De pronto, Roma arde. Un incendio asola la ciudad. ¿Es un desastre o una oportunidad? Cinco 
+hombres se disponen a luchar a muerte por el poder. Creen que la partida está a punto de empezar.
+ Pero para Julia la partida ya ha empezado. Sabe que solo una mujer puede forjar una dinastía.', 23, 1)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (3, N'Los crímenes de Alicia', N'Guillermo Martínez', N'Destino', N'loscrimenesdealicia.jpg', N'Oxford, 1994. La Hermandad Lewis Carroll decide publicar los diarios privados del autor 
+de Alicia en el país de las maravillas. Kristen Hill, una joven becaria, viaja para reunir 
+los cuadernos originales y descubre la clave de una página que fue misteriosamente arrancada. 
+Pero Kristen no logra llegar con su descubrimiento a la reunión de la Hermandad. Una serie de 
+crímenes se desencadena con el propósito aparente de impedir, una y otra vez, que el secreto de 
+esa página salga a la luz. ', 23, 4)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (4, N'La muerte del comendador', N'Haruki Murakami', N'Destino', N'lamuertedelcomendador.jpg', N'En plena crisis de pareja, un retratista de cierto prestigio abandona Tokio en dirección 
+al norte de Japón. Confuso, sumido en sus recuerdos, deambula por el país hasta que, finalmente,
+ un amigo le ofrece instalarse en una pequeña casa aislada, rodeada de bosques, que pertenece a su padre,
+  un pintor famoso.', 20, 4)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (5, N'Fuego y Sangre', N'George R. R. Martin', N'Plaza & Janés', N'fuegoysangre.jpg', N'Aquí tenemos el primero de los dos volúmenes en el que el autor de Juego de tronos 
+nos cuenta, con todo lujo de detalles, la historia de tan fascinante familia: empezando 
+por Aegon I Targaryen, creador del icónico Trono de Hierro, y seguido por el resto de las 
+generaciones de Targaryens que lucharon con fiereza por conservar el poder, y el trono, 
+hasta la llegada de la guerra civil que casi acaba con ellos.', 21, 2)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (6, N'El año de los delfines', N'Sarah Lark', N'B', N'elañodelosdelfines.jpg', N'La nueva novela de la exitosa escritora Sarah Lark que nos relata la gran aventura vital de Laura, una madre de familia todavía joven, que quiere cumplir su sueño de convertirse en bióloga marina y para ello, no duda en embarcarse en un apasionante viaje desde Alemania hasta el país de la nube blanca para trabajar como guía en una empresa turística especializada en cruceros para atisbar ballenas y delfines.', 21, 3)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (7, N'Maldito síndrome de Estocolmo', N'Carmen Sereno', N'Principal de los libros', N'malditosindromedeestocolmo.jpg', N'¿Quién eres realmente, Eric Grau, y qué ocultas bajo esa piel tan fría?» Ana empieza a trabajar en Laboratorios Grau, una multinacional farmacéutica. Su jefe, Eric Grau, un hombre alto y atractivo al que todo el mundo llama Iceman, tiene fama de ser arrogante y despiadado, además de un auténtico depredador sexual. Al principio, la relación entre ambos es muy tensa, pero, poco a poco, la joven descubrirá que su implacable jefe no es el hombre de hielo que todos creen. ¿Podrá Ana resistirse al síndrome de Estocolmo que Eric despierta en ella?', 16, 3)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (8, N'Lo que nunca te canté', N'Lena Valenti', N'Vanir', N'loquenuncatecante.jpg', N'Una siempre cree estar satisfecha con la vida que tiene. Yo, por ejemplo, así lo siento. Tengo una relación estable con un chico que me quiere y que me encanta, mi vocación es mi trabajo, me rodeo de buenos amigos, tengo salud y unos padres que me apoyan en todo. No pido nada más. Pero si esto fuera así, no tendría nada que decirte. Porque nada es lo que parece y porque, de un día para otro, en un abrir y cerrar de ojos, el destino puede reírse de ti en tu cara y jugártela hasta que ya no sepas ni quién eres ni qué es lo que te gusta. Y estoy asustada. Y todo va muy deprisa. Y no estoy preparada. Pero sé que tengo que ser valiente. Y lo voy a ser por mí, y también por ti, porque puede que hayas pasado o estés pasando por lo mismo.', 17, 3)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (9, N'Entre nosotros', N'Susan Wiggs', N'Top Novel', N'entrenosotros.jpg', N'En el pacífico corazón de las tierras de los Amish, una situación de vida o muerte hace saltar hasta los cimientos de ese tranquilo mundo. La autora número uno en ventas de The New York Times, Susan Wiggs, nos ofrece una fascinante historia que desafiará nuestras creencias más profundas. Atrapado entre dos mundos, Caleb Stoltz estaba atado por una promesa realizada en el lecho de muerte de un familiar de criar a sus dos sobrinos huérfanos en Middle Grove, donde la vida giraba en torno a la familia, la granja, la fe… y las arraigadas sospechas hacia los forasteros. Pero, tras producirse el desastre, Caleb se vio arrojado a un ambiente urbano de medicina de alta tecnología y la despiadada vorágine de la vida moderna. La doctora Reese Powell estaba destinada a unirse a la dinastía de médicos de sus adinerados y exitosos progenitores. Atrevida, enérgica y ágil de mente, vivía dedicada al adictivo frenesí de salvar vidas. Cuando un espantoso accidente llevó a Caleb Stoltz a su vida, Reese se vio obligada a tratar con una situación que desafiaba todo aquello que ella creía saber, empujándola a cuestionarse sus más profundas creencias. Pero una acción impulsiva desató una guerra de culturas que desafió la naturaleza misma de la justicia, repercutiendo en sucesivas generaciones, tensando los frágiles hilos de la fe y la familia… ', 16, 3)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (10, N'El tenedor, la hechicera y el dragón', N'Christopher Paolini', N'Roca', N'eltenedor.jpg', N'Ha pasado un año desde que Eragon partió de Alagaësia en busca del hogar perfecto para entrenar a una nueva generación de Jinetes de Dragón. Ahora debe de hacer frente a un mar de tareas que parecen no tener fin: construir un enorme refugio para dragones, lidiar con proveedores, custodiar huevos de dragón y enfrentarse con úrgalos beligerantes y elfos arrogantes. Pero ahora, una visión de los eldunarí, trae consigo visitas inesperadas; una extraordinaria leyenda úrgala, que aportará una distracción más que necesaria, así como una nueva perspectiva a la vida de Eragon.', 18, 5)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (11, N'El chico de las mil almas', N'María Herrejón', N'Alfaguara infantiles y juvenil', N'milalmas.jpg', N'Álex acaba de perder a su hermana Gabi. Ella era la hija perfecta y todo el mundo la adoraba. Álex se siente incapaz de asumir su pérdida o de suplir su ausencia. Pero todo cambia cuando conoce a Leo, el chico de las mil almas.
+Una desbordante historia de amor, en todas sus facetas, que llevará a Álex a descubrir la verdad sobre su hermana y sobre sí misma, y, quizás, a salvar a Leo antes de que sea demasiado tarde.', 16, 5)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (12, N'Hijas de las sombras', N'Patricia García', N'Hidra', N'hijadelassombras.jpg', N'Las tres asesinas más letales que están al servicio del rey, Katarina, Crystal y Louane, son además talentos: personas con poderes especiales. Pero durante su último encargo, el asesinato del príncipe heredero de un reino vecino, descubrirán que han sido traicionadas: ahora las tres están en el punto de mira. Siempre han sido muy hábiles arrebatando las vidas de otros, pero cuando se vean atrapadas en esta situación desesperada ¿lograrán conservar las suyas?', 14, 5)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (13, N'Los Austrias. El dueño del mundo', N'José Luis Corral', N'Planeta', N'Los Austrias. El dueño del mundo.jpg', N'Fines de primavera del año de 1539; Carlos de Austria, emperador de Alemania y rey de las Españas y de las Indias, se encierra, desesperado por la muerte de su esposa Isabel, en un monasterio cercano a Toledo. Entretanto, sus enemigos amenazan su poder y sus dominios. En Gante, su ciudad natal, los comerciantes se rebelan en protesta por los excesivos impuestos. Los turcos avanzan hacia Europa y ganan posiciones en el Mediterráneo. Los protestantes cuestionan su autoridad. Francia y el papa le son hostiles. Pero Carlos reacciona. Con los tercios viejos como fuerza de choque, consigue rutilantes victorias, se enamora de una joven alemana con la que tendrá su último hijo y sueña que un día su heredero Felipe se convertirá en el dueño del mundo. Tras vencer a los príncipes protestantes en la batalla de Mühlberg, el emperador alcanza la cima de su reinado, pero enseguida sufre una severa decadencia física que, unida a varias derrotas y no pocos contratiempos, lo obligan a abdicar como emperador y rey, en medio de una soterrada lucha por el poder e intrigas por la sucesión.', 22, 1)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (14, N'Territorio Lovecraft', N'Matt Ruff', N'Ediciones Destino', N'Territorio Lovecraft.jpg', N'Chicago, 1954. Siguiendo la pista de su padre desaparecido de forma misteriosa, el joven de 22 años Atticus Turner se embarca en un road trip hasta la mágica y peligrosa Nueva Inglaterra, acompañado
+por su tío George y por Letitia, una amiga de la infancia. En su viaje a la mansión de Mr. Braithwhite se enfrentan tanto a los terrores mundanos de la América blanca de la época, como a los
+espíritus malignos salidos de las lecturas de H.P. Lovecraft y novelas pulp que Atticus devora.
+
+En la mansión, Atticus descubre a su padre encerrado, prisionero de una sociedad llamada la Orden del Alba Antigua, dirigida por Samuel Braithwhite y su hijo Caleb, que se han reunido para orquestar un ritual cuyo centro es el propio Atticus. Y la única posibilidad de salvarse a sí mismo y a sus acompañantes pasa por su propia destrucción.', 20, 1)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (15, N'Ponte en mi piel', N'Emma Lira', N'Espasa', N'Ponte en mi piel.jpg', N'1537, isla de Tenerife. Un grupo de mujeres, mientras entonan antiguos cantos, forman un círculo alrededor de una joven parturienta. Sus alaridos resuenan en todo el valle. De repente, se hace el silencio. Y un último grito desgarrador… Entre las cobijas que debían arropar a un bebé, asoma lo que parece una
+pequeña mano cubierta de pelo. Ha nacido Petrus Gonsalvus, un rey guanche. Y esta es su historia…
+
+Rechazado por su pueblo, que lo considera un ser demoniaco, Petrus acaba en la corte de Enrique II de Francia y Catalina de Médici, a donde llega como un obsequio para el rey. Allí lo tratan como una simple mascota para divertimento real. Sin embargo, el monarca ve en él el brillo de una inteligencia despierta
+y sensible, y decide acogerlo bajo su protección.
+
+Petrus conoce entonces a Diana, hija bastarda del rey, que se convertirá en su amiga, cómplice y confidente. Los dos aprenderán a desenvolverse en la corte y lucharán por encontrar su lugar en ese mundo que los margina. Hasta que se cruza en su camino Catherine, una hermosa dama de compañía de la reina, elegida para ser la esposa de Petrus. Él se verá obligado a tomar una difícil decisión…', 20, 1)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (16, N'14 de julio', N'Éric Vuillard', N'Tusquets Editores S.A.', N'14 de julio.jpg', N'La Historia suele contar la toma de la Bastilla desde el punto de vista de grandes personajes que, en realidad, nunca estuvieron allí: en esta obra, se cuenta la historia de quienes sí se hallaban allí ese preciso día, el célebre 14 de julio de 1789. Sus protagonistas eran gentes anónimas, impulsadas por el hambre, el malestar, la carestía de lo indispensable. Pero antes de seguir los pasos de estos desconocidos revolucionarios, Vuillard retrocede unos meses para relatar la rebelión de los trabajadores de las manufacturas Réveillon, que vieron recortados sus salarios, y cuya cruenta represión causó más muertos que los del 14 de julio. También se detiene en narrar cómo se vivía en esos momentos en la gran corte de Versalles, así como el trasfondo económico y social que provocó el levantamiento. Pero sobre todo sigue, hora a hora, de manera vibrante y apasionada, cómo individuos sin derechos convulsionaron un régimen arcaico para dar un nuevo sentido a la historia. Y relatar la historia, advierte el autor, «es una manera de mirar el presente».', 18, 1)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (17, N'Metro 2035', N'Dmitry Glukhovsky', N'Minotauro', N'Metro 2035.jpg', N'Año 2035. Tras la devastadora guerra nuclear que destruyó la Tierra, la gente ha erigido una nueva civilización en las profundidades del metro de Moscú. Pero la aparente seguridad de las estaciones del metro esconde algo. Dos años después de que Artyom salvara a la población del metro de una catástrofe, los conflictos ideológicos están a punto de estallar. La única salvación parece pasar por una vuelta a la superficie. Sin embargo, ¿es eso realmente posible? Una vez más, Artyom empieza un peligroso viaje que lo cambiará todo.', 9, 2)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (19, N'El mundo que Jones creó', N'El mundo que Jones creó', N'Minotauro', N'El mundo que Jones creó.jpg', N'Precognición, un mundo gobernado por el relativismo y medusas alienígenas gigantes. El mundo que Jones creó es un clásico de Philip K. Dick que toma reflexiones filosóficas profundas y les infunde una acción trepidante.
+
+Floyd Jones siempre ha podido ver exactamente lo que sucederá en su futuro a un año vista; un regalo y una maldición que comenzó un año antes de que naciera. Como un adivino en un carnaval post-apocalíptico, Jones es una fuerza poderosa, y puede ser capaz de alejar a la sociedad de su relativismo paralizante.', 19, 2)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (20, N'Ink 2. Resplandor', N'Alice Broadway', N'Destino Infantil & Juvenil', N'Ink 2. Resplandor.jpg', N'Saintstone se ha convertido en un lugar peligroso para Leora, a pesar de que su piel está cubierta de tinta.
+
+Si quiere sobrevivir tendrá que seguir las reglas del alcalde Longsight: irá a donde viven los vacíos y se hará pasar por una de ellos. Para descubrir sus secretos arriesgará todo aquello en lo que cree, pero también viajará al lugar de donde son sus ancestros.
+
+Leora emprende el camino hacia Featherstone, un lugar olvidado cuyos habitantes desconocen la tinta en la piel. Ahí podrá encontrar el consuelo y las respuestas necesarias para reconocerse a sí misma; aunque también es probable que sus peores pesadillas se vuelvan realidad.
+
+La traición resplandece en la piel de Leora. ¿Estará dispuesta a convertirse en un puente entre dos tierras? ¿O será el arma que detone una guerra como no se ha visto desde tiempos ancestrales?', 14, 2)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (21, N'El fin del imperio', N'John Scalzi', N'Minotauro', N'El fin del imperio.jpg', N'La física rige nuestro universo. Es imposible viajar a una velocidad mayor que la de la luz… Hasta que se produce el descubrimiento del Flujo, un campo extradimensional que se encuentra en ciertos puntos del espacio-tiempo y que puede transportarnos a planetas de otros sistemas solares.
+
+A través del Flujo, la humanidad se expande a nuevos planetas. La Tierra cae en el olvido y se erige un nuevo imperio, la Interdependencia, fundamentado en el principio de que ningún asentamiento humano puede sobrevivir sin los demás. Es una manera de evitar las guerras interestelares… y, para los gobernantes del imperio, un sistema de control.
+
+El Flujo es eterno, pero no es estático. Cambia de la misma manera que lo hace el curso de un río. En casos excepcionales, planetas enteros han quedado aislados del resto de la humanidad. Cuando se descubre que el Flujo se mueve y que es posible que planetas humanos queden aislados para siempre, tres individuos, un científico, el capitán de una nave espacial y la emperox de la Interdependencia, emprenden una carrera contrarreloj para tratar de salvar lo que se pueda de un imperio estelar que está a punto de desmoronarse.', 19, 2)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (22, N'Mundo sin dioses 1. Camino a Sognum', N'Benito Taibo', N'Planeta', N'Mundo sin dioses 1. Camino a Sognum.jpg', N'Después de un cataclismo que arrasa con sus esplendorosas ciudades, los sobrevivientes deben aprender a convivir en un mundo lleno de peligros donde abundan la magia, la muerte y la traición.
+
+Con toda la tradición de El señor de los anillos y Narnia, Benito Taibo utiliza la fantasía narrativa para atrapar en esta tierra alucinante tanto a jóvenes como a adultos.
+
+Todos han escuchado hablar de Sognum, pero muy pocos han estado ahí.
+
+En un mundo sin dioses, sólo unos cuantos están dispuestos a dejar todo atrás para llegar a un lugar en donde no saben qué encontrarán. Tres adolescentes buscan recuperar el destino que les han robado. Un matemático tratará de encontrar a la Intocable que lo condenó a muerte. Un mercenario llevará a cabo una última misión mortal para librarse de su sanguinario oficio. Una joven mantiene dormido a un ejército de guerreros mientras disfruta contemplar sus sonrisas mientras sueñan.
+
+Cada uno alberga esperanzas que sólo se permiten los valientes. Pero para alcanzarlas necesitan reunir el coraje necesario para hacer valer el honor de estar vivo y emprender la proeza más grande de sus vidas.', 9, 2)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (23, N'El proyecto de mi vida', N'Megan Maxwell', N'Esencia', N'El proyecto de mi vida.jpg', N'Branon Sivon, dueño del prestigioso bufete de abogados Sivon-Cardigan de Nueva York, adora a su hija, Sharon, a quien ha ido preparando desde pequeña para que se haga cargo del negocio familiar cuando él falte. Sin embargo, Branon fallece inesperadamente, y Sharon, lejos de sentirse capaz de tomar las riendas del bufete, debe afrontar otro duro revés cuando encuentra una antigua foto suya junto a una niña que se le parece mucho. 
+
+Todas sus sospechas quedan resueltas cuando descubre una caja con un diario y los recibos bancarios de unos ingresos que su padre había estado haciendo a una entidad desde la misma fecha en la que ella nació. De este modo averigua que ella es adoptada y que la otra niña es su hermana. 
+
+Anibal, su prometido, intenta que la noticia no salga a la luz, ya que si el gabinete jurídico para el que trabaja se entera de que Sharon no es la hija biológica del magnate Branon Sivon y de Adela Cardigan, todas sus aspiraciones políticas se irán al traste. Pero Sharon necesita respuestas, por lo que iniciará un viaje durante el que, además de reencontrarse con su hermana melliza y con sus otros dos hermanos, conocerá a un hombre que le hará creer en la última palabra que su padre le susurró al oído antes de morir. ', 16, 3)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (24, N'Siempre te encontraré', N'Megan Maxwell', N'Booket', N'Siempre te encontraré.jpg', N'El laird Kieran O’Hara y sus guerreros son atacados por unos villanos mientras pernoctan en el bosque cercano al castillo de Caerlaveroch, pero una misteriosa banda de encapuchados, liderados por una mujer a la que los aldeanos llaman «Hada», consigue salvarlos.
+
+Angela es la menor de las hijas del laird Kubrat Ferguson. Todo el mundo cree que es una muchacha débil, temerosa de los caballos y que tiembla ante el acero. Cuando Kieran la conoce, la actitud tímida de la joven, su torpeza y su sentido del pudor ante su caballerosidad y galantería llaman su atención, sin saber que aquélla es la encapuchada a la que anda buscando.
+
+Juntos conseguirán desenmascarar al codicioso cuñado de Angela, Cedric Steward, quien ha tramado un plan terrible que cambiará para siempre el futuro de los habitantes del castillo de Caerlaveroch. Una historia vibrante, con unos personajes que te enamorarán y te harán sonreír mientras disfrutas de sus andanzas por las Highlands escocesas.', 9, 3)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (25, N'La sonrisa de los pájaros', N'Lea Vélez', N'Ediciones Destino', N'La sonrisa de los pájaros.jpg', N'Alma, periodista y escritora de treinta y cuatro años, regresa a Paraíso, la urbanización en pleno campo en la que vivió hasta la adolescencia, veinte años después de que un trágico accidente acabara con su
+felicidad familiar. Llamada por un impulso inconsciente, alquila la casa en plena naturaleza donde creció para tratar de reencontrarse con los recuerdos, en la esperanza de que sirvan de respuesta a sus preguntas vitales.
+El accidente de su familia coincidió en el tiempo con el terrible caso del “milano negro”, nombre que le dio la prensa al asesinato de una madre y sus dos hijos en los parajes naturales de Paraíso, un crimen
+del que se habló durante años, conmocionando al país, y por el que un hombre que podría ser inocente lleva veinte años en prisión. Alma decide escribir la historia de lo sucedido, hallando nuevos datos y
+entrevistándose con los protagonistas del drama. La búsqueda de la verdad la reconectará con Javier, un antiguo profesor del que estuvo enamorada, y que, debido a su afición a la cetrería, fue el primero en
+encontrar a las víctimas durante una de las salidas campestres con su halcón. Mientras Alma encaja las piezas del libro, reflexiona sobre las diferencias entre la realidad y la ficción, la inocencia y la culpabilidad,
+la necesidad que tiene el hombre de construir un relato hilado de unos hechos incomprensibles, quizá aleatorios, y se encontrará con su propia historia, descubriendo la naturaleza desbordante que la rodea,
+la verdad de su pasado y algo que jamás pensó llegar a conocer: el verdadero sentido del amor.', 21, 4)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (26, N'La herida', N'Jorge Fernández Díaz', N'Booket', N'La herida.jpg', N'El destino misterioso y tal vez violento de dos mujeres deja al desnudo la construcción del populismo corrupto. Una nueva misión para Remil, el controvertido personaje de El puñal.
+
+Una monja desaparece dejando un enigmático mensaje, y un colaborador del papa Francisco les encarga a dos agentes de Inteligencia buscarla por cielo y tierra. En paralelo, una operadora política despedida por el gobierno argentino es contratada por el gobernador de un feudo de la Patagonia para mejorar su imagen y evitarle una catástrofe electoral. Con la ayuda de Remil —un perturbador personaje que trabaja desde las sombras—, ella se vale de todo: espionaje político, compra y amenaza de jueces. Hasta que juntos se topan con un crimen de Estado y una siniestra organización.', 9, 4)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (27, N'El laberinto', N'Kate Mosse', N'Booket', N'El laberinto.jpg', N'En las montañas de Carcasona, la tierra de los cátaros, un secreto ha permanecido oculto desde el siglo XIII. En plena cruzada contra los cátaros, la joven Alaïs ha sido designada para proteger un antiguo libro que contiene los secretos del Santo Grial. Ochocientos años después, la arqueóloga Alice Tanner trabaja en una excavación en el sur de Francia y descubre una cueva que ha ocultado oscuros misterios durante todos estos siglos. ¿Qué pasará si todo sale a la luz?', 11, 4)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (28, N'Castigos justificados', N'Michael Hjorth', N'Booket', N'Castigos justificados.jpg', N'Una estrella de televisión es hallada muerta de un tiro a la cabeza en una escuela abandonada. Su cuerpo se encuentra de cara a la pared y, atadas a una silla del aula, unas hojas de examen. A juzgar por el número de respuestas incorrectas, la víctima suspendió el examen más importante de su vida.
+Este horrible asesinato es el primero de una serie de muertes que tendrán como víctimas a personajes famosos. La Brigada Criminal de Torkel Hölgrund se encargará del caso y sólo gracias a la pericia de Sebastian Bergman lograrán, siguiendo las pistas halladas en chats de internet y en cartas anónimas publicadas en los periódicos, resolver el misterio.', 10, 4)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (29, N'With me. Amelia', N'Jessica Cunsolo', N'Plan', N'With me. Amelia.jpg', N'Amelia Collins se muda a una nueva ciudad para escapar de un oscuro pasado y lo único que quiere es pasar totalmente desapercibida y acabar el último curso del instituto. Pero sus planes cambian drásticamente cuando el primer día tropieza, literalmente, con el chico más increíble del instituto, el chico que encabeza la lista de las personas con las que no meterse... Aiden Park.
+Amelia debe encontrar la forma de sobrevivir y de no caer en los brazos del insoportablemente atractivo Aiden, ni de Mason, su mejor amigo; pero con nuevos amigos, arpías, viejas rivalidades, bromas pesadas y un pasado del que no consigue escapar, el último año de Amelia promete estar lleno de drama...', 18, 5)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (30, N'April, Adam y la trayectoria de los planetas', N'Andrea Longarela', N'Destino Infantil & Juvenil', N'April, Adam y la trayectoria de los planetas.jpg', N'¿Alguna vez has son~ado con desaparecer? Adam, si´. No deja de hacerlo. Cuando se levanta, cuando se acuesta, cuando respira. Cada segundo de su existencia en el que se da cuenta de que Ella ya no esta´.
+
+¿Alguna vez has vivido como si todo fuera un suen~o? April, sí. No deja de hacerlo. Cuando hornea galletas para el grupo de terapia del sen~or Campbell, cuando observa a su hermano Otto crear mu´sica con una simple lata, cuando ve a Adam por primera vez.
+
+¿Pueden tener algo en comu´n un chico que solo vive entre sueños y una chica que solo suen~a despierta? ¿Y una chica que cree tener el don de romper el corazo´n a los dema´s y un chico que lo tiene de piedra?
+
+Quizá aún haya esperanza para ellos; quizá, juntos, sean capaces de matar monstruos de la mano y de conseguir que los planetas dejen de girar.', 14, 5)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (31, N'Stars. Estrellas fugaces', N'Anna Todd', N'Planeta', N'Stars. Estrellas fugaces.jpg', N'Karina tiene veinte años y un trabajo sencillo en un centro de bienestar. Tras comprobar que la mayoría de las relaciones fracasan decide que sólo quiere una vida tranquila. Y eso significa seguir una estricta política de no-citas, que cumple a rajatabla… Hasta el día que conoce a su nuevo cliente, Kael y sus principios se tambalean. Poco a poco Karina se dejará llevar por el mundo de Kael, todavía sin saber lo que le espera…', 18, 5)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (32, N'Sara y las Goleadoras', N'Laura Gallego | Laia López', N'Destino Infantil & Juvenil', N'Sara y las Goleadoras.jpg', N'Sara esta´ loca por el fu´tbol, pero no le permiten jugar en el equipo del colegio... ¡porque es solo para chicos! Asi´ que se propone convencer a sus amigas para crear un equipo de fu´tbol femenino. Pero solo podra´n competir en la liga interescolar si demuestran que son capaces de jugar mejor que los chicos. ¿Lo conseguira´n?', 12, 6)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (33, N'Colorea y juega con Pocoyó. Disfraces', N'Zinkia Entertainment, S. A.', N'Timun Mas Infantil', N'Colorea y juega con Pocoyó. Disfraces.jpg', N'Pocoyó y sus amigos lo pasan en grande disfrazándose de vaquero, de pirata, de hada, de bruja ¡y de muchas cosas más! ¿Quieres jugar con ellos? ¡Diviértete con las actividades y juega con los adhesivos!', 5, 6)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (34, N'Cuentos de Lucía, mi pediatra', N'Lucía Galán Bertrand', N'Timun Mas Infantil', N'Cuentos de Lucía, mi pediatra.jpg', N'Hola, soy Lola y tengo cinco an~os. Lo que ma´s me gusta de mi´ son mis trenzas. Toni es mi hermano mayor y le encantan las jirafas. Juntos jugamos, nos queremos, superamos nuestros miedos, rei´mos y... ¡nos hacemos mayores!
+
+¿Que´ siente Lola cuando visita a su pediatra? ¿Que´ es un constipado? ¿Co´mo Lola puede entender la importancia de vacunarse? ¿Que´ cuento le explica su mama´ para ir a dormir relajada? Los pequen~os lectores se divertira´n con Lola y aprendera´n con sus aventuras cotidianas estos y muchos otros ha´bitos saludables.
+
+Desde la experiencia de su profesio´n y la sensibilidad de su maternidad, Luci´a Gala´n ha creado un recopilatorio de cuentos para acompan~ar a los ma´s pequen~os en su desarrollo.', 15, 6)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (35, N'El tesoro de Rapa Nui', N'Geronimo Stilton', N'Destino Infantil & Juvenil', N'El tesoro de Rapa Nui.jpg', N'Mi hermana Tea ha partido a la Isla de Pascua en busca del antiguo tesoro de Rapa Nui, pero hace una semana que no tenemos noticias de ella... No hay tiempo que perder: ¡tenemos que emprender viaje y llegar cuanto antes a esa isla misteriosa!', 9, 6)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (36, N'Una estrella en peligro', N'Tea Stilton', N'Destino Infantil & Juvenil', N'Una estrella en peligro.jpg', N'Isabel nos pidio´ ayuda... mientras ensayaba con sus mejores amigas para un concurso de danza, ellas empezaron a evitarla y la excluyeron de la competicio´n. ¡Un caso perfecto para nosotras!', 13, 6)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (37, N'Hay un pirata en internet', N'Geronimo Stilton', N'Destino Infantil & Juvenil', N'Hay un pirata en internet.jpg', N'Alguien ha robado mi identidad en Internet y finge ser Geronimo Stilton... ¡¿Sera´ por eso que recibo toneladas de objetos comprados online con mi tarjeta de cre´dito?! ¡¡¡Hiiiiiiiii!! ¡Voy a necesitar a Doc, mi amiga experta en ordenadores!', 9, 6)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (38, N'Bilbao y San Sebastian De cerca', N'Regis St.Louis', N'GeoPlaneta', N'Bilbao y San Sebastian De cerca.jpg', N'Dos ciudades fascinantes que comparten su esencia vasca y su pasión por las artes culinarias. Bilbao es obrera y artística; San Sebastián, seductora y soleada. Y entre ambas una costa repleta de pintorescos pueblos con sabor a sal marina. Tanto si se desea deleitar el paladar en restaurantes de primera, dejarse seducir por la animada vida de los bares, ir de compras o disfrutar de un excelente panorama artístico, Bilbao y San Sebastián lo tienen todo para satisfacer al viajero más exigente, que con ayuda de esta guía conseguirá disfrutar de una estancia perfecta.', 13, 7)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (39, N'Dubái De cerca', N'Andrea Schulte-Peevers | Kevin Raub', N'GeoPlaneta', N'Dubái De cerca.jpg', N'Dubái se prepara para acoger la Exposición Universal del 2020, pero los viajeros bien informados saben que este pequeño y próspero emirato es desde hace tiempo un destino fascinante para gourmets, compradores y amantes del arte, la diversión y el desierto. Tranquilo, abierto, optimista y lleno de energía, aquí se hallará tanto vida sencilla como lujo futurista.', 13, 7)
+INSERT LIBROS ([IdLibro], [Titulo], [Autor], [Editorial], [Portada], [Resumen], [Precio], [IdGenero]) 
+VALUES (40, N'Camboya', N'Nick Ray | Ashley Harrell', N'GeoPlaneta', N'Camboya.jpg', N'En Camboya, mundo antiguo y moderno se unen para crear una aventura única y llena de autenticidad. El viajero podrá visitar los templos de Angkor, lugar clave para la devoción espiritual y una de las creaciones más importantes del mundo antiguo, pero también saborear el ambiente urbano en ciudades modernas y vitales como Phnom Penh y Siem Riep, o perderse en el interior del país disfrutando del ambiente rural, los paisajes de arrozales y la vida tradicional. Todo ello sin olvidar el auténtico tesoro de Camboya, la cordialidad de su gente. Con ayuda de esta guía el viajero podrá convertir su visita a Camboya en una experiencia perfecta.', 25, 7)
+INSERT INTO PEDIDOS VALUES (1, 1, GETDATE(), 1, 1, 1)
+INSERT INTO PEDIDOS VALUES (2, 1, GETDATE(), 2, 1, 1)
+INSERT INTO PEDIDOS VALUES (3, 1, GETDATE(), 2, 2, 1)
+SELECT * FROM LIBROS

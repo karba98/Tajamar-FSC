@@ -1,0 +1,26 @@
+﻿@model List<Comic>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Comics MariaDb</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Portada</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Comic comic in Model) {
+                <tr>
+                    <td>@comic.Nombre</td>
+                    <td>
+                        <img src="@comic.Imagen" style="width: 200px; height: 280px"/>
+                    </td>
+                </tr>
+        }
+    </tbody>
+</table>

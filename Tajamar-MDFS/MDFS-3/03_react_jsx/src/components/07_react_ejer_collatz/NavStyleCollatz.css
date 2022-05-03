@@ -1,0 +1,18 @@
+ul {
+    background-color: #333;
+    margin: 30px;
+    list-style-type: none;
+}
+
+ul li {
+  color: #f2f2f2;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Add a color to the active/current link */
+ul li.active {
+  background-color: #4CAF50;
+  color: white;
+}

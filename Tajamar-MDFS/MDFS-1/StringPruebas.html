@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <h1>VISUAL STUDIO.NET</h1>
+    <h2>Metodos string</h2>
+    <button onclick="prueba()">Metodos String</button>
+    <div id="res"></div>
+</body>
+
+<script>
+    function prueba() {
+        var texto = "VISUAL STUDIO .NET";
+        var html = "length: " + texto.length;
+        html += "<br/>"
+        html += "toLoweCase: " + texto.toLowerCase();
+        html += "<br/>"
+        html += "LastIndexOf(\"U\"): " + texto.lastIndexOf("U");
+        html += "<br/>"
+        html += "charAt(9): " + texto.charAt(9);
+        html += "<br/>"
+        html += "subString(2,5): " + texto.substring(2, 5);
+        html += "<br/>"
+        html += "substr(2,3): " + texto.substr(2, 3);
+        html += "<br/>"
+        html += "startWith(\"V\"): " + texto.startsWith("V");
+        html += "<br/>"
+        html += "endWith(\"T\"): " + texto.startsWith("T");
+
+        document.getElementById("res").innerHTML = html;
+
+
+    }
+</script>
+</html>

@@ -1,0 +1,70 @@
+docker build -t appdocker:latest .
+docker image list
+docker run -p 8001:443  --rm -d appdocker:latest
+docker tag imagenlocal tagrepositorio(repositorio de https://hub.docker.com/)
+docker push YourName98/appdockerrc
+
+Instalar Mariadb https://mariadb.com/downloads/ => Ms Windows 64
+abrir workbench
+
+
+//ATAQUE A MARIADB LOCAL
+//TABLA MARIA DB
+CREATE TABLE COMICS
+(IDCOMIC INT PRIMARY KEY
+, NOMBRE NVARCHAR(150)
+, IMAGEN NVARCHAR(150));
+ 
+INSERT INTO COMICS VALUES (1, 'Spiderman', 'https://3.bp.blogspot.com/-i70Zu_LAHwI/T290xxduu-I/AAAAAAAALq8/8bXDrdvW50o/s1600/spiderman1.jpg');
+INSERT INTO COMICS VALUES (2, 'Batman', 'https://dam.smashmexico.com.mx/wp-content/uploads/2019/11/dc-batman-detective-comics-desfigurando-el-rostro-portada.jpg');
+INSERT INTO COMICS VALUES (3, 'Wolverine', 'https://vignette.wikia.nocookie.net/marveldatabase/images/d/da/Wolverine_Vol_2_305_Variant_McNiven.jpg');
+INSERT INTO COMICS VALUES (4, 'Spawn', 'https://cdn.imagecomics.com/assets/i/releases/10128/spawn-1_30e862e6c4.jpg');
+INSERT INTO COMICS VALUES (5, 'Mortadelo y Filemon', 'https://images-na.ssl-images-amazon.com/images/I/9174Tnh28WL.jpg');
+INSERT INTO COMICS VALUES (6, 'X-MEN', 'https://images-na.ssl-images-amazon.com/images/I/91uqJzXB1xL.jpg');
+INSERT INTO COMICS VALUES (7, 'Avengers', 'https://www.milcomics.com/fotos/los-vengadores-04-103-82143-1.jpg');
+
+docker network create my-network
+docker run --network my-network --name mariadbdocker -e MYSQL_ROOT_PASSWORD=mariadb -d mariadb:latest
+docker ps -a =>(vemos el container que está en oculto)
+docker exec -it mariadbdocker mariadb -uroot -p
+
+//CAMBIAR DOCKERFILE
+
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster as build-env
+WORKDIR /app
+
+# Copy csproj and restore as distinct layers
+COPY *.csproj ./
+RUN dotnet restore
+
+# Copy everything else and build
+COPY . ./
+RUN dotnet publish -c Release -o out
+
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/aspnet:3.1
+WORKDIR /app
+COPY --from=build-env /app/out .
+ENTRYPOINT ["dotnet", "MvcCoreMariaDb.dll"]
+
+
+docker run -p 8005:80 --network my-network --rm -d mvcmariadb:latest
+
+//crea comntainer azure
+//publicamos desde visual como container azure en el nuevo recurso
+//crea kubernetes al nuevo container
+//en nuestra consola:
+
+az login
+az aks install-cli
+az aks get-credentials --resource-group prueba_containerregister --name aksclustertajamarrc --overwrite-existing
+kubectl config get-contexts
+
+vs add orchestator kubernete (se crea el yaml)
+en cmd. ir donde esté el yaml
+
+kubectl apply -f service.yaml
+kubectl get svc -w
+
+kubectl delete deployment mvccoremariadb
+

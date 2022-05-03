@@ -1,0 +1,10 @@
+E:\MCSD\MDFS\MDFS-5\Azure\ServiciosWCF\HostTablaMultiplicar\bin\HostTablaMultiplicar.dll.config
+E:\MCSD\MDFS\MDFS-5\Azure\ServiciosWCF\HostTablaMultiplicar\bin\HostTablaMultiplicar.dll
+E:\MCSD\MDFS\MDFS-5\Azure\ServiciosWCF\HostTablaMultiplicar\bin\HostTablaMultiplicar.pdb
+E:\MCSD\MDFS\MDFS-5\Azure\ServiciosWCF\HostTablaMultiplicar\bin\ServiceTablaMultiplicar.dll
+E:\MCSD\MDFS\MDFS-5\Azure\ServiciosWCF\HostTablaMultiplicar\bin\ServiceTablaMultiplicar.pdb
+E:\MCSD\MDFS\MDFS-5\Azure\ServiciosWCF\HostTablaMultiplicar\obj\Debug\HostTablaMultiplicar.csprojAssemblyReference.cache
+E:\MCSD\MDFS\MDFS-5\Azure\ServiciosWCF\HostTablaMultiplicar\obj\Debug\HostTablaMultiplicar.csproj.CoreCompileInputs.cache
+E:\MCSD\MDFS\MDFS-5\Azure\ServiciosWCF\HostTablaMultiplicar\obj\Debug\HostTablaMultiplicar.csproj.CopyComplete
+E:\MCSD\MDFS\MDFS-5\Azure\ServiciosWCF\HostTablaMultiplicar\obj\Debug\HostTablaMultiplicar.dll
+E:\MCSD\MDFS\MDFS-5\Azure\ServiciosWCF\HostTablaMultiplicar\obj\Debug\HostTablaMultiplicar.pdb

@@ -1,0 +1,64 @@
+1) new file app.routing.ts en app
+
+import {ModuleWithProviders} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+
+const appRoutes:Routes =[];
+
+export const appRoutingProvider: any[]=[];
+export const routing : ModuleWithProviders<any> = RouterModule.forRoot(appRoutes);
+
+2) app.modules:
+
+import {routing, appRoutingProvider} from './app.routing';
+
+import:[routing],
+providers:[appRoutingProvider]
+
+3) importar Componentes a app.routing.ts. En approutes añadir paths
+Ejemplo Empleados: 
+ {path:'empleados', component=TablaempleadosComponent},
+ {path :'detalles:empleado', component:DetallesempleadoComponent}
+
+4) crear Menu component con ul y lis y rutas a paths
+Menu.html
+<header>
+    <nav><ul>
+    <li><a [routerLink]="['/']">Home</a></li>
+    <li><a [routerLink]="['/cine']">Cine</a></li>
+    <li><a href="docs">Docs</a>
+    <li><a href="multi">Tabla Multiplicar</a></li>
+    <li><a [routerLink]="['/detalles', objeto a pasar en /: ]"/></li>  <= Pasando parametros a la ruta
+    </ul> </nav> 
+</header>
+
+5)<router-outlet></router-outlet> en componente principal
+
+****GET ELEMENT FROM ROUTIN LIKE /empleados/:empleado
+
+en mi componente:
+import { ActivatedRoute, Params } from '@angular/router';
+
+
+constructor(private _service:EmpleadosRoutingService,
+    private _activeRoute: ActivatedRoute,
+    ) { 
+    this.empleado=null;
+  }
+
+ ngOnInit(): void {
+    this._activeRoute.params.subscribe(( params: Params ) => {
+      var empno = params.empleado;
+      //YA TENEMOS IDEMPLEADO DE PARAMETROS DE URL
+    });
+      
+  }
+**NAVIGATE EN CODIGO JS
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+...
+constructor(private router:Router){
+}
+metodoOnClick(){
+   this.router.navigate(['/',title]);
+    console.log(title);
+}

@@ -1,0 +1,26 @@
+﻿@model Persona
+<h1>Vista POST</h1>
+<hr/>
+<form method="post">
+    <input type="text" name="nombre" placeholder="Nombre" />
+    <br />
+    <input type="text" name="edad" placeholder="Edad" />
+    <br />
+    <input type="text" name="email" placeholder="Email" />
+    <br />
+    <button type="submit" class="btn-dark">Enviar</button>
+    <hr />
+
+
+    <h1>@ViewBag.Nombre @ViewBag.Edad</h1>
+    <h2>@ViewBag.Email</h2>
+    <h2>-------------------------------------</h2>
+    @if (Model != null)
+    {
+        <h1>@Model.nombre</h1>
+        <h2>@Model.edad</h2>
+        <h2>@Model.NSS</h2>
+        <h3>@Model.email</h3>
+    }
+
+</form><input id="Hidden1" type="hidden" />

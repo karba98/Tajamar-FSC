@@ -1,0 +1,16 @@
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\bin\Debug\netcoreapp3.1\APIPersonasAWSServerless.deps.json
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\bin\Debug\netcoreapp3.1\APIPersonasAWSServerless.runtimeconfig.json
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\bin\Debug\netcoreapp3.1\APIPersonasAWSServerless.runtimeconfig.dev.json
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\bin\Debug\netcoreapp3.1\APIPersonasAWSServerless.dll
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\bin\Debug\netcoreapp3.1\APIPersonasAWSServerless.pdb
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\bin\Debug\netcoreapp3.1\Amazon.Lambda.APIGatewayEvents.dll
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\bin\Debug\netcoreapp3.1\Amazon.Lambda.Core.dll
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\bin\Debug\netcoreapp3.1\Amazon.Lambda.Serialization.SystemTextJson.dll
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\obj\Debug\netcoreapp3.1\APIPersonasAWSServerless.csprojAssemblyReference.cache
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\obj\Debug\netcoreapp3.1\APIPersonasAWSServerless.AssemblyInfoInputs.cache
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\obj\Debug\netcoreapp3.1\APIPersonasAWSServerless.AssemblyInfo.cs
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\obj\Debug\netcoreapp3.1\APIPersonasAWSServerless.csproj.CoreCompileInputs.cache
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\obj\Debug\netcoreapp3.1\APIPersonasAWSServerless.csproj.CopyComplete
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\obj\Debug\netcoreapp3.1\APIPersonasAWSServerless.dll
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\obj\Debug\netcoreapp3.1\APIPersonasAWSServerless.pdb
+C:\Users\AlumnoMCSD\source\repos\MDFS\MDFS-6\AWSAPIGateway\APIPersonasAWSServerless\obj\Debug\netcoreapp3.1\APIPersonasAWSServerless.genruntimeconfig.cache

@@ -1,0 +1,1 @@
+yum clean all && yum clean metadata && yum clean dbcache && yum makecache && yum update -y

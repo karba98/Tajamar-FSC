@@ -1,0 +1,21 @@
+<h1>Empleados</h1>
+<table class="table table-hover"
+ *ngIf="empleados.length > 0">
+    <table>
+        <thead>
+        <tr>
+            <th>Apellido</th>
+            <tH>Oficio</tH>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let empleado of empleados">
+            <td>{{empleado.apellido}}</td>
+            <td>{{empleado.oficio}}</td>
+            <td>
+                <button [routerLink]="['/detalles', empleado.idEmpleado ]">Detalles</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MvcCore.Models.Departamento>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@{
+    if (ViewBag.Deleted == true)
+    {
+        <div class="alert alert-danger" role="alert">
+            Eliminado correctamente
+        </div>
+    }
+}
+
+
+<p>
+    <a asp-action="Create">Create New</a><br/>
+    <a asp-action="SeleccionMultiple" asp-controller="Departamentos">Multiples Empleados</a>
+</p>
+<h1>Departamentos</h1>
+<hr/>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Numero)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.localidad)
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Numero)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.localidad)
+                </td>
+                <td>
+
+                    <img src="~/images/@item.Imagen" style="width:100px;height:100px" />
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", "Departamentos", new { id = item.Numero }) |
+                    @Html.ActionLink("Details", "Details", "Departamentos", new { id = item.Numero }) |
+                    @Html.ActionLink("Delete", "Delete", "Departamentos", new { id = item.Numero })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

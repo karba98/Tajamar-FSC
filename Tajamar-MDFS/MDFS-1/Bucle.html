@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <button id="w"onclick="ejecutarWhile()">While</button>
+    <button id="f"onclick="ejecutarFor()">For</button>
+    <h1 id="res"></h1>
+</body>
+
+<script>
+    function ejecutarWhile() {
+        var result = document.getElementById("res");
+        result.innerText = "";
+        var contador = 0;
+        while (contador < 21) {
+            if (contador % 2 == 0) {
+                result.innerText += " "+contador;
+            }
+            contador++;
+            
+        }
+    }
+    function ejecutarFor() {
+
+        var result = document.getElementById("res");
+        result.innerText = "";
+        for (var i = 0; i < 21;i++) {
+            if (i%2 ==1) {
+                result.innerText += " "+i;
+            }
+        }
+    }
+</script>
+</html>

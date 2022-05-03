@@ -1,0 +1,49 @@
+﻿@model ServiceClientesNameSpace.Cliente
+
+@{
+    ViewData["Title"] = "CountryInfo";
+}
+
+<h1>CountryInfo</h1>
+<hr />
+<form method="post">
+    <label>ID: </label><br /><input type="text" name="id" /><br />
+    <button class="btn btn-info" type="submit">Buscar</button>
+</form>
+@if (Model != null)
+{
+
+    <div>
+        <h4>tCountryInfo</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ImagenCliente)
+            </dt>
+            <dd class="col-sm-10">
+                <img src="@Html.DisplayFor(model => model.ImagenCliente)" style="width:300px;height:300px"/>
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Nombre)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Nombre)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.IdCliente)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.IdCliente)
+            </dd>
+           
+        </dl>
+    </div>
+
+
+}

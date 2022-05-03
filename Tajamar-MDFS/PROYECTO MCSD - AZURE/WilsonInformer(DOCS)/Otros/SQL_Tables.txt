@@ -1,0 +1,55 @@
+/****** Object:  Table [dbo].[partes]    Script Date: 01/02/2021 17:45:07 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[partes](
+	[N_Parte] [varchar](40) NOT NULL,
+	[Envios] [varchar](255) NOT NULL,
+	[Bult] [int] NOT NULL,
+	[F_Albaran] [date] NOT NULL,
+	[Orig] [varchar](255) NOT NULL,
+	[Dest] [varchar](255) NOT NULL,
+	[Propi] [varchar](255) NOT NULL,
+	[Serv] [varchar](45) NOT NULL,
+	[Abonado] [varchar](255) NOT NULL,
+	[Tipo] [varchar](255) NOT NULL,
+	[Estado] [varchar](255) NOT NULL,
+	[Gestor] [varchar](255) NOT NULL,
+	[Resolucion] [varchar](255) NOT NULL,
+	[Fecha_parte] [date] NOT NULL,
+	[Tiempo] [varchar](255) NULL,
+	[Accion] [varchar](500) NOT NULL,
+	[F_Resolucion] [date] NULL,
+ CONSTRAINT [PK__partes__8C93BD3766A3AD71] PRIMARY KEY CLUSTERED 
+(
+	[N_Parte] ASC
+)WITH (STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[users](
+	[Username] [nvarchar](255) NOT NULL,
+	[Email] [nvarchar](255) NOT NULL,
+	[Nombre] [nvarchar](255) NOT NULL,
+	[Apellido] [nvarchar](255) NOT NULL,
+	[Password] [nvarchar](255) NOT NULL,
+	[Salt] [varbinary](max) NOT NULL
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[users] ADD  CONSTRAINT [DF__users__create_ti__5DCAEF64]  DEFAULT (getdate()) FOR [Email]
+GO
+
+
+
+

@@ -1,0 +1,29 @@
+﻿@{ 
+    int total = 0;
+    if (Context.Session.GetObject<List<int>>("EMPLEADOS") != null)
+    {
+        {
+            List<int> empleados = Context.Session.GetObject<List<int>>("EMPLEADOS");
+
+            total = empleados.Count();
+        }
+    }
+}
+
+@if (Context.Session.GetObject<List<int>>("EMPLEADOS") != null){
+
+    <li class="nav-item">
+        <a asp-controller="EmpleadosSessionController"
+           asp-action="ClearCarrito">
+            Tienes @total empleados en la cesta
+        </a>
+    </li>
+
+}
+else
+{
+<li class="nav-item">
+    <a>No tienes chacas en el carrito
+    </a>
+</li>
+}

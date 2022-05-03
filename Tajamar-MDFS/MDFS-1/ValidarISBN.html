@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Validar ISBN</title>
+</head>
+<body>
+    <h1>Validar ISBN</h1>
+    <label>Introduzca ISBN</label>
+    <input type="text" id="isbn" />
+    <button onclick="validar()">Validar</button>
+    <br/>
+    <h2 id="res"></h2>
+</body>
+
+<script>
+    function validar() {
+        var isbn = document.getElementById("isbn").value;
+        if (isbn.length > 10) {
+            document.getElementById("res").innerText = "ISBN no valido";
+        } else {
+            var suma=0;
+            for (var i = 0; i < 10; i++) {
+                suma += parseInt(isbn.charAt(i)) * (i+1);
+                console.log(suma);
+            }
+            if (suma % 11 == 0) {
+                document.getElementById("res").innerText = "ISBN valido";
+            } else {
+                document.getElementById("res").innerText = "ISBN no valido";
+            }
+        }
+    }
+</script>
+</html>

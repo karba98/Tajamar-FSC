@@ -1,0 +1,47 @@
+﻿@model List<Doctor>
+@{ 
+    List<String> especialidades = ViewBag.especialidades as List<String>;
+}
+<h1>Docs por esepecialidad</h1>
+<hr />
+<form method="post">
+    <select name="espe">
+        @foreach(String s in especialidades)
+        {
+            <option>@s</option>
+        }
+    </select>
+    <button type="submit">Filtrar</button>
+</form>
+<hr/>
+@Html.ActionLink("Incrementar Salario de especialidad", "UpdateSalario")
+<hr/>
+@if (Model != null)
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Apellido</th>
+                <th>Especialidad</th>
+                <th>Hospital</th>
+                <th>Salario</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (Doctor e in Model)
+            {
+
+                <tr>
+                    <td>@e.IdDoctor</td>
+                    <td>@e.Apellido</td>
+                    <td>@e.Especialidad</td>
+                    <td>@e.Hospital</td>
+                    <td>@e.Salario €</td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+} 

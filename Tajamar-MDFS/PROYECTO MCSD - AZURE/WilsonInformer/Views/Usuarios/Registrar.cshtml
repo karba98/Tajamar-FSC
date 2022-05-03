@@ -1,0 +1,73 @@
+﻿@model WilsonInformer.Models.Usuario
+@{ Layout = "_Login"; }
+
+@{ ViewData["Title"] = "Registrar"; }
+@section alert{
+    @Html.Raw(ViewBag.Alert)
+}
+<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+    <h3 class="register-heading">Registrar Usuario</h3>
+
+    <div class="row register-form">
+        <div class="col-md-9">
+
+            <div class="form-group">
+
+                <div class="row">
+
+                    <form asp-action="Registrar">
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group" hidden>
+                            <input asp-for="Id" class="form-control" type="text" value="0" readonly />
+                            <span asp-validation-for="Id" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Email" class="control-label">Email</label>
+                            <input asp-for="Email" type="email" class="form-control" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Nombre" class="control-label">Nombre</label>
+                            <input asp-for="Nombre" class="form-control" />
+                            <span asp-validation-for="Nombre" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Apellido" class="control-label">Apellido</label>
+                            <input asp-for="Apellido" class="form-control" />
+                            <span asp-validation-for="Apellido" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="User" class="control-label">Nombre de usuario</label>
+                            <input asp-for="User" class="form-control" />
+                            <span asp-validation-for="User" class="text-danger">@ViewBag.ErrorUser</span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Pass" class="control-label">Contraseña</label>
+                            <input asp-for="Pass" type="password" class="form-control" />
+                            <span asp-validation-for="Pass" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Repetir Contraseña</label>
+                            <input name="repeatpass" type="password" class="form-control" />
+                            <span class="text-danger">@ViewBag.ErrorRepeatPass</span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Rol" class="control-label">Privilegios</label>
+                            <select asp-for="Rol" class="form-select">
+                                <option value="A">Administrador</option>
+                                <option value="V">Visitante</option>
+                            </select>
+                            <hr />
+
+                            <a class="btn btn-outline-dark" href='@Url.Action("Index", "Partes")'>Volver</a>
+                            <input type="submit" value="Regitrar" class="btnRegister" />
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

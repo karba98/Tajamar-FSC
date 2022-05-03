@@ -1,0 +1,18 @@
+﻿@model Departamento
+@Html.ActionLink("Volver", "GetDepartamentos", "Home")
+
+@if (Model != null)
+{
+    <form method="post">
+        <h1><input type="text" name="dnombre" value="@Model.Dnombre" /><br /></h1>
+        <input type="text" name="loc" value="@Model.Loc" /><br />
+        <input type="number" name="dept_no" value="@Model.Dept_no" readonly /><br />
+
+        <button class="btn-warning" type="submit">Modificar</button>
+    </form>
+    <h3>@ViewBag.Mensaje</h3>
+}
+else
+{
+    <h1>No se encontraron datos</h1>
+}

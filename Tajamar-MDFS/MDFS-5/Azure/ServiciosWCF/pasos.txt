@@ -1,0 +1,24 @@
+Libreria => References (NOMBRES NO EXACTOS)
+		System.Services.Models
+		system.RunTime.Serialization
+	    Nugets   EntityFramework, System.Data.SqlClient
+		
+	Modelo
+	Interface => Servicecontract. OperationContract
+	Clase que implemente interface
+WCFServuce
+	borrar svc
+	borra class
+	Referencias => libreria anterior
+	Nuget EntityFramweork, System.Data.SqlClient
+	
+	webconfig copiapega
+	connectionstring (fijarse en local vs azure)
+	cambiar service (arriba clasem abajo interface)
+	
+	svc
+	cambiar a clase
+
+	Poner svc principal
+	Poner host como principal
+

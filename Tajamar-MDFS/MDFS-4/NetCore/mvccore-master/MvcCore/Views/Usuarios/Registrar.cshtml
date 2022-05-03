@@ -1,0 +1,49 @@
+﻿@model MvcCore.Models.Usuario
+
+@{
+    ViewData["Title"] = "Registrar";
+}
+@{ 
+    Random r = new Random();
+    int id = r.Next(10000, 999999);
+    String i = "#" + id.ToString();
+}
+@Html.Raw(ViewBag.Alert)
+<h1>Registrar</h1>
+<h4>Usuario</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Registrar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                
+                <input asp-for="Id" class="form-control" type="text" value="@i" readonly/>
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label">Nombre Completo</label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="User" class="control-label">Nombre de usuario</label>
+                <input asp-for="User" class="form-control" />
+                <span asp-validation-for="User" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pass" class="control-label">Contraseña</label>
+                <input asp-for="Pass" type="password" class="form-control" />
+                <span asp-validation-for="Pass" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Regitrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

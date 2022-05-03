@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MDFS-1", "MDFS-1.vbproj", "{114B4C4F-3253-41EF-9BC8-0F83A0BA29EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{114B4C4F-3253-41EF-9BC8-0F83A0BA29EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{114B4C4F-3253-41EF-9BC8-0F83A0BA29EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{114B4C4F-3253-41EF-9BC8-0F83A0BA29EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{114B4C4F-3253-41EF-9BC8-0F83A0BA29EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C5B6604-0B18-45B5-930C-4010229BAD93}
+	EndGlobalSection
+EndGlobal

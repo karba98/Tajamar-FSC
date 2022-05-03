@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ejemplo Matematicas</title>
+</head>
+<body>
+    <h1>Ejemplo POO</h1>
+    <hr />
+    <label>Numero: </label>
+    <input typeof="number" id="numero"></input>
+    <button type="button" id="doble">Ver doble</button>
+    <h2 id="res"></h2>
+</body>
+</html>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script src="js/20_POO_ObjMatematicas.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#doble").click(function () {
+            var num = parseInt($("#numero").val());
+            var mates = new Matematicas(num);
+
+            console.log("mates.doble (original) = " + mates.doble);
+            mates.generarDoble();
+            $("#res").text("mates.doble = "+mates.doble);
+        });
+    });
+</script>

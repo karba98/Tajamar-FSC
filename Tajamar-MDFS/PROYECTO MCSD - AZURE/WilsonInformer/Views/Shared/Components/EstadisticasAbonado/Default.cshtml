@@ -1,0 +1,69 @@
+﻿@if (ViewBag.Propis != null)
+{
+    <div id="containerAbonado" 
+     style="height: 600px;
+    margin: 0 auto;">
+
+</div>
+
+<script src="https://code.highcharts.com/stock/highstock.js"></script>
+<script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
+<script>
+
+    Highcharts.chart('containerAbonado', {
+        chart: {
+            type: 'bar',
+        },
+        title: {
+            text: 'Partes / Abonado'
+        },
+
+        xAxis: {
+            type: 'category',
+            title: {
+                text: null
+            },
+            min: 0,
+            max: 10,
+            scrollbar: {
+                enabled: true
+            },
+            tickLength: 0
+        },
+        yAxis: {
+            min: 0,
+            max: @ViewBag.Max,
+            title: {
+                text: 'Partes',
+                align: 'high'
+            }
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true
+                }
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: 'Partes',
+            data: [
+                    @Html.Raw(ViewBag.Propis)
+
+            ]
+        }]
+    });
+
+</script>
+}
+else
+{
+    <h4>No hay propietarios a mostrar</h4>
+}

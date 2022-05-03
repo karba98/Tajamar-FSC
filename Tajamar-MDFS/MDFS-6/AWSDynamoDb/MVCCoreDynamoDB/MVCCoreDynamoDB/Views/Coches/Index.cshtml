@@ -1,0 +1,76 @@
+﻿@model IEnumerable<MVCCoreDynamoDB.Models.Coche>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form method="post" class="form-group">
+    <input type="text" name="marca" class="form-control"/>
+    <br/>
+    <button type="submit" class="btn btn-info">Buscar</button>
+</form>
+<hr/>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCoche)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Marca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modelo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VMaxima)
+            </th>
+            <th>
+                Motor
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model != null)
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdCoche)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Marca)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Modelo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.VMaxima)
+                    </td>
+                    <td>
+                        @if (item.Motor != null)
+                        {
+                            <input type="checkbox" value="yes" checked class="form-check-inline" onclick="return false;" />
+                        }
+                        else
+                        {
+                            <input type="checkbox" value="no" class="form-check-inline" onclick="return false;"/>
+                        }
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new {  id=item.IdCoche  }) |
+                        @Html.ActionLink("Delete", "Delete", new {  id=item.IdCoche  })
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

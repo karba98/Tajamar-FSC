@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PersonalizarDispositivos.Views.PaginaEstilosCSS">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView Orientation="Both">
+                <StackLayout>
+                    <Frame>
+                        <StackLayout>
+                            <Label Text="batman" StyleClass="header"/>
+                            <Label Text="Que cachondo XD batman dice" />
+                            <Label Text="Que cachondo XD batman dice" />
+                            <Image Source="https://i.blogs.es/24bcec/the-batman-affleck/840_560.jpg"/>
+                            <Label Text="Que cachondo XD batman dice" />
+                            <Image Source="https://estaticos-cdn.elperiodico.com/clip/8165e262-7484-4b38-8cf6-00b897bf85e4_alta-libre-aspect-ratio_default_0.jpg"/>
+                            <Label Text="Que cachondo XD batman dice" />
+                            <Image Source="https://i.blogs.es/24bcec/the-batman-affleck/840_560.jpg"/>
+                            <Label Text="Que cachondo XD batman dice" />
+                            <Button/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Validar DNI</title>
+</head>
+<body>
+    <h1 style="background-color:dodgerblue">Validar letra DNI</h1>
+    <label>Introduzca DNI (sin letra)</label>
+    <input type="text" id="dni" />
+    <button onclick="validar()">Validar</button>
+    <br />
+    <br />
+    <h2 id="res"></h2>
+</body>
+
+<script>
+    function validar() {
+        var dnibox = document.getElementById("dni");
+        var dni = dnibox.value;
+        var res = document.getElementById("res");
+        var letras ="TRWAGMYFPDXBNJZSQVHLCKET";
+        dnibox.style.backgroundColor = "White";
+        if (dni == "") {
+            res.innerText = "Introduzca DNI sin letra";
+            dnibox.style.backgroundColor = "Red";
+        } else {
+            var n = parseInt(Math.trunc(dni % 23));
+            //Truncamos el resultado
+            res.innerText = dni + letras.charAt(n);       
+        }
+    }
+</script>
+</html>

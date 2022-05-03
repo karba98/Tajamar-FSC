@@ -1,0 +1,12 @@
+﻿<a href='@Url.Action("Index", "Partes")' id="defaultOpen">Inicio</a>
+<a href='@Url.Action("Estadisticas", "Partes",new { })'>Estadisticas</a>
+@if (Context.User.IsInRole("A"))
+{
+<a href='@Url.Action("UploadPartes", "Partes")'>Gestionar Datos</a>
+<a href='@Url.Action("GetPartes", "Partes",new { })'>Partes</a> @*<a href='@Url.Action("EntregadosEnGestion", "Partes",new { })'>Gestión - Entregados</a>
+ <a href='@Url.Action("Pendientes15", "Partes",new { })'>Gestión - Pendientes <br />(15 dias atras)</a>*@
+  <a href='@Url.Action("Registrar", "Usuarios",new { })'>Registrar usuario</a>
+  }
+
+<a href='@Url.Action("QuienesSomos", "Partes",new { })'>¿Quiénes somos?</a>
+<a href='@Url.Action("LogOut", "Usuarios",new { })'>Cerrar Sesion</a>

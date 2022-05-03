@@ -1,0 +1,26 @@
+﻿@model CustomerList 
+<div style="padding:10px">
+    <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Compañia</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Customer c in Model.values)
+            {
+                <tr>
+                    <td>@c.Name</td>
+                    <td>@c.ComapnyName</td>
+                    <td>@c.Address, @c.City</td>
+                    <td>@c.Phone</td>
+                    <td><a asp-action="Detalles" asp-controller="Home" asp-route-id="@c.CustomerID">Detalles</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cambiador de imagen</title>
+    
+</head>
+
+</style>
+<body>
+    <form name="formu">
+        <select name="selector" onchange="resetImg()" id="fotos">
+            <option value="green">Verde</option>
+            <option value="red">Rojo</option>
+            <option value="facebook_logo_portada">Facebook</option>
+        </select>
+        <input type="range" min="0" max="10" value="0" oninput="capRango()" name="repe" />
+        <a id="nr"></a>
+        <br />
+        <div id="limg"></div>
+
+    </form>
+</body>
+<script type="text/javascript">
+
+    window.onload = function () {
+        var range = document.formu.repe;
+        console.log(range.value);
+        document.getElementById("nr").innerText = range.value;
+    }
+    function capRango() {
+        var range = document.formu.repe;
+        console.log(range.value);
+        var imagenes = document.getElementById("limg");
+        document.getElementById("nr").innerText = range.value;
+        imagenes.innerHTML = "";
+        var index = document.formu.selector.options.selectedIndex;
+        for (var i = 0; i < parseInt(range.value); i++) {
+            var html = "<img src = " + document.formu.selector.options[index].value + ".jpg  style=\"width:50p;height:50px\"/>";
+            imagenes.innerHTML += html;
+        }
+            
+        
+
+    } 
+
+    function resetImg() {
+        for (var i of document.images) {
+            var index = document.formu.selector.options.selectedIndex;
+            i.src = document.formu.selector.options[index].value + ".jpg";
+        }
+    }
+        
+</script>
+</html>

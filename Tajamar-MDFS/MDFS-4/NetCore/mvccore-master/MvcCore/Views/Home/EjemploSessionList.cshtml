@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MvcCore.Models.Persona>
+
+@{
+    ViewData["Title"] = "EjemploSessionList";
+}
+
+<h1>EjemploSessionList</h1>
+
+<hr />
+<h4>@ViewBag.Mensaje</h4>
+<hr/>
+<ul class="list-group list-group-horizontal">
+    <li class="list-group-item">
+        <a asp-action="EjemploSessionList" asp-controller="Home" asp-route-accion="almacenar">
+            Almacenar Session
+        </a>
+    </li>
+    <li class="list-group-item">
+        <a asp-action="EjemploSessionList" asp-controller="Home" asp-route-accion="mostrar">
+            Mostrar Session
+        </a>
+    </li>
+</ul>
+<hr />
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Edad)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Hora)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Edad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Hora)
+                    </td>
+                   
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,20 @@
+﻿@model List<Hospital>
+
+<h1>Lista de hospitales SQL</h1>
+<hr />
+<table class="table table-responsive-sm">
+    <thead style="background-color:black;color:white">
+        <tr>
+            <th>Hospital</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Hospital h in Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(h.Nombre, "Detalles", "Hospitales", new { id = h.IdHospital })</td>
+            </tr>
+        }
+    </tbody>
+</table>

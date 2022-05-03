@@ -1,0 +1,20 @@
+﻿@model List<Chollo>
+
+<h1>Chollos para hoy</h1>
+
+<div class="row">
+    @foreach (Chollo c in Model)
+    {
+        <div class="col-md-6">
+
+            <h2 style="color:red">
+                @c.IdTitular | @c.Titulo
+            </h2>
+            <img src="@c.Img"/>
+            @*<a href="@c.Enlace" target="_blank">@c.Enlace</a>
+            <p>
+                @Html.Raw(c.Descripcion)
+            </p>*@
+        </div>
+    }
+</div>

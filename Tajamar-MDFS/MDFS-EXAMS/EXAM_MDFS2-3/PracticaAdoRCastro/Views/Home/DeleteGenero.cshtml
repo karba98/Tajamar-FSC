@@ -1,0 +1,12 @@
+﻿
+@model List<String>
+<hr/>
+<form method="post">
+    <select name="genero">
+        @foreach(String genero in Model)
+        {
+            <option>@genero</option>
+        }
+    </select>
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+</form>

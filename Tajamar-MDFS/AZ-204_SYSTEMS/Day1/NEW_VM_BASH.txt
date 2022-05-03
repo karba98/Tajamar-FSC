@@ -1,0 +1,15 @@
+--instalado az cli
+az group --help
+az --help
+
+az login
+az group create --location francecentral --name "RG"
+
+az vm create --resource-group "RG-LINUX" --name "MeanStack" --image Canonical:UbuntuSe
+rver:16.04-LTS:Latest --admin-username usuario --generate-ssh-keys
+
+az vm open-port --port 80 --resource-group "RG-LINUX" --name "MeanStack"
+
+az vm show --name MeanStack -g RG-LINUX --show-details --query [publicIps]
+
+IP -> "52.188.173.79"

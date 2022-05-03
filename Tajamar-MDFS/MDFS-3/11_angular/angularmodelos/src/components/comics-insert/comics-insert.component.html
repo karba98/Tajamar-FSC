@@ -1,0 +1,11 @@
+<h2>insertar Comic:</h2>
+<form  #formu="ngForm" (ngSubmit)="setComic() " > 
+    <input name="nombre" 
+    [(ngModel)]="comic.nombre"/><label>Nombre: </label><br/>
+    <input name="imagen" 
+    [(ngModel)]="comic.imagen"/> <label>URL Imagen: </label><br/>
+    <input name="descripcion"
+    [(ngModel)]="comic.descripcion"/><label>Descripción: </label><br/><br/>
+    <button>Insertar</button>
+    <br/>
+</form>

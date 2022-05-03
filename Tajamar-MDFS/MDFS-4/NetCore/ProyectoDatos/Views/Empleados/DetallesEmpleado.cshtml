@@ -1,0 +1,25 @@
+﻿@model Empleado
+@Html.ActionLink("Volver","Empleados","Empleados")
+<h1>@Model.Apellido</h1>
+<hr/>
+<table class="table table-hover">
+    <tbody>
+        <tr>
+            <td>Oficio</td>
+            <td>@Model.Oficio</td>
+        </tr>
+        <tr>
+            <td>Departamento</td>
+            <td>@Model.Departamento</td>
+        </tr>
+        <tr>
+            <td>Salario</td>
+            <td>@Model.Salario</td>
+        </tr>
+        <tr>
+            <td>Nº Empleado</td>
+            <td>@Model.IdEmpleado €</td>
+        </tr>
+
+    </tbody>
+</table>

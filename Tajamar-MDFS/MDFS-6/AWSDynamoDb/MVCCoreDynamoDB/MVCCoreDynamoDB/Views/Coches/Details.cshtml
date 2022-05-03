@@ -1,0 +1,63 @@
+﻿@model MVCCoreDynamoDB.Models.Coche
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Coche</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IdCoche)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IdCoche)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.VMaxima)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.VMaxima)
+        </dd>
+        @if (Model.Motor != null)
+        {
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Motor.Tipo)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Motor.Tipo)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Motor.Caballos)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Motor.Caballos)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Motor.Cilindrada)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Motor.Cilindrada)
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

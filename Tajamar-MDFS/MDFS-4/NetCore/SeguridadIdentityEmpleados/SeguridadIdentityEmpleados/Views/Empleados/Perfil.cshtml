@@ -1,0 +1,12 @@
+﻿@model Empleado
+@{
+    ViewData["Title"] = "Perfil";
+}
+
+<h1>Perfil</h1>
+
+<h4>@User.FindFirst(ClaimTypes.Name).Value</h4>
+<hr/>
+<h2>Oficio: @User.FindFirst(ClaimTypes.Role).Value</h2>
+
+<h4>Salario: @Model.Salario €</h4>

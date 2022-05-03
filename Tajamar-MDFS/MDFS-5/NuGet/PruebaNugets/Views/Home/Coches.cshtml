@@ -1,0 +1,12 @@
+﻿@model List<Coche>
+
+<ul class="container float">
+    @foreach (Coche car in Model)
+    {
+        <li class="item float-item">
+
+            <img src="@car.Imagen" style="width:250px;height:200px" />
+        </li>
+    }
+</ul>
+

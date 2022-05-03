@@ -1,0 +1,33 @@
+drop table coches;
+CREATE TABLE coches(
+	idcoche int NOT NULL,
+	marca nvarchar(50) NULL,
+	modelo nvarchar(50) NULL,
+	conductor nvarchar(50) NULL,
+	imagen nvarchar(1000) NULL);
+ALTER TABLE coches 
+ADD CONSTRAINT PK_COCHES
+PRIMARY KEY (idcoche);
+
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (1, N'DMC MariaDb', N'DELOREAN', N'MARTY MACFLY', N'delorean.webp');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (2, N'PONTIAC MariaDb', N'FIREBIRD', N'MICHAEL KNIGHT', N'hqdefault.jpg');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (3, N'VOLKSWAGEN MariaDb', N'ESCARABAJO', N'HERBIE', N'maxresdefault.jpg');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (4, N'GMC MariaDb', N'VANDURA', N'M.A BARRACUS', N'450_1000.jpg');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (5, N'CADILLAC MariaDb', N'MILLER-METEOR', N'CAZAFANTASMAS', N'100066.jpg');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (6, N'CHEVROLET MariaDb', N'CORVETTE 84', N'FENIX', N'corvetteC4.jpg');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (7, N'ASTON MARTIN MariaDb', N'DB5', N'JAMES BOND', N'astonmartindb5.jpg');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (8, N'TRONCO MariaDb', N'MOVIL', N'PEDRO PICAPIEDRA', N'picapiedra.png');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (9, N'DODGE MariaDb', N'VIPER', N'RAYO MCQUEEN', N'rayomcqueen.jpg');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (10, N'AUTO MariaDb', N'DOBLE CERO', N'PIERRE NODOYUNA', N'pierre.jpg');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (11, N'COMPACT MariaDb', N'PUSSYCAT', N'PENELOPE GLAMOUR', N'penelope.jpg');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (12, N'BATMOVIL MariaDb', N'FIREBALL', N'BRUCE WAYNE', N'bruce.jpg');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (14, N'TRON MariaDb', N'LEGACY', N'KEVIN FLYNN', N'tron.jpg');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (15, N'LAND ROVER MariaDb', N'DEFENDER', N'CAPITAN NEMO', N'nautilus.webp');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (16, N'LANDSPEEDER MariaDb', N'X-34', N'LUKE SKYWALKER', N'landspeeder.jpg');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (18, N'DODGE MariaDb', N'CHARGER', N'DOMINIC TORETTO', N'toretto.jpg');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (22, N'VOLKSWAGEN MariaDb', N'V3', N'SCOOBY DOO', N'scoobydoo.jpg');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (23, N'BATMOVIL MariaDb', N'TUMBLER', N'BATMAN', N'batmanbegins.jpg');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (24, N'FORD MariaDb', N'MUSTANG', N'ELEANOR', N'eleanor.webp');
+INSERT into coches (idcoche, marca, modelo, conductor, imagen) VALUES (25, N'DODGE MariaDb', N'CHALLENGER R/T', N'DEATH PROOF', N'deathproof.jpg');
+commit;
+SELECT * FROM coches;

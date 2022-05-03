@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>DiaNacimientoSemana</title>
+</head>
+<body>
+    <!--Puede sustituir <a> por <label>-->
+    <a>Dia</a>
+    <input type="number" id="dia" />
+    <br />
+    <a>Mes</a>
+    <input type="number" id="mes" />
+    <br />
+    <a>Año</a>
+    <input type="number" id="anio" />
+    <br />
+    <button type="button" onclick="sacaSemana()">Mostrar dia de la semana</button>
+    <br/>
+    <h1 id="res"></h1>
+</body>
+<script>
+    function sacaSemana() {
+        var dia = parseInt(document.getElementById("dia").value);
+        var mes = parseInt(document.getElementById("mes").value);
+        var anio = parseInt(document.getElementById("anio").value);
+
+        if (dia > 31 || mes > 12) {
+            document.getElementById("res").innerText = "";
+            alert("Fecha erronea");
+        }
+        else {
+            switch (mes) {
+                case 1:
+                    mes == 13;
+                    anio--;
+                break;
+                case 2:
+                    mes == 14;
+                    anio -= 1;
+                break;
+            default: mes == mes;
+            }
+            
+            var op1 = parseInt(((mes + 1) * 3) / 5);
+            console.log(op1);
+            var op2 = parseInt(anio / 4);
+            console.log(op2);
+            var op3 = parseInt(anio / 100);
+            console.log(op3);
+            var op4 = parseInt(anio / 400);
+            console.log(op4);
+            var op5 = parseInt(dia + (mes * 2) + anio + op1 + op2 - op3 + op4 + 2);
+            console.log(op5);
+            var op6 = parseInt(op5 / 7);
+            console.log(op6);
+            var resul = parseInt(op5 - (op6 * 7));
+            console.log(resul);
+
+            switch (resul) {
+                case 0: document.getElementById("res").innerText = "Sabado";
+                    break;
+                case 1: document.getElementById("res").innerText = "Domingo";
+                    break;
+                case 2: document.getElementById("res").innerText = "Lunes";
+                    break;
+                case 3: document.getElementById("res").innerText = "Martes";
+                    break;
+                case 4: document.getElementById("res").innerText = "Miércoles";
+                    break;
+                case 5: document.getElementById("res").innerText = "Jueves";
+                    break;
+                case 6: document.getElementById("res").innerText = "Viernes";
+                    break;
+                default: document.getElementById("res").innerText = "Error inesperado";
+                    break;
+            }
+        }
+        
+    }
+</script>
+</html>

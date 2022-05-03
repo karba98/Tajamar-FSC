@@ -1,0 +1,1 @@
+﻿@model List<RetoMVCAutofac.Models.Empleado>@{ ViewBag.Title = "Index";}<h2>Empleados DI</h2>@if (Model != null){<table class ="table table-bordered">    @foreach (var emp in Model)    {<tr>    <td>@emp.Apellido</td>    <td>@emp.Oficio</td></tr>}    </table>}

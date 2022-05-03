@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Almacenamiento Web</h1>
+    <form>
+        <label>Marca: </label>
+        <input type="text" id="marca" />
+        <label>Modelo: </label>
+        <input type="text" id="modelo" />
+        <ul>
+            <li><input type="radio" name="storage" value="0"/>Local Storage</li>
+            <li><input type="radio" name="storage" value="1"/>Session Storage</li>
+        </ul>
+        <hr />
+        <button type="button" id="guardar">Guardar</button>
+        <button type="button" id="leer">Leer</button>
+        <button type="button" id="borrar">Borrar</button>
+        <hr />
+        <h2 id="res"></h2>
+    </form>
+</body>
+</html>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#guardar").click(function () {
+            var valradio = $("input[name='storage']:checked").val();
+            var marca = $("#marca").val();;
+            var modelo = $("#modelo").val();;
+            if (valradio == 0) {
+                localStorage.setItem("marca", marca);
+                localStorage.setItem("modelo", modelo);
+                alert("Almacenado en Local S.");
+            } else {
+                sessionStorage.setItem("marca", marca);
+                sessionStorage.setItem("modelo", modelo);
+                alert("Almacenado en Session S.");
+            }
+        });
+    $("#leer").click(function () {
+        var valradio = $("input[name='storage']:checked").val();
+        var marca = "";
+        var modelo = "";
+        if (valradio == 0) {
+            marca = localStorage.getItem("marca");
+            modelo = localStorage.getItem("modelo");
+        } else {
+            marca = sessionStorage.getItem("marca");
+            modelo = sessionStorage.getItem("modelo");
+            
+        }
+        $("#res").text("Marca: " + marca + " Modelo: " + modelo);
+    });
+        $("#borrar").click(function () {
+            var valradio = $("input[name='storage']:checked").val();
+            if (valradio == 0) {
+                localStorage.clear();
+                alert("LocalStorage borrado");
+            } else {
+                sessionStorage.clear();
+                alert("SessionStorage borrado");
+            }
+        });
+        
+    });
+</script>

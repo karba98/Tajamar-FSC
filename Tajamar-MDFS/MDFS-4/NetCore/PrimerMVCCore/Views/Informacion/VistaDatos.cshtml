@@ -1,0 +1,10 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Vista Datos</h1>
+<h2>Pasando datos a controller</h2>
+
+@Html.ActionLink("Enviar Datos a Controller para mostrar lo de abajo", "VistaDatos", "Informacion", new { aplicacion = "APIWEB", version = 1 })
+<h3>Aplicacion: @ViewBag.Aplicacion Version: @ViewBag.Version</h3>

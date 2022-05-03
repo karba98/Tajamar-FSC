@@ -1,0 +1,6 @@
+﻿@model List<Persona>
+<h1>Objetos Personas</h1>
+@foreach(Persona p in Model)
+{
+    <h3 style="color:blue">@p.nombre - @p.edad -- @p.email</h3>
+}

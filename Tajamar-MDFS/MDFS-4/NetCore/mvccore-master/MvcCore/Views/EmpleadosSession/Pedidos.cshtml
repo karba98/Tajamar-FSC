@@ -1,0 +1,48 @@
+﻿@model IEnumerable<MvcCore.Models.Empleado>
+
+@{
+    ViewData["Title"] = "Pedidos";
+    List<int> cantidades = ViewBag.Cantidades as List<int>;
+    int contador = 0;
+}
+
+<h1>Pedidos</h1>
+<hr/>
+<a class="nav-link" asp-action="AlmacenarEmpleados" asp-controller="EmpleadosSession">
+    Volver a Almacenar Empleados
+</a>
+<p>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IDEmpelado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Apellido)
+            </th>
+            <th>Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IDEmpelado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Apellido)
+            </td>
+
+            <td style="color:orangered">
+                @cantidades[contador]
+            </td>
+            @{ 
+                contador++;
+            }
+        </tr>
+        
+}
+    </tbody>
+</table>

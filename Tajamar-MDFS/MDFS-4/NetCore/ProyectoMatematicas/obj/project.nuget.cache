@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "EzxTkSbqkAM3L86FJjiTQJTTVUfYYbWe0C2o3SbZ0R0g+nWnZEaVCfcVQLzWM8xECM7s/K5yVnT35jnyH8wzQg==",
+  "success": true,
+  "projectFilePath": "E:\\MCSD\\MDFS\\MDFS-4\\NetCore\\ProyectoMatematicas\\ProyectoMatematicas.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\raulc\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\raulc\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+  ],
+  "logs": []
+}

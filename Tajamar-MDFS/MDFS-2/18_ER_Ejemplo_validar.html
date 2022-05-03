@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ejemplo validar</title>
+</head>
+<body>
+    <h1>Ejemplo validar Expresiones Regulares</h1>
+    <label>Codigo postal: </label>
+    <input type="text" id="CP" />
+    <button type="button" id="VCP">Validar</button>
+    <hr />
+    <label>Texto: </label>
+    <input type="text" id="cajatext" pattern="[A-Z]+" />
+    <label>Email </label>
+    <input type="email" id="cajaemail" />
+    <button type="submit">Enviar</button>
+    <button type="button">Pulsa a ver...</button>
+
+    <hr />
+    <label>NIF: </label>
+    <input type="text" id="NIF" />
+    <button type="button" id="valNIF">Validar</button>
+    <hr />
+    <h1 id="res"></h1>
+</body>
+</html>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        console.log("hi");
+        $("#VCP").click(function () {
+            console.log("clicked");
+            var cp = $("#CP").val();
+            //OBJETO
+            var expresion = new RegExp("^\\d{5}$");
+            if (expresion.test(cp)){
+                $("#res").text("CP Valido");
+            }
+            else {
+                 $("#res").text("CP No valido");
+            }
+            
+
+        });
+
+        $("#valNIF").click(function () {
+            var nif = $("#NIF").val();
+            //LITERAL
+            var expresion = /^\d{8}[A-Z]{1}$/;
+            var res = expresion.test(nif);
+
+            if (res){
+                $("#res").text("NIF Valido");
+            }
+            else {
+                 $("#res").text("NIF no valido");
+            }
+            
+             
+
+        });
+    });
+
+</script>

@@ -1,0 +1,32 @@
+<h1>Formularios binding: ngModel ngSubmit</h1>
+<p>*binding permite actualizar user al vuelo, es decir, nada mas
+    escribir se cambia user.loquesea
+</p>
+<h2>{{mensaje}}</h2>
+<form #formulario="ngForm" (ngSubmit)="recibirDatos()">
+    <input type="text" name="nombre" #nombre="ngModel" 
+    [(ngModel)]="user.nombre" required/>
+    <label> Nombre </label>
+    <label style="color:red" *ngIf="!nombre.valid && 
+    nombre.touched">
+        *Nombre obligatorio</label>
+    <br/>
+    <input type="text" name="apellidos"
+    #apellidos="ngModel" pattern="[A-Z]{1}[a-z]{2,99}"
+    [(ngModel)]="user.apellidos"/>
+    <label> Apellidos </label>
+    <label style="color:red" *ngIf="!apellidos.valid && 
+    apellidos.touched">
+     *Apellidos no válidos
+    </label>
+    <br/>
+    <input type="number" name="edad" #edad="ngModel" 
+    [(ngModel)]="user.edad"/>
+    <label> Edad </label>
+    <br/>
+    <button [disabled]="!formulario.valid">Enviar</button>
+</form>
+
+<h2>{{user.nombre}}</h2>
+<h2>{{user.apellidos}}</h2>
+<h2>{{user.edad}}</h2>

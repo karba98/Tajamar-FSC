@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<CLIENTES>
+  <CLIENTE IDCLIENTE="1">
+    <NOMBRE>DELORIAN</NOMBRE>
+    <DIRECCION>C/ Paseo Castellana, 150</DIRECCION>
+    <EMAIL>blockbuster@video.es</EMAIL>
+    <CODIGOPOSTAL>28020</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.delorian.es</PAGINAWEB>
+    <IMAGENCLIENTE>https://emerdelac.files.wordpress.com/2012/10/flyingcar.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="2">
+    <NOMBRE>RICARDO TUBBS</NOMBRE>
+    <DIRECCION>C/ Islas Canarias, 19</DIRECCION>
+    <EMAIL>miamivice@video.es</EMAIL>
+    <CODIGOPOSTAL>28020</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.ricardotubss.es</PAGINAWEB>
+    <IMAGENCLIENTE>https://s-media-cache-ak0.pinimg.com/236x/f9/14/c8/f914c898dcfd5574c0dd8bdc72fc3897.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="3">
+    <NOMBRE>JOHNNY UTAH</NOMBRE>
+    <DIRECCION>C/ Piratas, 78</DIRECCION>
+    <EMAIL>bodhi@pirata.es</EMAIL>
+    <CODIGOPOSTAL>66666</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.lellamanbodhi.es</PAGINAWEB>
+    <IMAGENCLIENTE>https://webbingthesurf.files.wordpress.com/2015/05/johnny-utah.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="4">
+    <NOMBRE>PINKY WINKI</NOMBRE>
+    <DIRECCION>C/ Olimpo, 25</DIRECCION>
+    <EMAIL>pinkywinki@musas.es</EMAIL>
+    <CODIGOPOSTAL>78524</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.pinkywinki.es</PAGINAWEB>
+    <IMAGENCLIENTE>http://www.zerozen.com.br/zzfiles/tinky.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="5">
+    <NOMBRE>OPTIMUS PRIME</NOMBRE>
+    <DIRECCION>C/ Transformers, 1</DIRECCION>
+    <EMAIL>transformers@dvd.es</EMAIL>
+    <CODIGOPOSTAL>50212</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.flufy.es</PAGINAWEB>
+    <IMAGENCLIENTE>http://tfwiki.net/mediawiki/images2/thumb/3/37/Optimusg1.jpg/350px-Optimusg1.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="6">
+    <NOMBRE>MICHAEL SCOFIELD</NOMBRE>
+    <DIRECCION>C/ Anton, 16</DIRECCION>
+    <EMAIL>teabag@esfera.es</EMAIL>
+    <CODIGOPOSTAL>58214</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.lincolnbarrows.es</PAGINAWEB>
+    <IMAGENCLIENTE>http://images.buddytv.com/articles/image/michael1.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="7">
+    <NOMBRE>CORONEL BRADDOCK</NOMBRE>
+    <DIRECCION>C/ Desaparecido, 80</DIRECCION>
+    <EMAIL>chucknorris@braddock.es</EMAIL>
+    <CODIGOPOSTAL>3663</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.braddock.es</PAGINAWEB>
+    <IMAGENCLIENTE>http://tamaimos.com/wp-content/uploads/2012/02/chuckn_small.jpeg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="8">
+    <NOMBRE>MADMARTIGAN</NOMBRE>
+    <DIRECCION>C/ Dramoga, 91</DIRECCION>
+    <EMAIL>willow@dramoga.es</EMAIL>
+    <CODIGOPOSTAL>55555</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.madmartigan.es</PAGINAWEB>
+    <IMAGENCLIENTE>http://thumbs.modthesims2.com/img/5/6/7/6/3/9/MTS_Paleoanth-650246-WILLOW2003.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="9">
+    <NOMBRE>JESUS QUINTANA</NOMBRE>
+    <DIRECCION>C/ Lebowsky, 19</DIRECCION>
+    <EMAIL>granlebowski@quintana.es</EMAIL>
+    <CODIGOPOSTAL>89565</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.jesusquintana.es</PAGINAWEB>
+    <IMAGENCLIENTE>https://i.ytimg.com/vi/YFz8Tptq634/maxresdefault.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="10">
+    <NOMBRE>MICHAEL KNIGHT</NOMBRE>
+    <DIRECCION>C/ Fantastic car, 21</DIRECCION>
+    <EMAIL>michaelknight@ninonino.com</EMAIL>
+    <CODIGOPOSTAL>3954</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.michaelknight.es</PAGINAWEB>
+    <IMAGENCLIENTE>http://www.snakkle.com/wp-content/uploads/2012/11/David-Hasselhoff-GC.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="11">
+    <NOMBRE>MARTY MACFLY</NOMBRE>
+    <DIRECCION>C/ Emmet brown, 20</DIRECCION>
+    <EMAIL>condensadordefluzo@macfly.es</EMAIL>
+    <CODIGOPOSTAL>56454</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.backtothefuture.es</PAGINAWEB>
+    <IMAGENCLIENTE>http://static.lared.cl/wp-content/uploads/2015/10/marty-960.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="12">
+    <NOMBRE>JOHN CONNOR</NOMBRE>
+    <DIRECCION>C/ T-1000</DIRECCION>
+    <EMAIL>terminator@connor.es</EMAIL>
+    <CODIGOPOSTAL>52154</CODIGOPOSTAL>
+    <PAGINAWEB>http://tepasmas.com/curiosidades/t2</PAGINAWEB>
+    <IMAGENCLIENTE>https://d.wattpad.com/story_parts/87366263/images/13af12844be59cf8.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="14">
+    <NOMBRE>MIKEY WALSH</NOMBRE>
+    <DIRECCION>C/ Valle Goonie, 85</DIRECCION>
+    <EMAIL>miky@goonies.es</EMAIL>
+    <CODIGOPOSTAL>85411</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.punkasspunk.com/goonies/</PAGINAWEB>
+    <IMAGENCLIENTE>http://static.celebuzz.com/uploads/2009/09/28/msg-125415651638-3.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="15">
+    <NOMBRE>DANIEL LARUSSO</NOMBRE>
+    <DIRECCION>C/ Señor Miyagi,21</DIRECCION>
+    <EMAIL>danielsan@miyagi.com</EMAIL>
+    <CODIGOPOSTAL>3954</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.karatekid.com</PAGINAWEB>
+    <IMAGENCLIENTE>http://www.gunaxin.com/wp-content/uploads/2009/10/Russo.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="16">
+    <NOMBRE>CUCO</NOMBRE>
+    <DIRECCION>C/ Franco, 19</DIRECCION>
+    <EMAIL>cuco@torrente.es</EMAIL>
+    <CODIGOPOSTAL>20885</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.torrente.es</PAGINAWEB>
+    <IMAGENCLIENTE>http://perso.wanadoo.es/lasfalc/Parecidos/cuco_zumo.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="17">
+    <NOMBRE>ICE MAN</NOMBRE>
+    <DIRECCION>C/ Miramar, 1</DIRECCION>
+    <EMAIL>maverick@topgun.com</EMAIL>
+    <CODIGOPOSTAL>3954</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.topgun.com</PAGINAWEB>
+    <IMAGENCLIENTE>http://i0.wp.com/www.ruthlessreviews.com/wp-content/uploads/2011/08/TOP-GUN-ICEMAN12.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="18">
+    <NOMBRE>MIKE DONOVAN</NOMBRE>
+    <DIRECCION>C/ Diana, 55</DIRECCION>
+    <EMAIL>milkedonovan@vvvvv.com</EMAIL>
+    <CODIGOPOSTAL>65455</CODIGOPOSTAL>
+    <PAGINAWEB>http://thevisitors.info</PAGINAWEB>
+    <IMAGENCLIENTE>http://www.ionlitio.com/images/2009/02/visitantes_donovan.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="19">
+    <NOMBRE>BASTIAN BALTASAR BUX</NOMBRE>
+    <DIRECCION>C/ Fujur, 8</DIRECCION>
+    <EMAIL>fujur@neverendingstory.com</EMAIL>
+    <CODIGOPOSTAL>55521</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.neverendingstory.com</PAGINAWEB>
+    <IMAGENCLIENTE>http://i41.servimg.com/u/f41/15/31/66/73/avata136.png</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="20">
+    <NOMBRE>DANNY ZUCO</NOMBRE>
+    <DIRECCION>C/ Grease, 78</DIRECCION>
+    <EMAIL>grease@zuco.com</EMAIL>
+    <CODIGOPOSTAL>21560</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.grease.com</PAGINAWEB>
+    <IMAGENCLIENTE>http://quizsocial.com/quimg/grease-characters/results/1.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="21">
+    <NOMBRE>JACK BURTON</NOMBRE>
+    <DIRECCION>C/ China, 90</DIRECCION>
+    <EMAIL>littlechina@gmail.com</EMAIL>
+    <CODIGOPOSTAL>3954</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.imdb.com/title/tt0090728/</PAGINAWEB>
+    <IMAGENCLIENTE>http://unrealitymag.com/wp-content/uploads/2014/07/btlc-jbkiss.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="22">
+    <NOMBRE>MATT HOOPER</NOMBRE>
+    <DIRECCION>C/ Jaws, 56</DIRECCION>
+    <EMAIL>tiburon@hotmail.com</EMAIL>
+    <CODIGOPOSTAL>81252</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.filmaffinity.com/es/film242422.html</PAGINAWEB>
+    <IMAGENCLIENTE>https://qhailishadarwinajaws.files.wordpress.com/2015/01/j6.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="23">
+    <NOMBRE>IAN MALCOLM</NOMBRE>
+    <DIRECCION>C/ Jurassic Park, 99</DIRECCION>
+    <EMAIL>jurassicpark@dino.es</EMAIL>
+    <CODIGOPOSTAL>14566</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.hoycinema.com/Parque-jurasico-1993.htm</PAGINAWEB>
+    <IMAGENCLIENTE>http://carboncostume.com/wordpress/wp-content/uploads/2013/06/Ianm.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="24">
+    <NOMBRE>HARRY CALLAHAN</NOMBRE>
+    <DIRECCION>C/ Sucio San Francisco, 34</DIRECCION>
+    <EMAIL>dirtyharry@sucio.com</EMAIL>
+    <CODIGOPOSTAL>89566</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.dirtyharry.com</PAGINAWEB>
+    <IMAGENCLIENTE>https://upload.wikimedia.org/wikipedia/en/2/27/Harry_Callahan.JPG</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="25">
+    <NOMBRE>ELLEN RIPLEY</NOMBRE>
+    <DIRECCION>C/ Nostromo, 20</DIRECCION>
+    <EMAIL>alien@octavopasajero.com</EMAIL>
+    <CODIGOPOSTAL>78954</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.alien.com</PAGINAWEB>
+    <IMAGENCLIENTE>http://images.amcnetworks.com/blogs.amctv.com/wp-content/uploads/2008/08/ripley-560.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="26">
+    <NOMBRE>TOM HIGHWAY</NOMBRE>
+    <DIRECCION>C/ Seccion reconocimiento, 46</DIRECCION>
+    <EMAIL>sargentodehierro@marines.com</EMAIL>
+    <CODIGOPOSTAL>12345</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.sargentodehierro.com</PAGINAWEB>
+    <IMAGENCLIENTE>http://chihuahuanoticias.com/wp-content/uploads/2015/05/heartbreakridge-f1.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="27">
+    <NOMBRE>AL BUNDY</NOMBRE>
+    <DIRECCION>C/ Matrimonio con hijos, 89</DIRECCION>
+    <EMAIL>matrimonioconhijos@albandy.com</EMAIL>
+    <CODIGOPOSTAL>78956</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.matrimonioconhijos.com</PAGINAWEB>
+    <IMAGENCLIENTE>http://www.returnofkings.com/wp-content/uploads/2014/10/albundy2.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="28">
+    <NOMBRE>MARK LENDERS</NOMBRE>
+    <DIRECCION>C/ Tiro mortal, 42</DIRECCION>
+    <EMAIL>campeones@oliveraton.com</EMAIL>
+    <CODIGOPOSTAL>78954</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.losmagosdelbalon.com</PAGINAWEB>
+    <IMAGENCLIENTE>https://i.ytimg.com/vi/gVGAqJMo80M/hqdefault.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="29">
+    <NOMBRE>ZACK MORRIS</NOMBRE>
+    <DIRECCION>C/ Salvados por la campana, 65</DIRECCION>
+    <EMAIL>kellykapowsky@zackmorris.com</EMAIL>
+    <CODIGOPOSTAL>78956</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.savedbythebell.com</PAGINAWEB>
+    <IMAGENCLIENTE>http://starsmedia.ign.com/stars/image/object/143/14357239/zack-morris_pictureboxart_160w.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="30">
+    <NOMBRE>IVAN DRAGO</NOMBRE>
+    <DIRECCION>C/ Rusia, 23</DIRECCION>
+    <EMAIL>rockyIV@sovietica.com</EMAIL>
+    <CODIGOPOSTAL>78956</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.rocky4.com</PAGINAWEB>
+    <IMAGENCLIENTE>http://izquierdazo.com/wp-content/uploads/2013/10/ivandragorocky.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="31">
+    <NOMBRE>CARLTON BANKS</NOMBRE>
+    <DIRECCION>C/ Bel Air, 21</DIRECCION>
+    <EMAIL>principebelair@carlton.com</EMAIL>
+    <CODIGOPOSTAL>17895</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.thefreshprince.com</PAGINAWEB>
+    <IMAGENCLIENTE>http://www.ooyuz.com/images/2015/7/21/1440182846494.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="32">
+    <NOMBRE>BALKI BARTOKOMOUS</NOMBRE>
+    <DIRECCION>C/ Primos Lejanos, 98</DIRECCION>
+    <EMAIL>primobalki@primoslejanos.com</EMAIL>
+    <CODIGOPOSTAL>14565</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.primoslejanos.com</PAGINAWEB>
+    <IMAGENCLIENTE>https://pbs.twimg.com/profile_images/530539647/bronsonpinchot_400x400.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="33">
+    <NOMBRE>WALDO FALDO</NOMBRE>
+    <DIRECCION>C/ Cosas de casa, 84</DIRECCION>
+    <EMAIL>waldogeraldofaldo@winslow.com</EMAIL>
+    <CODIGOPOSTAL>58965</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.waldofaldo.com</PAGINAWEB>
+    <IMAGENCLIENTE>http://www.kellie.de/pics/fm3/waldofood.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="34">
+    <NOMBRE>PAUL PFEIFFER</NOMBRE>
+    <DIRECCION>C/ recuerdos, 78</DIRECCION>
+    <EMAIL>aquellosmaravillososaños@pfeiffer.com</EMAIL>
+    <CODIGOPOSTAL>78944</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.aquellosmaravillososaños.com</PAGINAWEB>
+    <IMAGENCLIENTE>https://pbs.twimg.com/profile_images/2600937773/Paul_Pfeiffer.jpeg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="35">
+    <NOMBRE>TEMPLETON PECK</NOMBRE>
+    <DIRECCION>C/ Fenix, 45</DIRECCION>
+    <EMAIL>fenix@equipoA.com</EMAIL>
+    <CODIGOPOSTAL>12456</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.elequipoA.com</PAGINAWEB>
+    <IMAGENCLIENTE>http://cdn.24.co.za/files/Cms/General/d/967/ae1ed5e00823473f9d84a664cb607a28.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="36">
+    <NOMBRE>BIFF TANNEN</NOMBRE>
+    <DIRECCION>C/ Estiercol, 56</DIRECCION>
+    <EMAIL>regresoalfuturo@bifftannen.com</EMAIL>
+    <CODIGOPOSTAL>26987</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.backtothefuture.com</PAGINAWEB>
+    <IMAGENCLIENTE>https://metrouk2.files.wordpress.com/2015/07/ad_174238919.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+  <CLIENTE IDCLIENTE="37">
+    <NOMBRE>AXEL FOLEY</NOMBRE>
+    <DIRECCION>C/ Beverly Hills, 89</DIRECCION>
+    <EMAIL>superdetectiveenhollywood@hotmail.com</EMAIL>
+    <CODIGOPOSTAL>87546</CODIGOPOSTAL>
+    <PAGINAWEB>http://www.superdetectiveenhollywood.com</PAGINAWEB>
+    <IMAGENCLIENTE>https://lafayettewright.files.wordpress.com/2013/11/axel_foley1.jpg</IMAGENCLIENTE>
+  </CLIENTE>
+</CLIENTES>

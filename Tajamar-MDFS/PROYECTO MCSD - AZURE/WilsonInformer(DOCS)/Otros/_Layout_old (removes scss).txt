@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/css/site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="~/js/Chart.min.js"></script>
+    <script src="~/js/popper.min.js"></script>
+    <link href="~/StaticFiles/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    @*<h1>WSegInformer</h1>*@
+    <div class="content">
+        <div class="tab">
+            <button type="button" onclick="location.href='@Url.Action("Index", "Home")'" class="tablinks" id="defaultOpen">Inicio</button>
+            <button type="button" onclick="location.href='@Url.Action("UploadPartes", "Partes")'" class="tablinks">Importar Partes</button>
+            <button type="button" onclick="location.href='@Url.Action("GetPartes", "Partes",new { })'" class="tablinks">Buscar Partes</button>
+            <button type="button" onclick="location.href='@Url.Action("EntregadosEnGestion", "Partes",new { })'" class="tablinks">Gestión - Entregados</button>
+            <button type="button" onclick="location.href='@Url.Action("Pendientes15", "Partes",new { })'" class="tablinks">Gestión - Pendientes (15 dias atras)</button>
+            <button type="button" onclick="location.href='@Url.Action("Cerrados", "Partes",new { })'" class="tablinks">Estadisticas Cerrados / en Gestion</button>
+        </div>
+
+        <div class="tabcontent">
+            @RenderBody()
+        </div>
+
+    </div>
+   
+</body>
+</html>

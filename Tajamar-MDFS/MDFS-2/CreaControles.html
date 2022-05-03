@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Crea Controles</title>
+</head>
+<body>
+    <h1>Genera Controles dinamicamente</h1>
+    <form>
+        <label>Contenido: </label>
+        <input type="text"/ id="cajaTexto">
+        <button id="boton" type="button">Crear titulo</button>
+        <div id="padre"></div>
+    </form>
+</body>
+<script src="js/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#boton").click(function () {
+            var texto = $("#cajaTexto").val();
+        /**FORMAA 1 APPEND */
+            //var h1 = $("<h1>");
+            //h1.text(texto);
+
+            //FORMA STYLE 1
+            //h1.css("background-color", "green");
+            //h1.css("color", "white");
+
+            //FORMA STYLE 2
+            //h1.css({ "background-color": "green", "color": "white" });
+
+        /**FORMAA 2 APPEND */
+            var h1 = $("<h1>", {
+                "text": texto,
+                "style": "background-color:green;color:white"
+            });
+
+            //FORMA 1 CREA ETIQUETA
+            //$("#padre").append(h1);
+
+            //FORMA 2 CREAR ETIQUETA
+            h1.appendTo($("#padre"));
+            //SI QUIERPO QUE TENGA EVENTOS HAY QUE USAR METODOS DELEGADOS
+            //opcion 1(antigua) H1.ON("CLICK",FUNCTION(){});
+
+            //opcion 2(más usada): 
+            h1.click(function () {
+                $(this).text("Texto modificado");
+            });
+        });
+
+        //SOLO LE APLICARÁ A LOS CREADOS EN DOCUMENT READY
+        $("h1").click(function () {
+            alert("Prueba h1");
+        });
+    });
+</script>
+</html>

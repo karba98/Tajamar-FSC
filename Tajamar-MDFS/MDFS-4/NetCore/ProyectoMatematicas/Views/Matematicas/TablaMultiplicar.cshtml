@@ -1,0 +1,33 @@
+﻿@model List<Operacion>
+<h1>Tabla Multiplicar</h1>
+<form method="post">
+    <input type="number" name="num" />
+    <button type="submit" class="btn btn-info">Mostrar tabla</button>
+</form>
+<hr/>
+@if (Model != null)
+{
+    <table style="width:80%;border:solid">
+        <thead style="border:solid">
+            <tr style="border:solid;background-color:grey;color:white">
+                <th>Numero 1</th>
+                <th></th>
+                <th>Numero 2</th>
+                <th></th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Operacion op in Model)
+            {
+                <tr style="border:solid">
+                    <td>@op.n1</td>
+                    <td>x</td>
+                    <td>@op.n2</td>
+                    <td>=</td>
+                    <td>@op.result</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

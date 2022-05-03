@@ -1,0 +1,12 @@
+﻿
+<h1>Cifrado Hash</h1>
+<form method="post" enctype="multipart/form-data">
+    <label>Key: </label><br />
+    <input type="text" name="contenido" class="form-control" value="@ViewBag.key" /><br />
+    <label>Resultado</label><br/>
+    <textarea rows="5" class="form-control" name="resultado">@ViewBag.Res</textarea><br/>
+    <button type="submit" class="btn btn-info" name="accion" value="cifrar">Cifrar</button><br/>
+    <button type="submit" class="btn btn-dark" name="accion" value="comparar">Comparar</button><br/>
+</form>
+@Html.Raw(@ViewData["Mensaje"])
+

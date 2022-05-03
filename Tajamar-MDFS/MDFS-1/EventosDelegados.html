@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script type="text/javascript">
+        //VAMOS A CREAR UNA VARIABLE GLOBAL
+        //DONDE INCREMENTAREMOS SU VALOR CADA VEZ
+        //QUE ASOCIEMOS EL EVENTO.
+        //ASI VEREMOS EL NUMERO DE ASOCIACIONES Y EL
+        //NUMERO DE MENSAJES QUE MOSTREMOS.
+        //DIFERENCIAR ONCLICK DEL LISTENER
+        var contador = 0;
+        function asociarEvento() {
+            contador += 1;
+            var res = document.getElementById("resultado");
+            res.innerText = "Eventos asociados: " + contador;
+            //BUSCAMOS EL BOTON PARA DELEGAR EL EVENTO
+            var boton = document.getElementById("botonaccion");
+            //EMPEZAMOS CON ONCLICK Y FUNCIONES EXTERNAS
+            //NO HAY PILA DE LLAMADAS Y SE QUEDARA CON LA ULTIMA ACCION
+            //this: DEVUELVE EL BOTON ASOCIADO
+            //boton.onclick = mostrarMensaje;
+            //boton.onclick = mostrarMensaje2;
+            //UTILIZAMOS ONCLICK CON FUNCIONES ANONIMAS
+            //NO HAY PILA DE LLAMADAS Y SE QUEDARA CON LA ULTIMA ACCION
+            //this: DEVUELVE EL BOTON ASOCIADO
+            //CONTROL + K + C
+            //CONTROL + K + U
+            //boton.onclick = function () {
+            //    alert("Anonima 1");
+            //}
+            //boton.onclick = function () {
+            //    alert("Anonima 2 " + this);
+            //}
+            //LISTENER CON FUNCIONES EXTERNAS
+            //SI SON FUNCIONES DIFERENTES, EXISTE PILA DE LLAMADAS
+            //this: OBJETO BOTON
+            //boton.addEventListener("click", mostrarMensaje);
+            //boton.addEventListener("click", mostrarMensaje2);
+            //LISTENER CON FUNCIONES ANONIMAS
+            //EXISTE PILA DE LLAMADAS EN TODO MOMENTO
+            //PORQUE NO TIENEN NOMBRE LAS FUNCIONES/EVENTOS
+            //this:  BOTON
+            boton.addEventListener("click", function () {
+                alert("Anonima 1: " + this);
+            });
+        }
+
+        function mostrarMensaje() {
+            alert("Mensaje 1 " + this);
+        }
+
+        function mostrarMensaje2() { alert("Mensaje 2"); }
+    </script>
+</head>
+<body>
+    <h1>Eventos delegados JS</h1>
+    <h1 style="color:fuchsia" id="resultado"></h1>
+    <button type="button" onclick="asociarEvento()">
+        Asociar eventos
+    </button>
+    <button type="button" id="botonaccion">
+        Realizar acciones
+    </button>
+</body>
+</html>

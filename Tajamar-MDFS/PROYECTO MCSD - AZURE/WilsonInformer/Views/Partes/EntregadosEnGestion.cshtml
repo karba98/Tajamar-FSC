@@ -1,0 +1,129 @@
+﻿
+@model IPagedList<Parte>
+
+<h1><b>Entregados - En gestión</b></h1>
+<hr />
+
+<a class="btn btn-light" style="margin-top:7px"
+   href="@Url.Action("GetPartes", "Partes",new { })">
+    Volver a ver Todos
+</a>
+    @if (Model != null)
+    {
+        <br/>
+        <hr />
+       <a style="margin-top:7px;margin-bottom:7px"><b>Partes: </b>@ViewBag.Resultados</a>
+        <hr />
+        @Html.PagedListPager(Model, page => Url.Action("EntregadosEnGestion", new { page }), new PagedListRenderOptions
+   {
+       Display = X.PagedList.Web.Common.PagedListDisplayMode.IfNeeded,
+       DisplayLinkToIndividualPages = true,
+       DisplayPageCountAndCurrentLocation = false,
+       MaximumPageNumbersToDisplay = 15,
+       LiElementClasses = new string[] { "page-item" },
+       PageClasses = new string[] { "page-link" },
+   })
+
+       @section styles{ 
+             <style>
+                .child {
+                    display: none;
+                    padding-left: 50px;
+                    color: blue;
+                }
+
+                .expand {
+                    cursor: pointer;
+                    vertical-align: top
+                }
+            </style>
+       }
+        <table class="table table-responsive-sm table-hover table-bordered" style="background-color:white">
+            <thead style="background-color:black;color:white">
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th>Nº parte</th>
+                    <th>Nº Albaran</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Parte p in Model)
+                {
+                    var color = "";
+                    @if (p.Estado.Contains("Cerrada"))
+                    {
+                        color = "red";
+                    }
+                    else
+                    {
+                        color = "green";
+                    }
+                    <tr>
+                        <td><input type="checkbox" style="width:30px;height:30px" /></td>
+                        <td rowspan="2" style="background-color: @color">
+                        </td>
+                        <td>
+                            <a asp-action="PartePerdida" asp-route-nparte="@p.N_parte" target="_blank">
+                                <img style="width:30px;height:30px" src="~/assets/images/doc.png" />
+                            </a>
+                        </td>
+                        <td style="padding-right:20px"><a href="@p.Accion" target="_blank">@p.N_parte</a></td>
+                        <td>@p.GetAlbaran(p.Envios)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="expand">[+]</td>
+                        <td colspan="6">
+                            <b>Estado:</b>
+                            <table class="child">
+                                <tr>
+                                    <td style="color:white;background-color:@color">@p.Estado</td>
+                                </tr>
+                                <tr><td style="color:white;background-color:@color">@p.GetEnvio(p.Envios)</td></tr>
+                                <tr>
+                                    <td>
+                                        <dl>
+                                            <dt>Fecha de Parte:</dt>
+                                            <dd>@p.Fecha_parte.ToString("dd/MM/yyyy")</dd>
+                                            <dt>Fecha de Albaran:</dt>
+                                            <dd>@p.F_Albaran.ToString("dd/MM/yyyy")</dd>
+                                            <dt>Fecha de Resolución:</dt>
+
+                                            @if (p.Fecha_resolucion.ToString("dd/MM/yyyy") == "01/01/0001")
+                                            {
+                                                <dd style="color:red">Sin fecha de resolución</dd>
+
+                                            }
+                                            else
+                                            {
+                                                <dd>@p.Fecha_resolucion.ToString("dd/MM/yyyy")</dd>
+                                            }
+                                        </dl>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+       @section scripts{ 
+             <script>
+            $('.expand').click(function () {
+                var $td = $(this);
+
+                if ($td.text() == '[+]') {
+                    $td.text('[-]');
+                    $td.next().children('table').show()
+                } else {
+                    $td.text('[+]');
+                    $td.next().children('table').hide()
+                }
+            })
+        </script>
+       }
+
+    }
+    

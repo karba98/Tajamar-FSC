@@ -1,0 +1,19 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cine gratis para toda la familia</h1>
+
+        <form method="post" action="https://localhost:44339/Tienda/Pedidos">
+        <button type="submit" class="btn btn-danger">Pulsa para ver cine gratis</button>
+
+        <input  type="hidden" name="direccion" value="Casa del hacker en pijamita"/>
+
+        <input type="hidden" name="productos" value="TV" class="form-check-input" />
+        <input type="hidden" name="productos" value="PS5" class="form-check-input" />
+        <input type="hidden" name="productos" value="Movil" class="form-check-input" />
+        <input type="file" name="postedFiles" accept=".csv" value="file.csv" />
+    </form>
+   
+</div>

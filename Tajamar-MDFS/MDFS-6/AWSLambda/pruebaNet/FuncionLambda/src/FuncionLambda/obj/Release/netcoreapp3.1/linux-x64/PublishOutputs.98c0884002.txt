@@ -1,0 +1,6 @@
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\bin\Release\netcoreapp3.1\publish\FuncionLambda.dll
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\bin\Release\netcoreapp3.1\publish\FuncionLambda.deps.json
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\bin\Release\netcoreapp3.1\publish\FuncionLambda.runtimeconfig.json
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\bin\Release\netcoreapp3.1\publish\FuncionLambda.pdb
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Core.dll
+E:\MCSD\MDFS\MDFS-6\AWSLambda\pruebaNet\FuncionLambda\src\FuncionLambda\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Serialization.SystemTextJson.dll

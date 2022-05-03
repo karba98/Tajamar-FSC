@@ -1,0 +1,18 @@
+﻿
+<h1>Cifrado Hash Eficiente</h1>
+<hr/>
+<form method="post">
+    <label>Iteraciones</label>
+    <input type="number" class="form-control" name="iteraciones" value="@ViewBag.Iter"/><br />
+    <label>Salt</label>
+    <input type="text" class="form-control" name="salt" value="@ViewBag.Salt" /><br />
+    <label>Contenido</label>
+    <input type="text" class="form-control" name="contenido" value="@ViewBag.Key" /><br />
+    <label>Resultado:</label><br/>
+    <textarea class="form-control" name="resultado">@ViewBag.Res</textarea><br />
+    <button type="submit" name="accion" value="cifrar" class="btn btn-danger">Cifrar</button>
+    <button type="submit" name="accion" value="comparar" class="btn btn-warning">Comparar</button>
+</form>
+<hr/>
+@Html.Raw(ViewBag.Mensaje)
+

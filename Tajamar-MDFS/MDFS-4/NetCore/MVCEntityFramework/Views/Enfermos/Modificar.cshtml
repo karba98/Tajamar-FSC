@@ -1,0 +1,25 @@
+﻿@model Enfermo
+<br />
+<br/>
+<h1>Modificar Enfermo</h1>
+<form method="post">
+    <input type="hidden" value="@Model.Inscripcion" name="inscripcion" readonly /><br />
+    <input type="text" value="@Model.Apellido" name="apellido" /><br />
+    <input type="text" value="@Model.Direccion" name="direccion" /><br />
+    <input type="text" value="@Model.NSS" name="nss" /><br />
+    <label>F.Nacimiento</label><br/>
+    <input type="text" name="fechanac"  value="@Model.Fecha_Nac.ToString()"/><br />
+    <label>Sexo: </label><br/>
+    <select name="genero" >
+        @if (Model.S == "F")
+        {
+            <option value="F">Femenino</option>
+        }
+        else
+        {
+            <option value="M">Maculino</option>
+        }
+    </select>
+    <br />
+    <button type="submit" class="btn btn-success">Modificar</button>
+</form>
